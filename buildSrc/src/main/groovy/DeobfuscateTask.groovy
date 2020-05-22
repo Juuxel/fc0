@@ -36,6 +36,8 @@ class DeobfuscateTask extends DefaultTask {
 
     @TaskAction
     def run() {
+        Files.deleteIfExists(outputJar.toPath())
+
         def inputTiny = Files.createTempFile("raw.", ".tiny")
         def mergedTiny = Files.createTempFile("merged.", ".tiny")
         def invertedIntermediary = Files.createTempFile("inverted_intermediary.", ".tiny")
@@ -57,7 +59,7 @@ class DeobfuscateTask extends DefaultTask {
 
         def remapper = TinyRemapper.newRemapper()
             .fixPackageAccess(true)
-            .withMappings(TinyUtils.createTinyMappingProvider(outputMappings.toPath(), "intermediary", "named")) // FIXME: why does this put intermediary classes in the jar????
+            .withMappings(TinyUtils.createTinyMappingProvider(outputMappings.toPath(), "intermediary", "named"))
             .renameInvalidLocals(true)
             .build()
 
