@@ -59,6 +59,7 @@ task deobf(type: DeobfuscateTask) {
     mappings = mappingsDir
     inputJar = gameJar
     outputJar = file("build/deobf-${gameJar.name}")
+    libraries = configurations.runtimeClasspath
 }
 
 task decompile(type: DecompileTask, dependsOn: deobf) {
