@@ -114,21 +114,12 @@ task setup(dependsOn: [decompile, extractResources]) {
     group = "fc0"
 }
 
-task patchedIntermediary(type: RemapJarTask, dependsOn: [deobf, jar, intermediary]) {
-    from = "named"
-    to = "intermediary"
-    inputJar = jar.outputs.files.singleFile
-    outputJar = file("build/libs/${archivesBaseName}-${version}-patched-intermediary.jar")
-    mappings = deobf.outputMappings
-    libraries = configurations.runtimeClasspath
-}
-
-task diffJar(type: DiffJarTask, dependsOn: [deobf, generatePatches, patchedIntermediary]) {
+task diffJar(type: DiffJarTask, dependsOn: [deobf, generatePatches, jar]) {
     group = "fc0"
-    originJar = intermediaryJar
+    originJar = deobf.outputJar
     patches = files(applyPatches.patches, generatePatches.patchOutput)
-    modifiedJar = patchedIntermediary.outputJar
-    output = file("build/libs/${archivesBaseName}-${version}-diff.jar")
+    modifiedJar = jar.outputs.files.singleFile
+    output = file("build/libs/${archivesBaseName}-${version}-diff-named.jar")
 }
 
 task obfuscate(type: RemapJarTask, dependsOn: [deobf, diffJar]) {
@@ -136,8 +127,8 @@ task obfuscate(type: RemapJarTask, dependsOn: [deobf, diffJar]) {
     inputJar = diffJar.output
     mappings = deobf.outputMappings
     libraries = configurations.runtimeClasspath
-    outputJar = file("build/libs/${archivesBaseName}-${version}-diff-obf.jar")
-    from = "intermediary"
+    outputJar = file("build/libs/${archivesBaseName}-${version}-diff.jar")
+    from = "named"
     to = "official"
 }
 
