@@ -7,6 +7,7 @@ repositories {
 }
 
 dependencies {
-    implementation "org.benf:cfr:0.150"
+    implementation "org.benf:cfr:$cfr"
     implementation "cuchaz:enigma:$enigma"
+    implementation "io.github.java-diff-utils:java-diff-utils:$java_diff_utils"
 }

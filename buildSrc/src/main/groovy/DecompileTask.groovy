@@ -21,10 +21,15 @@ class DecompileTask extends DefaultTask {
     @OutputDirectory
     File output
 
+    @OutputDirectory
+    File cleanOutput
+
     @TaskAction
     def run() {
         output.deleteDir()
         output.mkdirs()
+        cleanOutput.deleteDir()
+        cleanOutput.mkdirs()
 
         def driver = new CfrDriver.Builder()
             .withOptions(
@@ -36,6 +41,11 @@ class DecompileTask extends DefaultTask {
             .withOutputSink(new SinkFactory())
             .build()
         driver.analyse([input.getAbsolutePath()])
+
+        // https://stackoverflow.com/a/6214823
+        new AntBuilder().copy(toDir: cleanOutput.absolutePath) {
+            fileset(dir: output.absolutePath)
+        }
     }
 
     private def accept(SinkReturns.Decompiled decompiled) {

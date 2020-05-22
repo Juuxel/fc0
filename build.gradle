@@ -65,7 +65,12 @@ task decompile(type: DecompileTask, dependsOn: deobf) {
     group = "fc0"
     input = deobf.outputJar
     output = file('src/main/java')
+    cleanOutput = file('src/raw/java')
     libraries = configurations.runtimeClasspath
+
+    doLast {
+        println "Decompiled! Note that you should only modify src/main and leave src/clean and src/raw untouched!"
+    }
 }
 
 task extractResources(type: ExtractResourcesTask) {
@@ -78,7 +83,24 @@ task setup(dependsOn: [decompile, extractResources]) {
     group = "fc0"
 }
 
+task applyPatches(type: ApplyPatchesTask) {
+    group = "fc0"
+    patches = file('patches')
+    // raw -> clean
+    cleanSources = decompile.cleanOutput
+    intermediateSources = file('src/clean/java')
+    userSources = decompile.output
+}
+
+task generatePatches(type: GeneratePatchesTask) {
+    group = "fc0"
+    cleanSources = applyPatches.intermediateSources
+    revisedSources = applyPatches.userSources
+    patchOutput = file('src/main/diff')
+}
+
 task enigma() {
+    group = "fc0"
     doLast {
         ant.setLifecycleLogLevel "WARN"
         ant.java(
