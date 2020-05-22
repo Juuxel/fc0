@@ -8,4 +8,5 @@ CLASS tk/valoeghese/fc0/class_34 tk/valoeghese/fc0/util/Direction
 		ARG 4 y
 		ARG 5 z
 	METHOD method_82 opposite ()Ltk/valoeghese/fc0/class_34;
+	METHOD method_83 half ()Ltk/valoeghese/fc0/class_45;
 	METHOD method_84 values ()[Ltk/valoeghese/fc0/class_34;

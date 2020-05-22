@@ -3,14 +3,7 @@
 @@ -40,5 +40,5 @@
          this.chunks = new Chunk[this.chunkSize * this.chunkSize];
          this.field_16 = new Random(l);
--        OrderedList orderedList = new OrderedList(chunk -> Math.abs(chunk.width) + Math.abs(chunk.depth));
-+        OrderedList<Chunk> orderedList = new OrderedList<>(chunk -> Math.abs(chunk.width) + Math.abs(chunk.depth));
+-        OrderedList orderedList = new OrderedList(chunk -> Math.abs(chunk.x) + Math.abs(chunk.z));
++        OrderedList<Chunk> orderedList = new OrderedList<>(chunk -> Math.abs(chunk.x) + Math.abs(chunk.z));
          for (n = -8; n < 9; ++n) {
              for (int i = -8; i < 9; ++i) {
-@@ -85,5 +85,5 @@
-     }
- 
--    public final List method_7() {
-+    public final List<Chunk> method_7() {
-         if (!this.field_15.isEmpty()) {
-             boolean bl = this.field_17 = !this.field_17;

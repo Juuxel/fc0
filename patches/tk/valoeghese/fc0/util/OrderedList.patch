@@ -1,45 +1,26 @@
 --- a/tk/valoeghese/fc0/util/OrderedList.java
 +++ b/tk/valoeghese/fc0/util/OrderedList.java
-@@ -7,32 +7,30 @@
- import tk.valoeghese.fc0.util.Function;
+@@ -7,17 +7,16 @@
+ import tk.valoeghese.fc0.util.ToFloatFunction;
  
 -public final class OrderedList
 -extends ArrayList {
+-    private final ToFloatFunction order;
 +public final class OrderedList<E>
 +extends ArrayList<E> {
-     private final Function indexer;
++    private final ToFloatFunction<? super E> order;
  
--    public OrderedList(Function function) {
-+    public OrderedList(Function<? super E> function) {
-         this.indexer = function;
+-    public OrderedList(ToFloatFunction toFloatFunction) {
++    public OrderedList(ToFloatFunction<? super E> toFloatFunction) {
+         this.order = toFloatFunction;
      }
  
      @Override
 -    public final boolean add(Object object) {
-+    public final boolean add(E object) {
++    public final boolean add(E object2) {
          float f;
 -        Object object2 = object;
 -        object = this;
--        int n = ((ArrayList)object).size();
-+        int n = size();
++        Object object = this;
+         int n = ((ArrayList)object).size();
          if (n == 0) {
--            return super.add(object2);
-+            return super.add(object);
-         }
--        float f2 = ((OrderedList)object).indexer.apply(object2);
-+        float f2 = indexer.apply(object);
-         int n2 = 0;
--        while ((f = ((OrderedList)object).indexer.apply(((ArrayList)object).get(n2))) < f2 && (n2 += 32) < n) {
-+        while ((f = this.indexer.apply(this.get(n2))) < f2 && (n2 += 32) < n) {
-         }
-         if (n2 >= n) {
-             n2 = n - 1;
-         }
--        while (n2 >= 0 && ((OrderedList)object).indexer.apply(((ArrayList)object).get(n2)) > f2) {
-+        while (n2 >= 0 && this.indexer.apply(this.get(n2)) > f2) {
-             --n2;
-         }
--        super.add(++n2, object2);
-+        super.add(++n2, object);
-         return true;
-     }

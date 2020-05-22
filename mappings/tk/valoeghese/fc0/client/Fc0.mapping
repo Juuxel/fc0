@@ -3,4 +3,6 @@ CLASS tk/valoeghese/fc0/class_36 tk/valoeghese/fc0/client/Fc0
 	FIELD field_109 projection Lorg/joml/Matrix4f;
 	FIELD field_110 window Ltk/valoeghese/fc0/class_32;
 	FIELD field_111 player Ltk/valoeghese/fc0/class_37;
+	FIELD field_113 versionOverlay Ltk/valoeghese/fc0/class_17;
 	FIELD field_114 guiProjection Lorg/joml/Matrix4f;
+	FIELD field_115 waterOverlay Ltk/valoeghese/fc0/class_17;

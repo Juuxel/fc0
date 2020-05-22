@@ -3,7 +3,7 @@ CLASS tk/valoeghese/fc0/class_27 tk/valoeghese/fc0/client/render/Camera
 	FIELD field_75 view Lorg/joml/Matrix4f;
 	FIELD field_76 pos Lorg/joml/Vector3f;
 	FIELD field_77 yaw F
-	FIELD field_78 MAX_ROTATION F
+	FIELD field_78 MAX_PITCH F
 	METHOD method_58 getYaw ()F
 	METHOD method_59 wrapYaw ()V
 	METHOD method_60 addYaw (F)V

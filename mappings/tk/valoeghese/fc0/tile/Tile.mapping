@@ -2,9 +2,11 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 	FIELD field_27 id B
 	FIELD field_28 textureX I
 	FIELD field_29 AIR Ltk/valoeghese/fc0/class_14;
+	FIELD field_30 solid Z
 	FIELD field_31 tiles [Ltk/valoeghese/fc0/class_14;
 	FIELD field_32 textureY I
 	FIELD field_33 STONE Ltk/valoeghese/fc0/class_14;
+	FIELD field_34 shouldRender Z
 	FIELD field_35 GRASS Ltk/valoeghese/fc0/class_14;
 	FIELD field_36 LEAVES Ltk/valoeghese/fc0/class_14;
 	FIELD field_37 LOG Ltk/valoeghese/fc0/class_14;
@@ -14,7 +16,10 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 		ARG 1 id
 		ARG 2 textureX
 		ARG 3 textureY
+	METHOD method_30 nonOpaque ()Ltk/valoeghese/fc0/class_14;
 	METHOD method_32 getTextureY (I)I
 		ARG 1 face
+	METHOD method_33 isSolid (Z)Z
+	METHOD method_34 shouldRender ()Z
 	METHOD method_35 getTextureX (I)I
 		ARG 1 face
