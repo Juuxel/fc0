@@ -1,13 +1,13 @@
-CLASS tk/valoeghese/fc0/client/b tk/valoeghese/fc0/client/Player
-	FIELD a chunk LD;
-	FIELD a world LH;
-	FIELD a camera Ll;
-	FIELD a pos Lu;
-	METHOD a getPos ()LC;
-	METHOD a getCamera ()Ll;
-	METHOD a rayCast (D)LA;
+CLASS tk/valoeghese/fc0/class_37 tk/valoeghese/fc0/client/Player
+	FIELD field_118 chunk Ltk/valoeghese/fc0/class_4;
+	FIELD field_119 world Ltk/valoeghese/fc0/class_8;
+	FIELD field_120 camera Ltk/valoeghese/fc0/class_27;
+	FIELD field_121 pos Ltk/valoeghese/fc0/class_40;
+	METHOD method_86 getPos ()Ltk/valoeghese/fc0/class_3;
+	METHOD method_87 getCamera ()Ltk/valoeghese/fc0/class_27;
+	METHOD method_90 rayCast (D)Ltk/valoeghese/fc0/class_1;
 		ARG 1 maxDistance
-	METHOD a (DDD)Z
+	METHOD method_92 (DDD)Z
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z

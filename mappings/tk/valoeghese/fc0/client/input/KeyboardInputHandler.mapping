@@ -1,5 +1,5 @@
-CLASS e tk/valoeghese/fc0/client/input/KeyboardInputHandler
-	FIELD a bindings Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;
+CLASS tk/valoeghese/fc0/class_20 tk/valoeghese/fc0/client/input/KeyboardInputHandler
+	FIELD field_56 bindings Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;
 	METHOD invoke (JIIII)V
 		ARG 1 window
 		ARG 3 key

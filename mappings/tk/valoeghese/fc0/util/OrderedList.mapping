@@ -1,7 +1,7 @@
-CLASS x tk/valoeghese/fc0/util/OrderedList
+CLASS tk/valoeghese/fc0/class_43 tk/valoeghese/fc0/util/OrderedList
 	COMMENT This is supposedly an ordered list, though I'm not sure what's ordered about it...
-	FIELD a indexer Ly;
-	METHOD <init> (Ly;)V
+	FIELD field_142 indexer Ltk/valoeghese/fc0/class_44;
+	METHOD <init> (Ltk/valoeghese/fc0/class_44;)V
 		ARG 1 indexer
 	METHOD add (ILjava/lang/Object;)V
 		ARG 1 index

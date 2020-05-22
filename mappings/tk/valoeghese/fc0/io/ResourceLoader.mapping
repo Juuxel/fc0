@@ -1,5 +1,5 @@
-CLASS p tk/valoeghese/fc0/io/ResourceLoader
-	METHOD a readResource (Ljava/lang/String;)Ljava/lang/String;
+CLASS tk/valoeghese/fc0/class_31 tk/valoeghese/fc0/io/ResourceLoader
+	METHOD method_80 readResource (Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 location
-	METHOD a getResource (Ljava/lang/String;)Ljava/net/URL;
+	METHOD method_81 getResource (Ljava/lang/String;)Ljava/net/URL;
 		ARG 0 location

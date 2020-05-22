@@ -1,8 +1,8 @@
-CLASS j tk/valoeghese/fc0/client/render/WorldTesselator
-	METHOD a vertex (FFFFFF)I
+CLASS tk/valoeghese/fc0/class_25 tk/valoeghese/fc0/client/render/WorldTesselator
+	METHOD method_55 vertex (FFFFFF)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 u
 		ARG 5 v
-	METHOD a index (III)V
+	METHOD method_56 index (III)V

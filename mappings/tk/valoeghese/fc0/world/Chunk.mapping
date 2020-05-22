@@ -1,19 +1,19 @@
-CLASS D tk/valoeghese/fc0/world/Chunk
-	FIELD a width I
-	FIELD a world LE;
-	FIELD a renderer Lg;
-	FIELD a players Ljava/util/List;
-	FIELD a tiles [B
-	FIELD b depth I
-	METHOD <init> (LE;II[B)V
+CLASS tk/valoeghese/fc0/class_4 tk/valoeghese/fc0/world/Chunk
+	FIELD field_10 players Ljava/util/List;
+	FIELD field_11 tiles [B
+	FIELD field_12 depth I
+	FIELD field_6 width I
+	FIELD field_7 world Ltk/valoeghese/fc0/class_5;
+	FIELD field_8 renderer Ltk/valoeghese/fc0/class_22;
+	METHOD <init> (Ltk/valoeghese/fc0/class_5;II[B)V
 		ARG 1 world
 		ARG 2 x
 		ARG 3 y
 		ARG 4 tiles
-	METHOD a getRenderer ()Lg;
-	METHOD a encode (III)I
+	METHOD method_2 getRenderer ()Ltk/valoeghese/fc0/class_22;
+	METHOD method_4 encode (III)I
 		ARG 0 x
 		ARG 1 y
 		ARG 2 z
-	METHOD a removePlayer (Ltk/valoeghese/fc0/client/b;)V
+	METHOD method_5 removePlayer (Ltk/valoeghese/fc0/class_37;)V
 		ARG 1 player

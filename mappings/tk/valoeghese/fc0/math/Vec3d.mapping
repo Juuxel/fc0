@@ -1,17 +1,17 @@
-CLASS z tk/valoeghese/fc0/math/Vec3d
-	FIELD a x D
-	FIELD b y D
-	FIELD c z D
+CLASS tk/valoeghese/fc0/class_45 tk/valoeghese/fc0/math/Vec3d
+	FIELD field_143 x D
+	FIELD field_144 y D
+	FIELD field_145 z D
 	METHOD <init> (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD a getX ()D
-	METHOD a add (DDD)Lz;
+	METHOD method_107 getX ()D
+	METHOD method_108 add (DDD)Ltk/valoeghese/fc0/class_45;
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD a add (Lz;)Lz;
+	METHOD method_109 add (Ltk/valoeghese/fc0/class_45;)Ltk/valoeghese/fc0/class_45;
 		ARG 1 other
-	METHOD b getY ()D
-	METHOD c getZ ()D
+	METHOD method_110 getY ()D
+	METHOD method_111 getZ ()D

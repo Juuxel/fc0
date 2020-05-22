@@ -1,17 +1,17 @@
-CLASS H tk/valoeghese/fc0/world/TileView
-	METHOD a getTile (III)B
+CLASS tk/valoeghese/fc0/class_8 tk/valoeghese/fc0/world/TileView
+	METHOD method_17 getTile (III)B
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD a setTile (IIIB)V
+	METHOD method_19 setTile (IIIB)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 tile
-	METHOD a getTile (LC;)B
+	METHOD method_21 getTile (Ltk/valoeghese/fc0/class_3;)B
 		ARG 1 pos
-	METHOD a setTile (LC;B)V
+	METHOD method_23 setTile (Ltk/valoeghese/fc0/class_3;B)V
 		ARG 1 pos
 		ARG 2 tile
-	METHOD b setPlayer (Ltk/valoeghese/fc0/client/b;)V
+	METHOD method_24 setPlayer (Ltk/valoeghese/fc0/class_37;)V
 		ARG 1 player

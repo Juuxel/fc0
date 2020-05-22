@@ -1,20 +1,20 @@
-CLASS n tk/valoeghese/fc0/client/render/WorldRenderer
-	FIELD a vertexCount I
-	FIELD a vertexData Lit/unimi/dsi/fastutil/floats/FloatList;
-	FIELD a indices Lit/unimi/dsi/fastutil/ints/IntList;
-	FIELD a vertices Ljava/util/List;
-	FIELD a shader Lm;
-	FIELD b usage I
-	METHOD <init> (ILm;)V
+CLASS tk/valoeghese/fc0/class_29 tk/valoeghese/fc0/client/render/WorldRenderer
+	FIELD field_80 vertexCount I
+	FIELD field_81 vertexData Lit/unimi/dsi/fastutil/floats/FloatList;
+	FIELD field_82 indices Lit/unimi/dsi/fastutil/ints/IntList;
+	FIELD field_83 vertices Ljava/util/List;
+	FIELD field_84 shader Ltk/valoeghese/fc0/class_28;
+	FIELD field_85 usage I
+	METHOD <init> (ILtk/valoeghese/fc0/class_28;)V
 		ARG 1 usage
 		ARG 2 shader
-	METHOD a getShader ()Lm;
-	METHOD a render (Lorg/joml/Matrix4f;)V
+	METHOD method_73 getShader ()Ltk/valoeghese/fc0/class_28;
+	METHOD method_75 render (Lorg/joml/Matrix4f;)V
 		ARG 1 transform
-	METHOD b addVertex (FFFFFF)I
+	METHOD method_76 addVertex (FFFFFF)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 u
 		ARG 5 v
-	METHOD b addIndex (III)V
+	METHOD method_77 addIndex (III)V

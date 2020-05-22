@@ -1,23 +1,23 @@
-CLASS g tk/valoeghese/fc0/client/render/ChunkRenderer
-	FIELD a x I
-	FIELD a chunk LG;
-	FIELD a terrainRenderer Li;
-	FIELD a transform Lorg/joml/Matrix4f;
-	FIELD a tiles [B
-	FIELD b z I
-	FIELD b waterRenderer Li;
-	METHOD <init> (LD;[BII)V
+CLASS tk/valoeghese/fc0/class_22 tk/valoeghese/fc0/client/render/ChunkRenderer
+	FIELD field_59 x I
+	FIELD field_60 chunk Ltk/valoeghese/fc0/class_7;
+	FIELD field_61 terrainRenderer Ltk/valoeghese/fc0/class_24;
+	FIELD field_62 transform Lorg/joml/Matrix4f;
+	FIELD field_63 tiles [B
+	FIELD field_64 z I
+	FIELD field_65 waterRenderer Ltk/valoeghese/fc0/class_24;
+	METHOD <init> (Ltk/valoeghese/fc0/class_4;[BII)V
 		ARG 1 chunk
 		ARG 2 tiles
 		ARG 3 x
 		ARG 4 z
-	METHOD a refresh ()V
-	METHOD a setTile (IB)V
+	METHOD method_50 refresh ()V
+	METHOD method_51 setTile (IB)V
 		ARG 1 index
 		ARG 2 tile
-	METHOD a encode (III)I
+	METHOD method_52 encode (III)I
 		ARG 0 x
 		ARG 1 y
 		ARG 2 z
-	METHOD a render (Ll;)V
+	METHOD method_53 render (Ltk/valoeghese/fc0/class_27;)V
 		ARG 1 camera

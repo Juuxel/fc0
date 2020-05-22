@@ -1,4 +1,5 @@
 import cuchaz.enigma.command.ConvertMappingsCommand
+import net.fabricmc.stitch.commands.tinyv2.CommandMergeTinyV2
 import net.fabricmc.stitch.commands.tinyv2.CommandProposeV2FieldNames
 import net.fabricmc.tinyremapper.TinyRemapper
 import net.fabricmc.tinyremapper.TinyUtils
@@ -16,6 +17,9 @@ class DeobfuscateTask extends DefaultTask {
     @InputDirectory
     File mappings
 
+    @InputFile
+    File intermediaryMappings
+
     @InputFiles
     FileCollection libraries
 
@@ -31,13 +35,17 @@ class DeobfuscateTask extends DefaultTask {
     @TaskAction
     def run() {
         def inputTiny = Files.createTempFile("raw.", ".tiny")
+        def mergedTiny = Files.createTempFile("merged.", ".tiny")
         def converter = new ConvertMappingsCommand()
 
         // Convert to tiny v2
         converter.run("enigma", mappings.absolutePath, "tinyv2:official:named", inputTiny.toString())
 
+        // Merge
+        new CommandMergeTinyV2().run(intermediaryMappings.absolutePath, inputTiny.toString(), mergedTiny.toString())
+
         // Propose names
-        new CommandProposeV2FieldNames().run([inputJar.absolutePath, inputTiny.toString(), outputMappings.absolutePath, "false"] as String[])
+        new CommandProposeV2FieldNames().run([inputJar.absolutePath, mergedTiny.toString(), outputMappings.absolutePath, "false"] as String[])
 
         def remapper = TinyRemapper.newRemapper()
             .fixPackageAccess(true)

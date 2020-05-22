@@ -1,5 +1,5 @@
-CLASS f tk/valoeghese/fc0/client/input/MouseInputHandler
-	FIELD a bindings Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;
+CLASS tk/valoeghese/fc0/class_21 tk/valoeghese/fc0/client/input/MouseInputHandler
+	FIELD field_58 bindings Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;
 	METHOD invoke (JIII)V
 		ARG 1 window
 		ARG 3 button

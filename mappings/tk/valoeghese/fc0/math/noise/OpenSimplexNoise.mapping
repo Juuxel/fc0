@@ -1,16 +1,16 @@
-CLASS w tk/valoeghese/fc0/math/noise/OpenSimplexNoise
-	FIELD a gradients2D [B
-	FIELD a perm [S
-	FIELD b gradients3D [B
-	FIELD b permGradIndex3D [S
+CLASS tk/valoeghese/fc0/class_42 tk/valoeghese/fc0/math/noise/OpenSimplexNoise
+	FIELD field_138 gradients2D [B
+	FIELD field_139 perm [S
+	FIELD field_140 gradients3D [B
+	FIELD field_141 permGradIndex3D [S
 	METHOD <init> (J)V
 		ARG 1 seed
-	METHOD a fastFloor (D)I
+	METHOD method_104 fastFloor (D)I
 		ARG 0 x
-	METHOD a eval (DD)D
+	METHOD method_105 eval (DD)D
 		ARG 1 x
 		ARG 3 y
-	METHOD a extrapolate (IIDD)D
+	METHOD method_106 extrapolate (IIDD)D
 		ARG 1 xsb
 		ARG 2 ysb
 		ARG 3 dx

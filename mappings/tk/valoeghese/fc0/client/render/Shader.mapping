@@ -1,11 +1,11 @@
-CLASS m tk/valoeghese/fc0/client/render/Shader
-	FIELD a program I
+CLASS tk/valoeghese/fc0/class_28 tk/valoeghese/fc0/client/render/Shader
+	FIELD field_79 program I
 	METHOD <init> (Ljava/lang/String;Ljava/lang/String;)V
 		ARG 1 vertex
 		ARG 2 fragment
-	METHOD a enableBlend ()V
-	METHOD a uniform (Ljava/lang/String;I)V
-	METHOD a uniform (Ljava/lang/String;Lorg/joml/Matrix4f;)V
-	METHOD a initWindow (Lq;)V
+	METHOD method_67 enableBlend ()V
+	METHOD method_69 uniform (Ljava/lang/String;I)V
+	METHOD method_70 uniform (Ljava/lang/String;Lorg/joml/Matrix4f;)V
+	METHOD method_71 initWindow (Ltk/valoeghese/fc0/class_32;)V
 		ARG 0 window
-	METHOD b apply ()V
+	METHOD method_72 apply ()V

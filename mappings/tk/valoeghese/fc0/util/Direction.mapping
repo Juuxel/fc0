@@ -1,11 +1,11 @@
-CLASS s tk/valoeghese/fc0/util/Direction
-	FIELD a x I
-	FIELD a _VALUES [Ls;
-	FIELD b y I
-	FIELD c z I
+CLASS tk/valoeghese/fc0/class_34 tk/valoeghese/fc0/util/Direction
+	FIELD field_94 x I
+	FIELD field_96 _VALUES [Ltk/valoeghese/fc0/class_34;
+	FIELD field_97 y I
+	FIELD field_99 z I
 	METHOD <init> (Ljava/lang/String;IIII)V
 		ARG 3 x
 		ARG 4 y
 		ARG 5 z
-	METHOD a opposite ()Ls;
-	METHOD a values ()[Ls;
+	METHOD method_82 opposite ()Ltk/valoeghese/fc0/class_34;
+	METHOD method_84 values ()[Ltk/valoeghese/fc0/class_34;

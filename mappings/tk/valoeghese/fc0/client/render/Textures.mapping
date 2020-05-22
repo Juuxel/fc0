@@ -1,7 +1,7 @@
-CLASS k tk/valoeghese/fc0/client/render/Textures
-	FIELD a TILE_ATLAS I
-	FIELD b VERSION I
-	FIELD c WATER_OVERLAY I
-	METHOD a load (Ljava/lang/String;Z)I
+CLASS tk/valoeghese/fc0/class_26 tk/valoeghese/fc0/client/render/Textures
+	FIELD field_71 TILE_ATLAS I
+	FIELD field_72 VERSION I
+	FIELD field_73 WATER_OVERLAY I
+	METHOD method_57 load (Ljava/lang/String;Z)I
 		ARG 0 location
 		ARG 1 failSafely

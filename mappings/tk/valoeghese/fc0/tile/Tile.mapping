@@ -1,20 +1,20 @@
-CLASS N tk/valoeghese/fc0/tile/Tile
-	FIELD a id B
-	FIELD a textureX I
-	FIELD a AIR LN;
-	FIELD a tiles [LN;
-	FIELD b textureY I
-	FIELD b STONE LN;
-	FIELD c GRASS LN;
-	FIELD d LEAVES LN;
-	FIELD e LOG LN;
-	FIELD f WATER LN;
-	FIELD g SAND LN;
+CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
+	FIELD field_27 id B
+	FIELD field_28 textureX I
+	FIELD field_29 AIR Ltk/valoeghese/fc0/class_14;
+	FIELD field_31 tiles [Ltk/valoeghese/fc0/class_14;
+	FIELD field_32 textureY I
+	FIELD field_33 STONE Ltk/valoeghese/fc0/class_14;
+	FIELD field_35 GRASS Ltk/valoeghese/fc0/class_14;
+	FIELD field_36 LEAVES Ltk/valoeghese/fc0/class_14;
+	FIELD field_37 LOG Ltk/valoeghese/fc0/class_14;
+	FIELD field_38 WATER Ltk/valoeghese/fc0/class_14;
+	FIELD field_39 SAND Ltk/valoeghese/fc0/class_14;
 	METHOD <init> (IIIFF)V
 		ARG 1 id
 		ARG 2 textureX
 		ARG 3 textureY
-	METHOD a getTextureY (I)I
+	METHOD method_32 getTextureY (I)I
 		ARG 1 face
-	METHOD b getTextureX (I)I
+	METHOD method_35 getTextureX (I)I
 		ARG 1 face

@@ -1,6 +1,6 @@
-CLASS r tk/valoeghese/fc0/math/Vec2i
-	FIELD a x I
-	FIELD b y I
+CLASS tk/valoeghese/fc0/class_33 tk/valoeghese/fc0/math/Vec2i
+	FIELD field_92 x I
+	FIELD field_93 y I
 	METHOD <init> (II)V
 		ARG 1 x
 		ARG 2 y

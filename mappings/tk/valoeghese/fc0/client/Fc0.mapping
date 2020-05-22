@@ -1,6 +1,6 @@
-CLASS tk/valoeghese/fc0/client/a tk/valoeghese/fc0/client/Fc0
-	FIELD a world LF;
-	FIELD a projection Lorg/joml/Matrix4f;
-	FIELD a window Lq;
-	FIELD a player Ltk/valoeghese/fc0/client/b;
-	FIELD b guiProjection Lorg/joml/Matrix4f;
+CLASS tk/valoeghese/fc0/class_36 tk/valoeghese/fc0/client/Fc0
+	FIELD field_107 world Ltk/valoeghese/fc0/class_6;
+	FIELD field_109 projection Lorg/joml/Matrix4f;
+	FIELD field_110 window Ltk/valoeghese/fc0/class_32;
+	FIELD field_111 player Ltk/valoeghese/fc0/class_37;
+	FIELD field_114 guiProjection Lorg/joml/Matrix4f;

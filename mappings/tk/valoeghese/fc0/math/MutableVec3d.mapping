@@ -1,19 +1,19 @@
-CLASS u tk/valoeghese/fc0/math/MutableVec3d
-	METHOD a setY (D)Lu;
-		ARG 1 y
-	METHOD a set (DDD)Lu;
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
-	METHOD a set (Lz;)Lu;
+CLASS tk/valoeghese/fc0/class_40 tk/valoeghese/fc0/math/MutableVec3d
+	METHOD method_100 set (Ltk/valoeghese/fc0/class_45;)Ltk/valoeghese/fc0/class_40;
 		ARG 1 other
-	METHOD b offsetY (D)Lu;
+	METHOD method_101 offsetY (D)Ltk/valoeghese/fc0/class_40;
 		ARG 1 y
-	METHOD b offset (DDD)Lu;
+	METHOD method_102 offset (DDD)Ltk/valoeghese/fc0/class_40;
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD c scale (DDD)Lu;
+	METHOD method_103 scale (DDD)Ltk/valoeghese/fc0/class_40;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_98 setY (D)Ltk/valoeghese/fc0/class_40;
+		ARG 1 y
+	METHOD method_99 set (DDD)Ltk/valoeghese/fc0/class_40;
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z

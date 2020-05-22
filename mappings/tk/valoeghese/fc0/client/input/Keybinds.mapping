@@ -1,11 +1,11 @@
-CLASS tk/valoeghese/fc0/client/d tk/valoeghese/fc0/client/input/Keybinds
-	FIELD a MOVE_FORWARDS Ld;
-	FIELD b MOVE_BACKWARDS Ld;
-	FIELD c MOVE_LEFT Ld;
-	FIELD d MOVE_RIGHT Ld;
-	FIELD e ESCAPE Ld;
-	FIELD f JUMP Ld;
-	FIELD g RUN Ld;
-	FIELD h DESTROY Ld;
-	FIELD i INTERACT Ld;
-	FIELD j RESPAWN Ld;
+CLASS tk/valoeghese/fc0/class_39 tk/valoeghese/fc0/client/input/Keybinds
+	FIELD field_126 MOVE_FORWARDS Ltk/valoeghese/fc0/class_19;
+	FIELD field_127 MOVE_BACKWARDS Ltk/valoeghese/fc0/class_19;
+	FIELD field_128 MOVE_LEFT Ltk/valoeghese/fc0/class_19;
+	FIELD field_129 MOVE_RIGHT Ltk/valoeghese/fc0/class_19;
+	FIELD field_130 ESCAPE Ltk/valoeghese/fc0/class_19;
+	FIELD field_131 JUMP Ltk/valoeghese/fc0/class_19;
+	FIELD field_132 RUN Ltk/valoeghese/fc0/class_19;
+	FIELD field_133 DESTROY Ltk/valoeghese/fc0/class_19;
+	FIELD field_134 INTERACT Ltk/valoeghese/fc0/class_19;
+	FIELD field_135 RESPAWN Ltk/valoeghese/fc0/class_19;

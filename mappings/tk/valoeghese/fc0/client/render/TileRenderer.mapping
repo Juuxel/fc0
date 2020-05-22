@@ -1,8 +1,8 @@
-CLASS h tk/valoeghese/fc0/client/render/TileRenderer
-	FIELD a textureX I
-	FIELD a pos Lorg/joml/Vector3f;
-	FIELD b textureY I
-	METHOD <init> (Lorg/joml/Vector3f;ILN;F)V
+CLASS tk/valoeghese/fc0/class_23 tk/valoeghese/fc0/client/render/TileRenderer
+	FIELD field_67 textureX I
+	FIELD field_68 pos Lorg/joml/Vector3f;
+	FIELD field_69 textureY I
+	METHOD <init> (Lorg/joml/Vector3f;ILtk/valoeghese/fc0/class_14;F)V
 		ARG 1 pos
 		ARG 3 tile
-	METHOD a apply (Lj;)V
+	METHOD method_54 apply (Ltk/valoeghese/fc0/class_25;)V

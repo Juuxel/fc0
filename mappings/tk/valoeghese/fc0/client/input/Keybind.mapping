@@ -1,21 +1,21 @@
-CLASS d tk/valoeghese/fc0/client/input/Keybind
-	FIELD a audioDevice J
-	FIELD a name Ljava/lang/String;
-	FIELD a terrainShader Lm;
-	FIELD a down Z
-	FIELD b audioContext J
-	FIELD b guiShader Lm;
-	FIELD b pressed Z
+CLASS tk/valoeghese/fc0/class_19 tk/valoeghese/fc0/client/input/Keybind
+	FIELD field_48 audioDevice J
+	FIELD field_49 name Ljava/lang/String;
+	FIELD field_50 terrainShader Ltk/valoeghese/fc0/class_28;
+	FIELD field_51 down Z
+	FIELD field_52 audioContext J
+	FIELD field_53 guiShader Ltk/valoeghese/fc0/class_28;
+	FIELD field_54 pressed Z
 	METHOD <init> (Ljava/lang/String;IZ)V
 		ARG 1 name
 		ARG 2 defaultKey
 		ARG 3 mouse
-	METHOD a initAudio ()V
-	METHOD a isDown ()Z
-	METHOD a signum (D)I
+	METHOD method_42 initAudio ()V
+	METHOD method_43 isDown ()Z
+	METHOD method_44 signum (D)I
 		ARG 0 n
-	METHOD a update (I)V
+	METHOD method_46 update (I)V
 		ARG 1 action
-	METHOD a storeTexture (Ljava/awt/image/BufferedImage;)I
+	METHOD method_47 storeTexture (Ljava/awt/image/BufferedImage;)I
 		ARG 0 image
-	METHOD b isPressed ()Z
+	METHOD method_48 isPressed ()Z

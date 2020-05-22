@@ -1,23 +1,23 @@
-CLASS l tk/valoeghese/fc0/client/render/Camera
-	FIELD a pitch F
-	FIELD a view Lorg/joml/Matrix4f;
-	FIELD a pos Lorg/joml/Vector3f;
-	FIELD b yaw F
-	FIELD c MAX_ROTATION F
-	METHOD a getYaw ()F
-	METHOD a wrapYaw ()V
-	METHOD a addYaw (F)V
+CLASS tk/valoeghese/fc0/class_27 tk/valoeghese/fc0/client/render/Camera
+	FIELD field_74 pitch F
+	FIELD field_75 view Lorg/joml/Matrix4f;
+	FIELD field_76 pos Lorg/joml/Vector3f;
+	FIELD field_77 yaw F
+	FIELD field_78 MAX_ROTATION F
+	METHOD method_58 getYaw ()F
+	METHOD method_59 wrapYaw ()V
+	METHOD method_60 addYaw (F)V
 		ARG 1 yaw
-	METHOD a setPos (FFF)V
+	METHOD method_61 setPos (FFF)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD a render (Ln;Lorg/joml/Matrix4f;)V
+	METHOD method_62 render (Ltk/valoeghese/fc0/class_29;Lorg/joml/Matrix4f;)V
 		ARG 1 renderer
 		ARG 2 transform
-	METHOD a offset (Lorg/joml/Vector3f;)V
+	METHOD method_63 offset (Lorg/joml/Vector3f;)V
 		ARG 1 pos
-	METHOD b getPitch ()F
-	METHOD b refresh ()V
-	METHOD b addPitch (F)V
+	METHOD method_64 getPitch ()F
+	METHOD method_65 refresh ()V
+	METHOD method_66 addPitch (F)V
 		ARG 1 pitch
