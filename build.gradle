@@ -60,6 +60,7 @@ task deobf(type: DeobfuscateTask) {
     inputJar = gameJar
     outputJar = file("build/deobf-${gameJar.name}")
     libraries = configurations.runtimeClasspath
+    outputMappings = file("build/mappings.tiny")
 }
 
 task decompile(type: DecompileTask, dependsOn: deobf) {
@@ -99,6 +100,24 @@ task generatePatches(type: GeneratePatchesTask) {
 task setup(dependsOn: [decompile, extractResources]) {
     group = "fc0"
 }
+
+task diffJar(type: DiffJarTask, dependsOn: [deobf, generatePatches, jar]) {
+    group = "fc0"
+    originJar = deobf.outputJar
+    patches = files(applyPatches.patches, generatePatches.patchOutput)
+    modifiedJar = jar.outputs.files.singleFile
+    output = file("build/libs/${archivesBaseName}-${version}-diff.jar")
+}
+
+task obfuscate(type: ObfuscateTask, dependsOn: [deobf, diffJar]) {
+    group = "fc0"
+    inputJar = diffJar.output
+    mappings = deobf.outputMappings
+    libraries = configurations.runtimeClasspath
+    outputJar = file("build/libs/${archivesBaseName}-${version}-diff-obf.jar")
+}
+
+build.dependsOn obfuscate
 
 task enigma() {
     group = "fc0"
