@@ -1,0 +1,12 @@
+--- a/tk\valoeghese\fc0\client\render\TerrainRenderer.java
++++ b/tk\valoeghese\fc0\client\render\TerrainRenderer.java
+@@ -13,7 +13,7 @@
+ extends WorldRenderer
+ implements WorldTesselator {
+-    public TerrainRenderer(List object) {
++    public TerrainRenderer(List<TileRenderer> renderers) {
+         super(35048, Keybind.terrainShader);
+-        object = object.iterator();
++        java.util.Iterator<TileRenderer> object = renderers.iterator();
+         while (object.hasNext()) {
+             TileRenderer tileRenderer = (TileRenderer)object.next();

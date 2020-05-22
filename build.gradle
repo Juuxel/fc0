@@ -96,7 +96,7 @@ task generatePatches(type: GeneratePatchesTask) {
     patchOutput = file('src/main/diff')
 }
 
-task setup(dependsOn: [decompile, extractResources, applyPatches]) {
+task setup(dependsOn: [decompile, extractResources]) {
     group = "fc0"
 }
 
