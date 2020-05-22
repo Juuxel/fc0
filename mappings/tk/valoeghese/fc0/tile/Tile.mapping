@@ -1,0 +1,6 @@
+CLASS N tk/valoeghese/fc0/tile/Tile
+	FIELD a id B
+	FIELD a AIR LN;
+	FIELD a tiles [LN;
+	METHOD <init> (IIIFF)V
+		ARG 1 id

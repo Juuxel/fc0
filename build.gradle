@@ -1,0 +1,92 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'tk.valoeghese.fc0.client.Main'
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+group 'tk.valoeghese'
+version '0.1.4'
+
+repositories {
+    mavenCentral()
+    
+    maven {
+        name = "FabricMC"
+        url = "https://maven.fabricmc.net"
+    }
+}
+
+configurations {
+    enigma
+}
+
+def gameJar = project.file("2fc0f18-${version}.jar")
+def mappingsDir = project.file('mappings')
+
+dependencies {
+    //implementation files(gameJar)
+
+    // lwjgl
+    implementation "org.lwjgl:lwjgl:${project.lwjgl_version}"
+    implementation "org.lwjgl:lwjgl-assimp:${project.lwjgl_version}"
+    //implementation "org.lwjgl:lwjgl-jawt:${project.lwjgl_version}"
+    implementation "org.lwjgl:lwjgl-opengl:${project.lwjgl_version}"
+    implementation "org.lwjgl:lwjgl-glfw:${project.lwjgl_version}"
+    implementation "org.lwjgl:lwjgl-openal:${project.lwjgl_version}"
+    implementation "org.lwjgl:lwjgl-stb:${project.lwjgl_version}"
+    // joml
+    implementation "org.joml:joml:${project.joml_version}"
+    // fastutil
+    implementation "it.unimi.dsi:fastutil:${project.fastutil_version}"
+    // lwjgl natives
+    runtimeOnly "org.lwjgl:lwjgl:${project.lwjgl_version}:${project.natives}"
+    runtimeOnly "org.lwjgl:lwjgl-assimp:${project.lwjgl_version}:${project.natives}"
+    runtimeOnly "org.lwjgl:lwjgl-opengl:${project.lwjgl_version}:${project.natives}"
+    runtimeOnly "org.lwjgl:lwjgl-glfw:${project.lwjgl_version}:${project.natives}"
+    runtimeOnly "org.lwjgl:lwjgl-openal:${project.lwjgl_version}:${project.natives}"
+    runtimeOnly "org.lwjgl:lwjgl-stb:${project.lwjgl_version}:${project.natives}"
+
+    compileOnly "com.google.code.findbugs:jsr305:3.0.2"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    
+    enigma "cuchaz:enigma:$project.enigma_version"
+}
+
+task deobf(type: DeobfuscateTask) {
+    group = "build setup"
+    mappings = mappingsDir
+    inputJar = gameJar
+    outputJar = file("build/deobf-${gameJar.name}")
+}
+
+task decompile(type: DecompileTask, dependsOn: deobf) {
+    group = "build setup"
+    input = deobf.outputJar
+    output = file('src/main/java')
+}
+
+task extractResources(type: ExtractResourcesTask) {
+    group = "build setup"
+    input = gameJar
+    output = file('src/main/resources')
+}
+
+task enigma() {
+    doLast {
+        ant.setLifecycleLogLevel "WARN"
+        ant.java(
+            classname: 'cuchaz.enigma.Main',
+            classpath: configurations.enigma.asPath,
+            fork: true,
+            spawn: true
+        ) {
+            jvmarg(value: "-Xmx2048m")
+            arg(value: '-jar')
+            arg(value: gameJar.getAbsolutePath())
+            arg(value: '-mappings')
+            arg(value: mappingsDir.getAbsolutePath())
+        }
+    }
+}

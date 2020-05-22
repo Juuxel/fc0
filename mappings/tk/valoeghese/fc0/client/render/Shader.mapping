@@ -1,0 +1,9 @@
+CLASS m tk/valoeghese/fc0/client/render/Shader
+	FIELD a program I
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 vertex
+		ARG 2 fragment
+	METHOD a enableBlend ()V
+	METHOD a initWindow (Lq;)V
+		ARG 0 window
+	METHOD b apply ()V

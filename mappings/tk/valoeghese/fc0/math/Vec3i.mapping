@@ -1,0 +1,11 @@
+CLASS C tk/valoeghese/fc0/math/Vec3i
+	FIELD a x I
+	FIELD b y I
+	FIELD c z I
+	METHOD <init> (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD <init> (Lz;)V
+		ARG 1 vec
+	METHOD a up ()LC;

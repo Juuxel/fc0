@@ -1,0 +1,19 @@
+CLASS u tk/valoeghese/fc0/math/MutableVec3d
+	METHOD a setY (D)Lu;
+		ARG 1 y
+	METHOD a set (DDD)Lu;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a set (Lz;)Lu;
+		ARG 1 other
+	METHOD b offsetY (D)Lu;
+		ARG 1 y
+	METHOD b offset (DDD)Lu;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD c scale (DDD)Lu;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z

@@ -1,0 +1,10 @@
+CLASS x tk/valoeghese/fc0/util/OrderedList
+	COMMENT This is supposedly an ordered list, though I'm not sure what's ordered about it...
+	FIELD a indexer Ly;
+	METHOD <init> (Ly;)V
+		ARG 1 indexer
+	METHOD add (ILjava/lang/Object;)V
+		ARG 1 index
+		ARG 2 element
+	METHOD add (Ljava/lang/Object;)Z
+		ARG 1 element

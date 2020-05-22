@@ -1,0 +1,6 @@
+CLASS A tk/valoeghese/fc0/math/HitResult_maybe
+	FIELD a pos LC;
+	FIELD a side Ls;
+	METHOD <init> (LC;Ls;)V
+		ARG 1 pos
+		ARG 2 side

@@ -1,0 +1,12 @@
+repositories {
+    mavenCentral()
+    maven {
+        name = "fabric"
+        url = "https://maven.fabricmc.net"
+    }
+}
+
+dependencies {
+    implementation "org.benf:cfr:0.150"
+    implementation "cuchaz:enigma:$enigma"
+}

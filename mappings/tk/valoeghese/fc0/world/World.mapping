@@ -1,0 +1,6 @@
+CLASS F tk/valoeghese/fc0/world/World
+	FIELD a chunks [LD;
+	FIELD b chunkSize I
+	METHOD <init> (J)V
+		ARG 1 seed
+	METHOD a populate ()V

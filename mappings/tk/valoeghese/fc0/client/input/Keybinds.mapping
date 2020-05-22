@@ -1,0 +1,11 @@
+CLASS tk/valoeghese/fc0/client/d tk/valoeghese/fc0/client/input/Keybinds
+	FIELD a MOVE_FORWARDS Ld;
+	FIELD b MOVE_BACKWARDS Ld;
+	FIELD c MOVE_LEFT Ld;
+	FIELD d MOVE_RIGHT Ld;
+	FIELD e ESCAPE Ld;
+	FIELD f JUMP Ld;
+	FIELD g RUN Ld;
+	FIELD h DESTROY Ld;
+	FIELD i INTERACT Ld;
+	FIELD j RESPAWN Ld;

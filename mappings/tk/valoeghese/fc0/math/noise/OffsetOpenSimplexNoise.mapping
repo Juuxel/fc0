@@ -1,0 +1,5 @@
+CLASS v tk/valoeghese/fc0/math/noise/OffsetOpenSimplexNoise
+	FIELD a offsetX D
+	FIELD b offsetY D
+	METHOD <init> (Ljava/util/Random;)V
+		ARG 1 random

@@ -1,0 +1,17 @@
+CLASS z tk/valoeghese/fc0/math/Vec3d
+	FIELD a x D
+	FIELD b y D
+	FIELD c z D
+	METHOD <init> (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a getX ()D
+	METHOD a add (DDD)Lz;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD a add (Lz;)Lz;
+		ARG 1 other
+	METHOD b getY ()D
+	METHOD c getZ ()D

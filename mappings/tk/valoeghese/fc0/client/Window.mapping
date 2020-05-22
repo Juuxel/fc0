@@ -1,0 +1,8 @@
+CLASS q tk/valoeghese/fc0/client/Window
+	FIELD a ratio F
+	FIELD a width I
+	FIELD a pointer J
+	FIELD b height I
+	METHOD <init> (II)V
+		ARG 1 width
+		ARG 2 height

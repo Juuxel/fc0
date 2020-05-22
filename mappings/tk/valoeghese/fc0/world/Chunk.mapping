@@ -1,0 +1,13 @@
+CLASS D tk/valoeghese/fc0/world/Chunk
+	FIELD a width I
+	FIELD a world LE;
+	FIELD a tiles [B
+	FIELD b height I
+	METHOD <init> (LE;II[B)V
+		ARG 1 world
+		ARG 2 x
+		ARG 3 y
+	METHOD a encode (III)I
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z

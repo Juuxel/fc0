@@ -1,0 +1,10 @@
+/src/
+build/
+*.jar
+out/
+.idea/
+*.ipr
+*.iml
+*.iws
+.gradle/
+*.zip
