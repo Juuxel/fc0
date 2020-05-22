@@ -1,0 +1,8 @@
+root = true
+
+[*]
+indent_size = 4
+indent_style = space
+
+[{*.java,*.groovy}]
+ij_continuation_indent_size = 4

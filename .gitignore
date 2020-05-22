@@ -8,3 +8,4 @@ out/
 *.iws
 .gradle/
 *.zip
+!gradle/wrapper/gradle-wrapper.jar

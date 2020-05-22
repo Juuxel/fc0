@@ -55,22 +55,27 @@ dependencies {
 }
 
 task deobf(type: DeobfuscateTask) {
-    group = "build setup"
+    group = "fc0"
     mappings = mappingsDir
     inputJar = gameJar
     outputJar = file("build/deobf-${gameJar.name}")
 }
 
 task decompile(type: DecompileTask, dependsOn: deobf) {
-    group = "build setup"
+    group = "fc0"
     input = deobf.outputJar
     output = file('src/main/java')
+    libraries = configurations.runtimeClasspath
 }
 
 task extractResources(type: ExtractResourcesTask) {
-    group = "build setup"
+    group = "fc0"
     input = gameJar
     output = file('src/main/resources')
+}
+
+task setup(dependsOn: [decompile, extractResources]) {
+    group = "fc0"
 }
 
 task enigma() {

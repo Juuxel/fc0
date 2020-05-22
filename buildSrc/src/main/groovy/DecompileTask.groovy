@@ -2,29 +2,39 @@ import org.benf.cfr.reader.api.CfrDriver
 import org.benf.cfr.reader.api.OutputSinkFactory
 import org.benf.cfr.reader.api.SinkReturns
 import org.gradle.api.DefaultTask
-import org.gradle.api.tasks.Input
+import org.gradle.api.file.FileCollection
+import org.gradle.api.tasks.InputFile
+import org.gradle.api.tasks.InputFiles
+import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 
 import java.nio.charset.StandardCharsets
-import java.nio.file.FileSystem
-import java.nio.file.FileSystems
 import java.nio.file.Files
 
 class DecompileTask extends DefaultTask {
-    @Input
+    @InputFile
     File input
 
-    @Input
+    @InputFiles
+    FileCollection libraries
+
+    @OutputDirectory
     File output
 
     @TaskAction
     def run() {
+        output.deleteDir()
         output.mkdirs()
 
         def driver = new CfrDriver.Builder()
-                .withOptions(renamedupmembers: 'true')
-                .withOutputSink(new SinkFactory())
-                .build()
+            .withOptions(
+                renamedupmembers: 'true',
+                usenametable: 'false',
+                sugarenums: 'true',
+                extraclasspath: libraries.collect { it.absolutePath }.join(File.pathSeparator)
+            )
+            .withOutputSink(new SinkFactory())
+            .build()
         driver.analyse([input.getAbsolutePath()])
     }
 
@@ -45,8 +55,8 @@ class DecompileTask extends DefaultTask {
         @Override
         <T> Sink<T> getSink(SinkType sinkType, SinkClass sinkClass) {
             return (sinkClass == SinkClass.DECOMPILED && sinkType == SinkType.JAVA)
-                    ? { data -> accept(data as SinkReturns.Decompiled) }
-                    : null
+                ? { data -> accept(data as SinkReturns.Decompiled) }
+                : null
         }
     }
 }
