@@ -103,21 +103,28 @@ task applyPatches(type: ApplyPatchesTask) {
     userSources = decompile.output
 }
 
-task generatePatches(type: GeneratePatchesTask) {
+task generateModPatches(type: GeneratePatchesTask) {
     group = "fc0"
     cleanSources = applyPatches.intermediateSources
     revisedSources = applyPatches.userSources
     patchOutput = file('src/main/diff')
 }
 
+task generateFullPatches(type: GeneratePatchesTask) {
+    group = "fc0"
+    cleanSources = applyPatches.cleanSources
+    revisedSources = applyPatches.userSources
+    patchOutput = file('build/full-diff')
+}
+
 task setup(dependsOn: [decompile, extractResources]) {
     group = "fc0"
 }
 
-task diffJar(type: DiffJarTask, dependsOn: [deobf, generatePatches, jar]) {
+task diffJar(type: DiffJarTask, dependsOn: [deobf, generateModPatches, jar]) {
     group = "fc0"
     originJar = deobf.outputJar
-    patches = files(applyPatches.patches, generatePatches.patchOutput)
+    patches = files(applyPatches.patches, generateModPatches.patchOutput)
     modifiedJar = jar.outputs.files.singleFile
     output = file("build/libs/${archivesBaseName}-${version}-diff-named.jar")
 }
