@@ -1,0 +1,8 @@
+CLASS h tk/valoeghese/fc0/client/render/TileRenderer
+	FIELD a textureX I
+	FIELD a pos Lorg/joml/Vector3f;
+	FIELD b textureY I
+	METHOD <init> (Lorg/joml/Vector3f;ILN;F)V
+		ARG 1 pos
+		ARG 3 tile
+	METHOD a apply (Lj;)V

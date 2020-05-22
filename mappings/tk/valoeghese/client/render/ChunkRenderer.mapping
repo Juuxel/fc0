@@ -1,0 +1,23 @@
+CLASS g tk/valoeghese/client/render/ChunkRenderer
+	FIELD a x I
+	FIELD a chunk LG;
+	FIELD a terrainRenderer Li;
+	FIELD a transform Lorg/joml/Matrix4f;
+	FIELD a tiles [B
+	FIELD b z I
+	FIELD b waterRenderer Li;
+	METHOD <init> (LD;[BII)V
+		ARG 1 chunk
+		ARG 2 tiles
+		ARG 3 x
+		ARG 4 z
+	METHOD a refresh ()V
+	METHOD a setTile (IB)V
+		ARG 1 index
+		ARG 2 tile
+	METHOD a encode (III)I
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD a render (Ll;)V
+		ARG 1 camera

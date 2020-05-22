@@ -13,3 +13,5 @@ CLASS H tk/valoeghese/fc0/world/TileView
 	METHOD a setTile (LC;B)V
 		ARG 1 pos
 		ARG 2 tile
+	METHOD b setPlayer (Ltk/valoeghese/fc0/client/b;)V
+		ARG 1 player

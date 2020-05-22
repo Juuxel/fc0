@@ -1,0 +1,16 @@
+CLASS I tk/valoeghese/fc0/world/ChunkGenerator
+	FIELD a noise Lv;
+	FIELD b ridgedNoise Lv;
+	FIELD c thirdNoise Lv;
+	METHOD a evalNoise (DD)D
+		ARG 0 x
+		ARG 2 y
+	METHOD a generateChunk (LE;IIJ)LD;
+		ARG 0 world
+		ARG 1 x
+		ARG 2 z
+		ARG 3 seed
+	METHOD a decorate (LH;LD;Ljava/util/Random;)V
+		ARG 0 world
+		ARG 1 chunk
+		ARG 2 random

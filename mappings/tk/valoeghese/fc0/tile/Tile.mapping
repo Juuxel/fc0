@@ -1,6 +1,20 @@
 CLASS N tk/valoeghese/fc0/tile/Tile
 	FIELD a id B
+	FIELD a textureX I
 	FIELD a AIR LN;
 	FIELD a tiles [LN;
+	FIELD b textureY I
+	FIELD b STONE LN;
+	FIELD c GRASS LN;
+	FIELD d LEAVES LN;
+	FIELD e LOG LN;
+	FIELD f WATER LN;
+	FIELD g SAND LN;
 	METHOD <init> (IIIFF)V
 		ARG 1 id
+		ARG 2 textureX
+		ARG 3 textureY
+	METHOD a getTextureY (I)I
+		ARG 1 face
+	METHOD b getTextureX (I)I
+		ARG 1 face

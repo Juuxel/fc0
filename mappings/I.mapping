@@ -1,8 +1,0 @@
-CLASS I
-	METHOD a evalNoise (DD)D
-		ARG 0 x
-		ARG 2 y
-	METHOD a generateChunk (LE;IIJ)LD;
-		ARG 1 x
-		ARG 2 z
-		ARG 3 seed

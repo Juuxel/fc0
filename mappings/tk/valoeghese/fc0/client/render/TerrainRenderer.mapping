@@ -1,0 +1,3 @@
+CLASS i tk/valoeghese/fc0/client/render/TerrainRenderer
+	METHOD <init> (Ljava/util/List;)V
+		ARG 1 tileRenderers
