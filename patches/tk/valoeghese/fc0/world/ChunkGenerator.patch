@@ -1,5 +1,5 @@
---- a/tk\valoeghese\fc0\world\ChunkGenerator.java
-+++ b/tk\valoeghese\fc0\world\ChunkGenerator.java
+--- a/tk/valoeghese/fc0/world/ChunkGenerator.java
++++ b/tk/valoeghese/fc0/world/ChunkGenerator.java
 @@ -40,5 +40,5 @@
                  int n8 = (int)(2.1 * thirdNoise.eval((double)n5 / 21.0, (double)n6 / 21.0));
                  double d3 = noise.eval((double)n5 / 86.0, (double)n6 / 86.0);

@@ -1,5 +1,5 @@
---- a/tk\valoeghese\fc0\world\World.java
-+++ b/tk\valoeghese\fc0\world\World.java
+--- a/tk/valoeghese/fc0/world/World.java
++++ b/tk/valoeghese/fc0/world/World.java
 @@ -40,5 +40,5 @@
          this.chunks = new Chunk[this.chunkSize * this.chunkSize];
          this.var_java_util_Random_a = new Random(l);

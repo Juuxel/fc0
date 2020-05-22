@@ -1,5 +1,5 @@
---- a/tk\valoeghese\fc0\client\input\MouseInputHandler.java
-+++ b/tk\valoeghese\fc0\client\input\MouseInputHandler.java
+--- a/tk/valoeghese/fc0/client/input/MouseInputHandler.java
++++ b/tk/valoeghese/fc0/client/input/MouseInputHandler.java
 @@ -10,22 +10,13 @@
  import tk.valoeghese.fc0.client.input.Keybind;
  

@@ -35,7 +35,8 @@ class GeneratePatchesTask extends DefaultTask {
                 def cleanLines = Files.readAllLines(it)
                 def revisedLines = Files.readAllLines(revised)
                 def patch = DiffUtils.diff(cleanLines, revisedLines)
-                def patchLines = UnifiedDiffUtils.generateUnifiedDiff("a/$relative", "b/$relative", cleanLines, patch, contextSize)
+                def filePath = relative.toString().replace(File.separator, "/")
+                def patchLines = UnifiedDiffUtils.generateUnifiedDiff("a/$filePath", "b/$filePath", cleanLines, patch, contextSize)
 
                 if (!patchLines.isEmpty()) {
                     def sourceName = relative.toString()

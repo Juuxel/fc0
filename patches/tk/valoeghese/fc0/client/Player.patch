@@ -1,5 +1,5 @@
---- a/tk\valoeghese\fc0\client\Player.java
-+++ b/tk\valoeghese\fc0\client\Player.java
+--- a/tk/valoeghese/fc0/client/Player.java
++++ b/tk/valoeghese/fc0/client/Player.java
 @@ -16,4 +16,7 @@
  import tk.valoeghese.fc0.world.TileView;
  

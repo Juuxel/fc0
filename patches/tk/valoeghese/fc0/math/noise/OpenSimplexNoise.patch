@@ -1,5 +1,5 @@
---- a/tk\valoeghese\fc0\math\noise\OpenSimplexNoise.java
-+++ b/tk\valoeghese\fc0\math\noise\OpenSimplexNoise.java
+--- a/tk/valoeghese/fc0/math/noise/OpenSimplexNoise.java
++++ b/tk/valoeghese/fc0/math/noise/OpenSimplexNoise.java
 @@ -1,154 +1,2141 @@
 +package tk.valoeghese.fc0.math.noise;
 +

@@ -1,5 +1,5 @@
---- a/tk\valoeghese\fc0\client\render\WorldRenderer.java
-+++ b/tk\valoeghese\fc0\client\render\WorldRenderer.java
+--- a/tk/valoeghese/fc0/client/render/WorldRenderer.java
++++ b/tk/valoeghese/fc0/client/render/WorldRenderer.java
 @@ -21,5 +21,5 @@
      private int vertexCount = 0;
      private IntList indices = new IntArrayList();
