@@ -1,4 +1,4 @@
-CLASS g tk/valoeghese/client/render/ChunkRenderer
+CLASS g tk/valoeghese/fc0/client/render/ChunkRenderer
 	FIELD a x I
 	FIELD a chunk LG;
 	FIELD a terrainRenderer Li;
