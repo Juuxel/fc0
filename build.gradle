@@ -121,10 +121,10 @@ task setup(dependsOn: [decompile, extractResources]) {
     group = "fc0"
 }
 
-task diffJar(type: DiffJarTask, dependsOn: [deobf, generateModPatches, jar]) {
+task diffJar(type: DiffJarTask, dependsOn: [deobf, generateFullPatches, jar]) {
     group = "fc0"
     originJar = deobf.outputJar
-    patches = files(applyPatches.patches, generateModPatches.patchOutput)
+    patches = files(applyPatches.patches, generateFullPatches.patchOutput)
     modifiedJar = jar.outputs.files.singleFile
     output = file("build/libs/${archivesBaseName}-${version}-diff-named.jar")
 }
@@ -139,7 +139,14 @@ task obfuscate(type: RemapJarTask, dependsOn: [deobf, diffJar]) {
     to = "official"
 }
 
-build.dependsOn obfuscate
+task fullPatchZip(type: Zip, dependsOn: generateFullPatches) {
+    group = "fc0"
+    from fileTree(generateFullPatches.patchOutput)
+    archiveName "${archivesBaseName}-${project.version}-patches.zip"
+    destinationDir file('build/libs')
+}
+
+build.dependsOn obfuscate, fullPatchZip
 
 task enigma(dependsOn: intermediary) {
     group = "fc0"

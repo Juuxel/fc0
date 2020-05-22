@@ -40,14 +40,24 @@ class DiffJarTask extends DefaultTask {
                     .forEach {
                         def relative = root.relativize(it)
                         def target = diffFs.getPath(relative.toString())
+                        boolean shouldCopy
+                        if (it.toString().endsWith(".class")) {
+                            def hasPatch = patches.any {
+                                def sourceName = relative.toString()
+                                def patchName = sourceName.substring(0, sourceName.length() - ".class".length()) + ".patch"
+                                Files.exists(it.toPath().resolve(patchName))
+                            }
 
-                        def hasPatch = patches.any {
-                            def sourceName = relative.toString()
-                            def patchName = sourceName.substring(0, sourceName.length() - ".class".length()) + ".patch"
-                            Files.exists(it.toPath().resolve(patchName))
+                            shouldCopy = hasPatch || Files.notExists(originFs.getPath(relative.toString()))
+                        } else { // Resources: check equality
+                            def origin = originFs.getPath(relative.toString())
+                            byte[] bytesA = Files.readAllBytes(origin)
+                            byte[] bytesB = Files.readAllBytes(it)
+
+                            shouldCopy = !Arrays.equals(bytesA, bytesB)
                         }
 
-                        if (hasPatch || Files.notExists(originFs.getPath(relative.toString()))) {
+                        if (shouldCopy) {
                             def parent = target.parent
                             if (parent != null) Files.createDirectories(parent)
                             Files.copy(it, target)
