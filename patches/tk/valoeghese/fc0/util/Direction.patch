@@ -1,0 +1,54 @@
+--- a/tk\valoeghese\fc0\util\Direction.java
++++ b/tk\valoeghese\fc0\util\Direction.java
+@@ -8,34 +8,24 @@
+ import tk.valoeghese.fc0.math.Vec3i;
+ 
+-public final class Direction
+-extends Enum
++public enum Direction
+ implements UnaryOperator {
+-    public static final /* enum */ Direction NORTH = new Direction("NORTH", 0, 0, 0, 1);
+-    public static final /* enum */ Direction SOUTH = new Direction("SOUTH", 1, 0, 0, -1);
+-    public static final /* enum */ Direction EAST = new Direction("EAST", 2, 1, 0, 0);
+-    public static final /* enum */ Direction WEST = new Direction("WEST", 3, -1, 0, 0);
+-    public static final /* enum */ Direction UP = new Direction("UP", 4, 0, 1, 0);
+-    public static final /* enum */ Direction DOWN = new Direction("DOWN", 5, 0, -1, 0);
++    NORTH(0, 0, 1),
++    SOUTH(0, 0, -1),
++    EAST(1, 0, 0),
++    WEST(-1, 0, 0),
++    UP(0, 1, 0),
++    DOWN(0, -1, 0);
+     private final int x;
+     private final int y;
+     private final int z;
+-    private static final /* synthetic */ Direction[] _VALUES;
+ 
+-    public static Direction[] values() {
+-        return (Direction[])_VALUES.clone();
+-    }
+-
+     /*
+      * WARNING - Possible parameter corruption
+      * WARNING - void declaration
+      */
+-    private Direction(int n3) {
+-        void var5_3;
+-        void var4_2;
+-        void var2_-1;
+-        void var1_-1;
+-        this.x = n3;
+-        this.y = var4_2;
+-        this.z = var5_3;
++    private Direction(int x, int y, int z) {
++        this.x = x;
++        this.y = y;
++        this.z = z;
+     }
+ 
+@@ -81,5 +71,4 @@
+ 
+     static {
+-        _VALUES = new Direction[]{NORTH, SOUTH, EAST, WEST, UP, DOWN};
+     }
+ }

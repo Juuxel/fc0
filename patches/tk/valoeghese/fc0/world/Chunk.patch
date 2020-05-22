@@ -1,0 +1,12 @@
+--- a/tk\valoeghese\fc0\world\Chunk.java
++++ b/tk\valoeghese\fc0\world\Chunk.java
+@@ -192,7 +192,6 @@
+             ((Player)object).chunk = this;
+             Player player = object;
+-            object = this;
+-            if (!((Chunk)object).players.contains(player)) {
+-                ((Chunk)object).players.add(player);
++            if (!players.contains(player)) {
++                players.add(player);
+             }
+         }

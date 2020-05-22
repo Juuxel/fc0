@@ -1,0 +1,32 @@
+--- a/tk\valoeghese\fc0\client\Fc0.java
++++ b/tk\valoeghese\fc0\client\Fc0.java
+@@ -62,5 +62,5 @@
+     @Override
+     public final void run() {
+-        Object object = this;
++        Fc0 object = this;
+         GL11.glEnable(2929);
+         GL11.glClearColor(0.3f, 0.5f, 0.9f, 1.0f);
+@@ -76,6 +76,5 @@
+         while (true) {
+             int n;
+-            object = this.window;
+-            if (!(!GLFW.glfwWindowShouldClose(((Window)object).pointer))) break;
++            if (!(!GLFW.glfwWindowShouldClose(window.pointer))) break;
+             long l = System.currentTimeMillis();
+             if (l >= this.var_long_a) {
+@@ -162,12 +161,10 @@
+                 System.out.println("[Render/Warn] Unusually long time! Rendering took: " + l4 + "ms. Note that this is normal if it merely happens on startup.");
+             }
+-            object = this.window;
+-            GLFW.glfwSwapBuffers(((Window)object).pointer);
++            GLFW.glfwSwapBuffers(window.pointer);
+             GLFW.glfwPollEvents();
+             if (!Keybinds.ESCAPE.isPressed()) continue;
+             GLFW.glfwSetWindowShouldClose(this.window.pointer, true);
+         }
+-        object = this.window;
+-        GLFW.glfwDestroyWindow(((Window)object).pointer);
++        GLFW.glfwDestroyWindow(window.pointer);
+     }
+ 

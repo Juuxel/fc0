@@ -1,0 +1,37 @@
+--- a/tk\valoeghese\fc0\client\input\MouseInputHandler.java
++++ b/tk\valoeghese\fc0\client\input\MouseInputHandler.java
+@@ -10,22 +10,13 @@
+ import tk.valoeghese.fc0.client.input.Keybind;
+ 
+-public final class MouseInputHandler
+-extends Enum
++public enum MouseInputHandler
+ implements GLFWMouseButtonCallbackI {
+-    public static final /* enum */ MouseInputHandler INSTANCE;
+-    static final Int2ObjectMap bindings;
++    INSTANCE;
++    static final Int2ObjectMap<List<Keybind>> bindings;
+ 
+-    /*
+-     * WARNING - Possible parameter corruption
+-     * WARNING - void declaration
+-     */
+-    private MouseInputHandler() {
+-        void var1_-1;
+-    }
+-
+     @Override
+     public final void invoke(long l, int n, int n2, int n3) {
+         if (n <= 7 && bindings.containsKey(n)) {
+-            for (Keybind keybind : (List)bindings.get(n)) {
++            for (Keybind keybind : bindings.get(n)) {
+                 keybind.update(n2);
+             }
+@@ -34,6 +25,5 @@
+ 
+     static {
+-        (new MouseInputHandler[1])[0] = INSTANCE = new MouseInputHandler("INSTANCE", 0);
+-        bindings = new Int2ObjectArrayMap();
++        bindings = new Int2ObjectArrayMap<>();
+     }
+ }

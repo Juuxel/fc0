@@ -1,0 +1,37 @@
+--- a/tk\valoeghese\fc0\client\input\KeyboardInputHandler.java
++++ b/tk\valoeghese\fc0\client\input\KeyboardInputHandler.java
+@@ -10,22 +10,13 @@
+ import tk.valoeghese.fc0.client.input.Keybind;
+ 
+-public final class KeyboardInputHandler
+-extends Enum
++public enum KeyboardInputHandler
+ implements GLFWKeyCallbackI {
+-    public static final /* enum */ KeyboardInputHandler INSTANCE;
+-    static final Int2ObjectMap bindings;
++    INSTANCE;
++    static final Int2ObjectMap<List<Keybind>> bindings;
+ 
+-    /*
+-     * WARNING - Possible parameter corruption
+-     * WARNING - void declaration
+-     */
+-    private KeyboardInputHandler() {
+-        void var1_-1;
+-    }
+-
+     @Override
+     public final void invoke(long l, int n, int n2, int n3, int n4) {
+         if (n <= 348 && bindings.containsKey(n)) {
+-            for (Keybind keybind : (List)bindings.get(n)) {
++            for (Keybind keybind : bindings.get(n)) {
+                 keybind.update(n3);
+             }
+@@ -34,6 +25,5 @@
+ 
+     static {
+-        (new KeyboardInputHandler[1])[0] = INSTANCE = new KeyboardInputHandler("INSTANCE", 0);
+-        bindings = new Int2ObjectArrayMap();
++        bindings = new Int2ObjectArrayMap<>();
+     }
+ }

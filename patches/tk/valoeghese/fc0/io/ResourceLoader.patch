@@ -1,0 +1,22 @@
+--- a/tk\valoeghese\fc0\io\ResourceLoader.java
++++ b/tk\valoeghese\fc0\io\ResourceLoader.java
+@@ -5,4 +5,5 @@
+ 
+ import java.io.ByteArrayOutputStream;
++import java.io.IOException;
+ import java.io.InputStream;
+ import java.net.URL;
+@@ -14,10 +15,10 @@
+     }
+ 
+-    public static String readResource(String object) {
++    public static String readResource(String object) throws IOException {
+         int n;
+-        object = ResourceLoader.class.getClassLoader().getResourceAsStream((String)object);
++        InputStream stream = ResourceLoader.class.getClassLoader().getResourceAsStream(object);
+         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+         byte[] arrby = new byte[16384];
+-        while ((n = ((InputStream)object).read(arrby, 0, 16384)) != -1) {
++        while ((n = stream.read(arrby, 0, 16384)) != -1) {
+             byteArrayOutputStream.write(arrby, 0, n);
+         }

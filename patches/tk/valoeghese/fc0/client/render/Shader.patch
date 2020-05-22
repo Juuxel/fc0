@@ -1,0 +1,31 @@
+--- a/tk\valoeghese\fc0\client\render\Shader.java
++++ b/tk\valoeghese\fc0\client\render\Shader.java
+@@ -40,7 +40,7 @@
+         }
+         GL20.glCompileShader(n);
+-        object = new int[1];
+-        GL20.glGetShaderiv(n, 35713, (int[])object);
+-        if (object[0] == false) {
++        int[] buf = new int[1];
++        GL20.glGetShaderiv(n, 35713, (int[])buf);
++        if (buf[0] == 0) {
+             throw new RuntimeException("Error compiling vertex shader", new RuntimeException(GL20.glGetShaderInfoLog(n)));
+         }
+@@ -53,6 +53,6 @@
+         }
+         GL20.glCompileShader(n2);
+-        GL20.glGetShaderiv(n2, 35713, (int[])object);
+-        if (object[0] == false) {
++        GL20.glGetShaderiv(n2, 35713, (int[])buf);
++        if (buf[0] == 0) {
+             throw new RuntimeException("Error compiling fragment shader", new RuntimeException(GL20.glGetShaderInfoLog(n2)));
+         }
+@@ -61,6 +61,6 @@
+         GL20.glAttachShader(this.program, n2);
+         GL20.glLinkProgram(this.program);
+-        GL20.glGetProgramiv(this.program, 35714, (int[])object);
+-        if (object[0] == false) {
++        GL20.glGetProgramiv(this.program, 35714, (int[])buf);
++        if (buf[0] == 0) {
+             throw new RuntimeException("Error linking shaders", new RuntimeException(GL20.glGetProgramInfoLog(this.program)));
+         }
