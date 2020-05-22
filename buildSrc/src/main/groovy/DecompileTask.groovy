@@ -33,7 +33,6 @@ class DecompileTask extends DefaultTask {
 
         def driver = new CfrDriver.Builder()
             .withOptions(
-                renamedupmembers: 'true',
                 usenametable: 'false',
                 sugarenums: 'true',
                 extraclasspath: libraries.collect { it.absolutePath }.join(File.pathSeparator)
