@@ -39,23 +39,23 @@ class DeobfuscateTask extends DefaultTask {
         Files.deleteIfExists(outputJar.toPath())
 
         def inputTiny = Files.createTempFile("raw.", ".tiny")
+        def proposedTiny = Files.createTempFile("proposed.", ".tiny")
         def mergedTiny = Files.createTempFile("merged.", ".tiny")
         def invertedIntermediary = Files.createTempFile("inverted_intermediary.", ".tiny")
-        def unorderedTiny = Files.createTempFile("unordered.", ".tiny")
         def converter = new ConvertMappingsCommand()
 
         // Convert to tiny v2
         converter.run("enigma", mappings.absolutePath, "tinyv2:intermediary:named", inputTiny.toString())
         new InvertMappingsCommand().run("tinyv2", intermediaryMappings.absolutePath, "tinyv2:intermediary:official", invertedIntermediary.toString())
 
-        // Merge
-        new CommandMergeTinyV2().run(invertedIntermediary.toString(), inputTiny.toString(), mergedTiny.toString())
-
         // Propose names
-        new CommandProposeV2FieldNames().run([inputJar.absolutePath, mergedTiny.toString(), unorderedTiny.toString(), "false"] as String[])
+        new CommandProposeV2FieldNames().run([inputJar.absolutePath, inputTiny.toString(), proposedTiny.toString(), "false"] as String[])
+
+        // Merge
+        new CommandMergeTinyV2().run(invertedIntermediary.toString(), proposedTiny.toString(), mergedTiny.toString())
 
         // Reorder
-        new CommandReorderTinyV2().run([unorderedTiny.toString(), outputMappings.absolutePath, "official", "intermediary", "named"] as String[])
+        new CommandReorderTinyV2().run([mergedTiny.toString(), outputMappings.absolutePath, "official", "intermediary", "named"] as String[])
 
         def remapper = TinyRemapper.newRemapper()
             .fixPackageAccess(true)

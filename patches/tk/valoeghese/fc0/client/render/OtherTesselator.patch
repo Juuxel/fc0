@@ -1,0 +1,16 @@
+--- a/tk/valoeghese/fc0/client/render/OtherTesselator.java
++++ b/tk/valoeghese/fc0/client/render/OtherTesselator.java
+@@ -19,5 +19,5 @@
+     private int field_40 = 0;
+     private IntList field_42 = new IntArrayList();
+-    private List field_43 = new ArrayList();
++    private List<OtherVertex> field_43 = new ArrayList<>();
+     private final int field_44;
+     private final int field_45;
+@@ -60,5 +60,5 @@
+         GL20.glEnableVertexAttribArray(1);
+         GL30.glBindVertexArray(0);
+-        this.field_43.add(new OtherVertex(n3, arrn.length, 0));
++        this.field_43.add(new OtherVertex(n3, arrn.length, (byte) 0));
+     }
+ 

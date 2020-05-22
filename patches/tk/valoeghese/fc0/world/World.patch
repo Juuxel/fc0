@@ -2,7 +2,7 @@
 +++ b/tk/valoeghese/fc0/world/World.java
 @@ -40,5 +40,5 @@
          this.chunks = new Chunk[this.chunkSize * this.chunkSize];
-         this.var_java_util_Random_a = new Random(l);
+         this.field_16 = new Random(l);
 -        OrderedList orderedList = new OrderedList(chunk -> Math.abs(chunk.width) + Math.abs(chunk.depth));
 +        OrderedList<Chunk> orderedList = new OrderedList<>(chunk -> Math.abs(chunk.width) + Math.abs(chunk.depth));
          for (n = -8; n < 9; ++n) {
@@ -10,7 +10,7 @@
 @@ -85,5 +85,5 @@
      }
  
--    public final List a() {
-+    public final List<Chunk> a() {
-         if (!this.var_java_util_Queue_a.isEmpty()) {
-             boolean bl = this.var_boolean_a = !this.var_boolean_a;
+-    public final List method_7() {
++    public final List<Chunk> method_7() {
+         if (!this.field_15.isEmpty()) {
+             boolean bl = this.field_17 = !this.field_17;

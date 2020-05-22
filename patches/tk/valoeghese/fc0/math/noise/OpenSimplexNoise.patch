@@ -1,12 +1,14 @@
 --- a/tk/valoeghese/fc0/math/noise/OpenSimplexNoise.java
 +++ b/tk/valoeghese/fc0/math/noise/OpenSimplexNoise.java
-@@ -1,154 +1,2141 @@
-+package tk.valoeghese.fc0.math.noise;
-+
-+// Patch: replaced with original
-+
- /*
-- * Decompiled with CFR 0.150.
+@@ -4,151 +4,2139 @@
+ package tk.valoeghese.fc0.math.noise;
+ 
+-class OpenSimplexNoise {
+-    private short[] perm = new short[256];
+-    private short[] permGradIndex3D = new short[256];
+-    private static byte[] gradients2D = new byte[]{5, 2, 2, 5, -5, 2, -2, 5, 5, -2, 2, -5, -5, -2, -2, -5};
+-    private static byte[] gradients3D = new byte[]{-11, 4, 4, -4, 11, 4, -4, 4, 11, 11, 4, 4, 4, 11, 4, 4, 4, 11, -11, -4, 4, -4, -11, 4, -4, -4, 11, 11, -4, 4, 4, -11, 4, 4, -4, 11, -11, 4, -4, -4, 11, -4, -4, 4, -11, 11, 4, -4, 4, 11, -4, 4, 4, -11, -11, -4, -4, -4, -11, -4, -4, -4, -11, 11, -4, -4, 4, -11, -4, 4, -4, -11};
++/*
 + * OpenSimplex Noise in Java.
 + * by Kurt Spencer
 + *
@@ -20,15 +22,7 @@
 + * - Changed seed-based constructor to be independent
 + *   of any particular randomization library, so results
 + *   will be the same when ported to other languages.
-  */
--package tk.valoeghese.fc0.math.noise;
- 
--class OpenSimplexNoise {
--    private short[] perm = new short[256];
--    private short[] permGradIndex3D = new short[256];
--    private static byte[] gradients2D = new byte[]{5, 2, 2, 5, -5, 2, -2, 5, 5, -2, 2, -5, -5, -2, -2, -5};
--    private static byte[] gradients3D = new byte[]{-11, 4, 4, -4, 11, 4, -4, 4, 11, 11, 4, 4, 4, 11, 4, 4, 4, 11, -11, -4, 4, -4, -11, 4, -4, -4, 11, 11, -4, 4, 4, -11, 4, 4, -4, 11, -11, 4, -4, -4, 11, -4, -4, 4, -11, 11, 4, -4, 4, 11, -4, 4, 4, -11, -11, -4, -4, -4, -11, -4, -4, -4, -11, 11, -4, -4, 4, -11, -4, 4, -4, -11};
-+public class OpenSimplexNoise {
++ */
  
 -    public OpenSimplexNoise(long l) {
 -        int n;
@@ -36,6 +30,8 @@
 -        for (n = 0; n < 256; n = (int)((short)(n + 1))) {
 -            int n2 = n;
 -            arrs[n2] = n2;
++public class OpenSimplexNoise {
++
 +    private static final double STRETCH_CONSTANT_2D = -0.211324865405187;    //(1/Math.sqrt(2+1)-1)/2;
 +    private static final double SQUISH_CONSTANT_2D = 0.366025403784439;      //(Math.sqrt(2+1)-1)/2;
 +    private static final double STRETCH_CONSTANT_3D = -1.0 / 6;              //(1/Math.sqrt(3+1)-1)/3;

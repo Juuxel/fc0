@@ -14,7 +14,7 @@
 -            if (!(!GLFW.glfwWindowShouldClose(((Window)object).pointer))) break;
 +            if (!(!GLFW.glfwWindowShouldClose(window.pointer))) break;
              long l = System.currentTimeMillis();
-             if (l >= this.var_long_a) {
+             if (l >= this.field_106) {
 @@ -162,12 +161,10 @@
                  System.out.println("[Render/Warn] Unusually long time! Rendering took: " + l4 + "ms. Note that this is normal if it merely happens on startup.");
              }

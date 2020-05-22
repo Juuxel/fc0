@@ -40,8 +40,12 @@ class ApplyPatchesTask extends DefaultTask {
                 if (Files.exists(patchPath)) {
                     println "Patching $relative"
                     def patch = UnifiedDiffUtils.parseUnifiedDiff(Files.readAllLines(patchPath))
-                    def patched = patch.applyTo(Files.readAllLines(it))
-                    Files.write(target, patched)
+                    try {
+                        def patched = patch.applyTo(Files.readAllLines(it))
+                        Files.write(target, patched)
+                    } catch (Exception e) {
+                        throw new RuntimeException("Could not patch file $relative", e)
+                    }
                 } else {
                     Files.copy(it, target)
                 }

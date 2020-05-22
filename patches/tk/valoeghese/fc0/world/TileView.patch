@@ -1,0 +1,9 @@
+--- a/tk/valoeghese/fc0/world/TileView.java
++++ b/tk/valoeghese/fc0/world/TileView.java
+@@ -32,5 +32,5 @@
+     public boolean method_18(int var1, int var2, int var3);
+ 
+-    public int method_20(int var1, int var2, Predicate var3);
++    public int method_20(int var1, int var2, Predicate<? super Tile> var3);
+ 
+     default public void setPlayer(Player player) {

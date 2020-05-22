@@ -4,6 +4,6 @@
  
  public abstract class Decorator {
 -    public static final List instances = new ArrayList();
-+    public static final List<Decorator> instances = new ArrayList();
++    public static final List<Decorator> instances = new ArrayList<>();
  
      protected Decorator() {
