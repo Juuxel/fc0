@@ -80,10 +80,6 @@ task extractResources(type: ExtractResourcesTask) {
     output = file('src/main/resources')
 }
 
-task setup(dependsOn: [decompile, extractResources]) {
-    group = "fc0"
-}
-
 task applyPatches(type: ApplyPatchesTask) {
     group = "fc0"
     patches = file('patches')
@@ -98,6 +94,10 @@ task generatePatches(type: GeneratePatchesTask) {
     cleanSources = applyPatches.intermediateSources
     revisedSources = applyPatches.userSources
     patchOutput = file('src/main/diff')
+}
+
+task setup(dependsOn: [decompile, extractResources, applyPatches]) {
+    group = "fc0"
 }
 
 task enigma() {
