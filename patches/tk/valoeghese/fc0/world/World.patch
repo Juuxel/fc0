@@ -7,3 +7,10 @@
 +        OrderedList<Chunk> orderedList = new OrderedList<>(chunk -> Math.abs(chunk.x) + Math.abs(chunk.z));
          for (n = -8; n < 9; ++n) {
              for (int i = -8; i < 9; ++i) {
+@@ -85,5 +85,5 @@
+     }
+
+-    public final List method_7() {
++    public final List<Chunk> method_7() {
+         if (!this.field_15.isEmpty()) {
+             boolean bl = this.field_17 = !this.field_17;
