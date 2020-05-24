@@ -1,0 +1,22 @@
+--- a/tk/valoeghese/fc0/client/render/Overlay.java
++++ b/tk/valoeghese/fc0/client/render/Overlay.java
+@@ -36,8 +36,7 @@
+         f2 = 0.5f;
+         char[] arrc = ((String)object).toCharArray();
+-        object = arrc;
+         int n = arrc.length;
+         for (int i = 0; i < n; ++i) {
+-            Object object2 = object[i];
++            int object2 = arrc[i];
+             if (object2 == 10) {
+                 f2 -= 0.11000001f;
+@@ -47,7 +46,7 @@
+                 throw new RuntimeException("Text cannot contain non-newline characters lower than 32!");
+             }
+-            reference f5 = object2 - 32;
++            int f5 = object2 - 32;
+             Object object3 = f5 % 16;
+-            reference var6_9 = f5 / 16;
++            int var6_9 = f5 / 16;
+             float f4 = (float)object3 / 16.0f;
+             float f6 = (float)var6_9 / 16.0f;

@@ -13,10 +13,10 @@
 +    public static String readResource(String object) throws IOException {
          int n;
 -        object = ResourceLoader.class.getClassLoader().getResourceAsStream((String)object);
-+        InputStream stream = ResourceLoader.class.getClassLoader().getResourceAsStream(object);
++        InputStream in = ResourceLoader.class.getClassLoader().getResourceAsStream((String)object);
          ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
          byte[] arrby = new byte[16384];
 -        while ((n = ((InputStream)object).read(arrby, 0, 16384)) != -1) {
-+        while ((n = stream.read(arrby, 0, 16384)) != -1) {
++        while ((n = in.read(arrby, 0, 16384)) != -1) {
              byteArrayOutputStream.write(arrby, 0, n);
          }

@@ -1,6 +1,6 @@
 --- a/tk/valoeghese/fc0/client/render/Textures.java
 +++ b/tk/valoeghese/fc0/client/render/Textures.java
-@@ -20,10 +20,9 @@
+@@ -21,10 +21,9 @@
          }
          catch (IOException iOException) {
 -            object = iOException;
@@ -9,6 +9,6 @@
                  return 0;
              }
 -            throw new UncheckedIOException("Error loading Tile Atlas", (IOException)object);
-+            throw new UncheckedIOException("Error loading Tile Atlas", (IOException)iOException);
++            throw new UncheckedIOException("Error loading Tile Atlas", iOException);
          }
      }

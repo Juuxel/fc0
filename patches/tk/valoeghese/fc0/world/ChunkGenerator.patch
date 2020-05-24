@@ -1,9 +1,9 @@
 --- a/tk/valoeghese/fc0/world/ChunkGenerator.java
 +++ b/tk/valoeghese/fc0/world/ChunkGenerator.java
-@@ -40,5 +40,5 @@
-                 int n8 = (int)(2.1 * thirdNoise.eval((double)n5 / 21.0, (double)n6 / 21.0));
-                 double d3 = noise.eval((double)n5 / 86.0, (double)n6 / 86.0);
--                if (d > noise.eval((double)(n5 + 121) / 66.5, (double)(n6 + 121) / 66.5)) {
-+                if (d3 /* TODO: d2 or d3? */ > noise.eval((double)(n5 + 121) / 66.5, (double)(n6 + 121) / 66.5)) {
-                     n7 = (int)((double)n7 + d3);
+@@ -46,5 +46,5 @@
+                 int n9 = (int)(2.1 * thirdNoise.eval((double)n5 / 21.0, (double)n7 / 21.0));
+                 double d3 = noise.eval((double)n5 / 86.0, (double)n7 / 86.0);
+-                if (d > noise.eval((double)(n5 + 121) / 66.5, (double)(n7 + 121) / 66.5)) {
++                if (d3 /* TODO: d2 or d3? */ > noise.eval((double)(n5 + 121) / 66.5, (double)(n7 + 121) / 66.5)) {
+                     n8 = (int)((double)n8 + d3);
                  }

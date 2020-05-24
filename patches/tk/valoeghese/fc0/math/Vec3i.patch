@@ -1,0 +1,14 @@
+--- a/tk/valoeghese/fc0/math/Vec3i.java
++++ b/tk/valoeghese/fc0/math/Vec3i.java
+@@ -18,10 +18,5 @@
+ 
+     public Vec3i(Vec3d vec3d) {
+-        double d = vec3d.x + 0.5;
+-        double d2 = d;
+-        double d3 = vec3d.y + 0.5;
+-        d2 = d3;
+-        d2 = vec3d.z + 0.5;
+-        this((int)Math.floor(d), (int)Math.floor(d3), (int)Math.floor(d2));
++        this((int) Math.floor(vec3d.x), (int) Math.floor(vec3d.y), (int) Math.floor(vec3d.z));
+     }
+ 

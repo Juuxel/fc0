@@ -1,6 +1,6 @@
 --- a/tk/valoeghese/fc0/client/input/Keybind.java
 +++ b/tk/valoeghese/fc0/client/input/Keybind.java
-@@ -29,10 +29,9 @@
+@@ -15,10 +15,9 @@
      public Keybind(String object, int n2, boolean bl) {
          this.name = object;
 -        object = this;
@@ -13,10 +13,3 @@
 +        KeyboardInputHandler.bindings.computeIfAbsent(n2, n -> new ArrayList()).add(this);
      }
  
-@@ -61,5 +60,5 @@
- 
-     public static void initAudio() {
--        audioDevice = ALC10.alcOpenDevice(null);
-+        audioDevice = ALC10.alcOpenDevice((ByteBuffer) null);
-         ALCCapabilities aLCCapabilities = ALC.createCapabilities(audioDevice);
-         IntBuffer intBuffer = BufferUtils.createIntBuffer(16);

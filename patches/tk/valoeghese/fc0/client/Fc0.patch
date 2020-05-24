@@ -1,23 +1,23 @@
 --- a/tk/valoeghese/fc0/client/Fc0.java
 +++ b/tk/valoeghese/fc0/client/Fc0.java
-@@ -62,5 +62,5 @@
+@@ -70,5 +70,5 @@
      @Override
      public final void run() {
 -        Object object = this;
 +        Fc0 object = this;
          GL11.glEnable(2929);
          GL11.glClearColor(0.3f, 0.5f, 0.9f, 1.0f);
-@@ -76,6 +76,5 @@
+@@ -85,6 +85,5 @@
+         ((Fc0)object).player.getCamera().addYaw((float)java.lang.Math.PI);
          while (true) {
-             int n;
 -            object = this.window;
 -            if (!(!GLFW.glfwWindowShouldClose(((Window)object).pointer))) break;
 +            if (!(!GLFW.glfwWindowShouldClose(window.pointer))) break;
              long l = System.currentTimeMillis();
              if (l >= this.field_106) {
-@@ -162,12 +161,10 @@
-                 System.out.println("[Render/Warn] Unusually long time! Rendering took: " + l4 + "ms. Note that this is normal if it merely happens on startup.");
-             }
+@@ -170,12 +169,10 @@
+             GL11.glClear(16640);
+             this.method_128();
 -            object = this.window;
 -            GLFW.glfwSwapBuffers(((Window)object).pointer);
 +            GLFW.glfwSwapBuffers(window.pointer);
@@ -30,3 +30,10 @@
 +        GLFW.glfwDestroyWindow(window.pointer);
      }
  
+@@ -191,5 +188,5 @@
+         f2 /= 2.0f;
+         f2 = 0.125f + f2 * 1.025f;
+-        f2 = f > 1.15f ? 1.15f : (f2 < 0.125f ? 0.125f : f2);
++        f2 = f2 > 1.15f ? 1.15f : (f2 < 0.125f ? 0.125f : f2);
+         GL11.glClearColor(0.35f * f2, 0.55f * f2, 0.95f * f2, 1.0f);
+         Player.field_172.apply();
