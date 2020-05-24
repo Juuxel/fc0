@@ -14,9 +14,10 @@
                  throw new RuntimeException("Text cannot contain non-newline characters lower than 32!");
              }
 -            reference f5 = object2 - 32;
-+            int f5 = object2 - 32;
-             Object object3 = f5 % 16;
+-            Object object3 = f5 % 16;
 -            reference var6_9 = f5 / 16;
++            int f5 = object2 - 32;
++            int object3 = f5 % 16;
 +            int var6_9 = f5 / 16;
              float f4 = (float)object3 / 16.0f;
              float f6 = (float)var6_9 / 16.0f;

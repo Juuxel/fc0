@@ -21,20 +21,12 @@
 +    DOWN(0, -1, 0);
      private final int x;
      private final int y;
-@@ -38,5 +37,5 @@
-     }
+@@ -46,6 +45,6 @@
  
--    public final Vec3i method_85(Vec3i vec3i) {
-+    public final Vec3i apply(Vec3i vec3i) {
-         int n = this.z;
-         int n2 = this.y;
-@@ -45,9 +44,4 @@
-     }
- 
--    @Override
+     @Override
 -    public final /* synthetic */ Object apply(Object object) {
 -        return this.method_85((Vec3i)object);
--    }
--
-     static {
-         Direction[] arrdirection = new Direction[]{NORTH, SOUTH, EAST, WEST, UP, DOWN};
++    public Vec3i apply(Vec3i vec3i) {
++        return method_85(vec3i);
+     }
+ 
