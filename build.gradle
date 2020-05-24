@@ -135,13 +135,13 @@ task obfuscate(type: RemapJarTask, dependsOn: [deobf, jar]) {
     to = "official"
 }
 
-task diffJar(type: DiffJarTask, dependsOn: [deobf, generateModPatches, obfuscate]) {
+task modJar(type: DiffJarTask, dependsOn: [deobf, generateModPatches, obfuscate]) {
     group = "fc0"
     originJar = gameJar
     patches = files(generateModPatches.patchOutput)
     modifiedJar = obfuscate.outputJar
     mappings = deobf.outputMappings
-    output = file("build/libs/${archivesBaseName}-${version}-diff.jar")
+    output = file("build/libs/${archivesBaseName}-${version}-mod.jar")
 }
 
 task fullPatchZip(type: Zip, dependsOn: generateFullPatches) {
@@ -156,7 +156,7 @@ task runUnmoddedGame(type: JavaExec) {
     main = "tk.valoeghese.fc0.client.Main"
 }
 
-build.dependsOn diffJar, fullPatchZip
+build.dependsOn modJar, fullPatchZip
 
 task enigma(dependsOn: intermediary) {
     group = "fc0"
