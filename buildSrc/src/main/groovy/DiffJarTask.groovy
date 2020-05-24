@@ -1,3 +1,4 @@
+import net.fabricmc.mapping.tree.TinyMappingFactory
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.FileCollection
 import org.gradle.api.tasks.InputFile
@@ -19,6 +20,9 @@ class DiffJarTask extends DefaultTask {
     @InputFile
     File modifiedJar
 
+    @InputFile
+    File mappings
+
     @OutputFile
     File output
 
@@ -33,6 +37,7 @@ class DiffJarTask extends DefaultTask {
         def originFs = createFs(originJar, false)
         def modifiedFs = createFs(modifiedJar, false)
         def diffFs = createFs(output, true)
+        def mapping = mappings.withReader { TinyMappingFactory.loadWithDetection(it) }
 
         try {
             for (def root : modifiedFs.rootDirectories) {
@@ -42,9 +47,13 @@ class DiffJarTask extends DefaultTask {
                         def target = diffFs.getPath(relative.toString())
                         boolean shouldCopy
                         if (it.toString().endsWith(".class")) {
-                            def hasPatch = patches.any {
-                                def sourceName = relative.toString()
-                                def patchName = sourceName.substring(0, sourceName.length() - ".class".length()) + ".patch"
+                            def sourceName = relative.toString().substring(0, relative.toString().length() - ".class".length())
+                            def obfName = sourceName.replace(modifiedFs.separator, "/")
+                            def classDef = mapping.classes.find {
+                                it.getName("official") == obfName
+                            }
+                            def hasPatch = classDef != null && patches.any {
+                                def patchName = (classDef.getName("named") + ".patch").replace("/", modifiedFs.separator)
                                 Files.exists(it.toPath().resolve(patchName))
                             }
 

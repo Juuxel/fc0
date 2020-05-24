@@ -22,6 +22,10 @@ configurations {
     enigma {
         extendsFrom runtimeClasspath
     }
+
+    game {
+        extendsFrom runtimeClasspath
+    }
 }
 
 def gameJar = project.file("2fc0f18-${version}.jar")
@@ -29,7 +33,7 @@ def mappingsDir = project.file('mappings')
 def intermediaryJar = project.file("build/intermediary-${gameJar.name}")
 
 dependencies {
-    //implementation files(gameJar)
+    game files(gameJar)
 
     // lwjgl
     implementation "org.lwjgl:lwjgl:${project.lwjgl_version}"
@@ -121,22 +125,23 @@ task setup(dependsOn: [decompile, extractResources]) {
     group = "fc0"
 }
 
-task diffJar(type: DiffJarTask, dependsOn: [deobf, generateFullPatches, jar]) {
+task obfuscate(type: RemapJarTask, dependsOn: [deobf, jar]) {
     group = "fc0"
-    originJar = deobf.outputJar
-    patches = files(applyPatches.patches, generateFullPatches.patchOutput)
-    modifiedJar = jar.outputs.files.singleFile
-    output = file("build/libs/${archivesBaseName}-${version}-diff-named.jar")
-}
-
-task obfuscate(type: RemapJarTask, dependsOn: [deobf, diffJar]) {
-    group = "fc0"
-    inputJar = diffJar.output
+    inputJar = jar.outputs.files.singleFile
     mappings = deobf.outputMappings
     libraries = configurations.runtimeClasspath
-    outputJar = file("build/libs/${archivesBaseName}-${version}-diff.jar")
+    outputJar = file("build/libs/${archivesBaseName}-${version}-obfuscated.jar")
     from = "named"
     to = "official"
+}
+
+task diffJar(type: DiffJarTask, dependsOn: [deobf, generateModPatches, obfuscate]) {
+    group = "fc0"
+    originJar = gameJar
+    patches = files(generateModPatches.patchOutput)
+    modifiedJar = obfuscate.outputJar
+    mappings = deobf.outputMappings
+    output = file("build/libs/${archivesBaseName}-${version}-diff.jar")
 }
 
 task fullPatchZip(type: Zip, dependsOn: generateFullPatches) {
@@ -146,7 +151,12 @@ task fullPatchZip(type: Zip, dependsOn: generateFullPatches) {
     destinationDir file('build/libs')
 }
 
-build.dependsOn obfuscate, fullPatchZip
+task runUnmoddedGame(type: JavaExec) {
+    classpath = configurations.game
+    main = "tk.valoeghese.fc0.client.Main"
+}
+
+build.dependsOn diffJar, fullPatchZip
 
 task enigma(dependsOn: intermediary) {
     group = "fc0"

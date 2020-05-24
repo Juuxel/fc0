@@ -12,4 +12,6 @@ dependencies {
     implementation "io.github.java-diff-utils:java-diff-utils:$java_diff_utils"
     implementation "net.fabricmc:stitch:$stitch"
     implementation "net.fabricmc:tiny-remapper:$tiny_remapper"
+    implementation "net.fabricmc:tiny-mappings-parser:$tiny_mappings_parser"
+    implementation "com.google.guava:guava:$guava" // for t-m-p
 }
