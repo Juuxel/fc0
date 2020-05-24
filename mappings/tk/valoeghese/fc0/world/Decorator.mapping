@@ -1,2 +1,8 @@
 CLASS tk/valoeghese/fc0/class_10 tk/valoeghese/fc0/world/Decorator
-	FIELD field_26 instances Ljava/util/List;
+	FIELD field_26 DECORATORS Ljava/util/List;
+	METHOD method_28 generate (Ltk/valoeghese/fc0/class_8;Ltk/valoeghese/fc0/class_46;IILjava/util/Random;)V
+		ARG 1 world
+		ARG 2 ecozone
+		ARG 3 x
+		ARG 4 z
+		ARG 5 random

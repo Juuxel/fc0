@@ -1,12 +1,12 @@
 --- a/tk/valoeghese/fc0/util/Direction.java
 +++ b/tk/valoeghese/fc0/util/Direction.java
 @@ -7,13 +7,12 @@
- import tk.valoeghese.fc0.math.Vec3i;
+ import tk.valoeghese.fc0.math.TilePos;
  
 -public final class Direction
 -extends Enum<Direction>
 +public enum Direction
- implements UnaryOperator<Vec3i> {
+ implements UnaryOperator<TilePos> {
 -    public static final /* enum */ Direction NORTH = new Direction(0, 0, 1);
 -    public static final /* enum */ Direction SOUTH = new Direction(0, 0, -1);
 -    public static final /* enum */ Direction EAST = new Direction(1, 0, 0);
@@ -21,12 +21,10 @@
 +    DOWN(0, -1, 0);
      private final int x;
      private final int y;
-@@ -46,6 +45,6 @@
+@@ -46,5 +45,5 @@
  
      @Override
 -    public final /* synthetic */ Object apply(Object object) {
--        return this.method_85((Vec3i)object);
-+    public Vec3i apply(Vec3i vec3i) {
-+        return method_85(vec3i);
++    public final /* synthetic */ TilePos apply(TilePos object) {
+         return this.offset((TilePos)object);
      }
- 

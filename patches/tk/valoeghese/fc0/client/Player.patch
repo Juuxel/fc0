@@ -3,60 +3,60 @@
 @@ -135,5 +135,5 @@
          f2 = (f2 > f5 ? f2 - f12 : f13 - f2) * f8;
          f3 = (f3 > f6 ? f3 - f14 : f15 - f3) * f9;
--        Object object2 = new ArrayList<Vec3i>();
-+        ArrayList<Vec3i> object2 = new ArrayList<Vec3i>();
+-        Object object2 = new ArrayList<TilePos>();
++        ArrayList<TilePos> object2 = new ArrayList<>();
          int n7 = 0;
          while ((double)n7 < 10.0) {
 @@ -159,31 +159,31 @@
-                 n8 = ((Vec3i)object2.get((int)(n7 - 1))).y - vec3i.y;
-                 int n10 = ((Vec3i)object2.get((int)(n7 - 1))).z - vec3i.z;
+                 n8 = ((TilePos)object2.get((int)(n7 - 1))).y - tilePos.y;
+                 int n10 = ((TilePos)object2.get((int)(n7 - 1))).z - tilePos.z;
 -                object2 = null;
-+                Direction d2 = null;
++                Direction direction = null;
                  if (n9 == -1) {
 -                    object2 = Direction.WEST;
-+                    d2 = Direction.WEST;
++                    direction = Direction.WEST;
                  } else if (n9 == 1) {
 -                    object2 = Direction.EAST;
-+                    d2 = Direction.EAST;
++                    direction = Direction.EAST;
                  } else if (n8 == -1) {
 -                    object2 = Direction.DOWN;
-+                    d2 = Direction.DOWN;
++                    direction = Direction.DOWN;
                  } else if (n8 == 1) {
 -                    object2 = Direction.UP;
-+                    d2 = Direction.UP;
++                    direction = Direction.UP;
                  } else if (n10 == -1) {
 -                    object2 = Direction.SOUTH;
-+                    d2 = Direction.SOUTH;
++                    direction = Direction.SOUTH;
                  } else if (n10 == 1) {
 -                    object2 = Direction.NORTH;
-+                    d2 = Direction.NORTH;
++                    direction = Direction.NORTH;
                  }
 -                if (object2 == null) {
-+                if (d2 == null) {
++                if (direction == null) {
                      throw new RuntimeException("tf\n//I blame p0nki.");
                  }
--                if (n9 != ((Direction)object2).method_125()) {
--                    throw new RuntimeException(n9 + ":" + ((Direction)object2).method_125());
-+                if (n9 != ((Direction)d2).method_125()) {
-+                    throw new RuntimeException(n9 + ":" + ((Direction)d2).method_125());
+-                if (n9 != ((Direction)object2).getX()) {
+-                    throw new RuntimeException(n9 + ":" + ((Direction)object2).getX());
++                if (n9 != ((Direction)direction).getX()) {
++                    throw new RuntimeException(n9 + ":" + ((Direction)direction).getX());
                  }
--                if (n8 != ((Direction)object2).method_126()) {
--                    throw new RuntimeException(n8 + ":" + ((Direction)object2).method_126());
-+                if (n8 != ((Direction)d2).method_126()) {
-+                    throw new RuntimeException(n8 + ":" + ((Direction)d2).method_126());
+-                if (n8 != ((Direction)object2).getY()) {
+-                    throw new RuntimeException(n8 + ":" + ((Direction)object2).getY());
++                if (n8 != ((Direction)direction).getY()) {
++                    throw new RuntimeException(n8 + ":" + ((Direction)direction).getY());
                  }
--                if (n10 != ((Direction)object2).method_127()) {
--                    throw new RuntimeException(n10 + ":" + ((Direction)object2).method_127());
-+                if (n10 != ((Direction)d2).method_127()) {
-+                    throw new RuntimeException(n10 + ":" + ((Direction)d2).method_127());
+-                if (n10 != ((Direction)object2).getZ()) {
+-                    throw new RuntimeException(n10 + ":" + ((Direction)object2).getZ());
++                if (n10 != ((Direction)direction).getZ()) {
++                    throw new RuntimeException(n10 + ":" + ((Direction)direction).getZ());
                  }
--                return new RaycastResult(new Vec3i(vec3i.x, vec3i.y, vec3i.z), (Direction)object2);
-+                return new RaycastResult(new Vec3i(vec3i.x, vec3i.y, vec3i.z), (Direction)d2);
+-                return new RaycastResult(new TilePos(tilePos.x, tilePos.y, tilePos.z), (Direction)object2);
++                return new RaycastResult(new TilePos(tilePos.x, tilePos.y, tilePos.z), (Direction)direction);
              }
              ++n7;
 @@ -215,5 +215,5 @@
  
-     public static void method_132() {
+     public static void initAudio() {
 -        field_173 = ALC10.alcOpenDevice(null);
 +        field_173 = ALC10.alcOpenDevice((ByteBuffer) null);
          ALCCapabilities aLCCapabilities = ALC.createCapabilities(field_173);

@@ -1,4 +1,4 @@
-CLASS tk/valoeghese/fc0/class_33 tk/valoeghese/fc0/math/Vec2i
+CLASS tk/valoeghese/fc0/class_33 tk/valoeghese/fc0/math/ChunkPos
 	FIELD field_92 x I
 	FIELD field_93 y I
 	METHOD <init> (II)V

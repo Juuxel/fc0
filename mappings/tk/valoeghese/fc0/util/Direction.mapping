@@ -6,3 +6,8 @@ CLASS tk/valoeghese/fc0/class_34 tk/valoeghese/fc0/util/Direction
 		ARG 3 x
 		ARG 4 y
 		ARG 5 z
+	METHOD method_125 getX ()I
+	METHOD method_126 getY ()I
+	METHOD method_127 getZ ()I
+	METHOD method_85 offset (Ltk/valoeghese/fc0/class_3;)Ltk/valoeghese/fc0/class_3;
+		ARG 1 pos

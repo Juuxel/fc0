@@ -2,6 +2,8 @@ CLASS tk/valoeghese/fc0/class_4 tk/valoeghese/fc0/world/Chunk
 	FIELD field_10 players Ljava/util/List;
 	FIELD field_11 tiles [B
 	FIELD field_12 z I
+	FIELD field_147 worldX I
+	FIELD field_148 worldZ I
 	FIELD field_6 x I
 	FIELD field_7 world Ltk/valoeghese/fc0/class_5;
 	METHOD <init> (Ltk/valoeghese/fc0/class_5;II[B)V

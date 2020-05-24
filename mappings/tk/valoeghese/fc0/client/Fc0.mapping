@@ -6,3 +6,6 @@ CLASS tk/valoeghese/fc0/class_36 tk/valoeghese/fc0/client/Fc0
 	FIELD field_113 versionOverlay Ltk/valoeghese/fc0/class_17;
 	FIELD field_114 guiProjection Lorg/joml/Matrix4f;
 	FIELD field_115 waterOverlay Ltk/valoeghese/fc0/class_17;
+	FIELD field_168 fov I
+	METHOD method_129 setFov (I)V
+		ARG 1 fov

@@ -1,0 +1,4 @@
+CLASS tk/valoeghese/fc0/class_48 tk/valoeghese/fc0/client/render/RenderChunk
+	FIELD field_167 renderer Ltk/valoeghese/fc0/class_22;
+	METHOD method_123 getRenderer ()Ltk/valoeghese/fc0/class_22;
+	METHOD method_124 refreshRenderer ()V

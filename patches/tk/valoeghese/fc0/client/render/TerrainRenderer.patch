@@ -2,12 +2,12 @@
 +++ b/tk/valoeghese/fc0/client/render/TerrainRenderer.java
 @@ -15,7 +15,7 @@
      public TerrainRenderer(List<TileRenderer> object) {
-         super(35048, Player.field_172);
+         super(35048, Player.terrainShader);
 -        object = object.iterator();
 -        while (object.hasNext()) {
 -            TileRenderer tileRenderer = (TileRenderer)object.next();
 +        java.util.Iterator<TileRenderer> iter = object.iterator();
 +        while (iter.hasNext()) {
-+            TileRenderer tileRenderer = iter.next();
++            TileRenderer tileRenderer = (TileRenderer)iter.next();
              tileRenderer.apply(this);
          }

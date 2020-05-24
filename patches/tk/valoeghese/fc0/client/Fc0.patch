@@ -36,4 +36,4 @@
 -        f2 = f > 1.15f ? 1.15f : (f2 < 0.125f ? 0.125f : f2);
 +        f2 = f2 > 1.15f ? 1.15f : (f2 < 0.125f ? 0.125f : f2);
          GL11.glClearColor(0.35f * f2, 0.55f * f2, 0.95f * f2, 1.0f);
-         Player.field_172.apply();
+         Player.terrainShader.apply();

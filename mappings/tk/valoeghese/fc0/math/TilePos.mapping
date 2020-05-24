@@ -1,4 +1,4 @@
-CLASS tk/valoeghese/fc0/class_3 tk/valoeghese/fc0/math/Vec3i
+CLASS tk/valoeghese/fc0/class_3 tk/valoeghese/fc0/math/TilePos
 	FIELD field_3 x I
 	FIELD field_4 y I
 	FIELD field_5 z I

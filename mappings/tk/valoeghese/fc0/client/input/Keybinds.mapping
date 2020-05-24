@@ -9,3 +9,5 @@ CLASS tk/valoeghese/fc0/class_39 tk/valoeghese/fc0/client/input/Keybinds
 	FIELD field_133 DESTROY Ltk/valoeghese/fc0/class_19;
 	FIELD field_134 INTERACT Ltk/valoeghese/fc0/class_19;
 	FIELD field_135 RESPAWN Ltk/valoeghese/fc0/class_19;
+	FIELD field_176 FOV_UP Ltk/valoeghese/fc0/class_19;
+	FIELD field_177 FOV_DOWN Ltk/valoeghese/fc0/class_19;

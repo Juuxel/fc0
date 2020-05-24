@@ -1,7 +1,8 @@
-CLASS tk/valoeghese/fc0/class_45 tk/valoeghese/fc0/math/Vec3d
+CLASS tk/valoeghese/fc0/class_45 tk/valoeghese/fc0/math/Pos
 	FIELD field_143 x D
 	FIELD field_144 y D
 	FIELD field_145 z D
+	FIELD field_178 ORIGIN Ltk/valoeghese/fc0/class_45;
 	METHOD <init> (DDD)V
 		ARG 1 x
 		ARG 3 y

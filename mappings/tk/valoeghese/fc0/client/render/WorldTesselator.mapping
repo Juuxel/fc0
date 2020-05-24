@@ -5,4 +5,5 @@ CLASS tk/valoeghese/fc0/class_25 tk/valoeghese/fc0/client/render/WorldTesselator
 		ARG 3 z
 		ARG 4 u
 		ARG 5 v
+		ARG 6 light
 	METHOD method_56 index (III)V

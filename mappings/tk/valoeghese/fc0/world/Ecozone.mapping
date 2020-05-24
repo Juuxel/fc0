@@ -1,0 +1,17 @@
+CLASS tk/valoeghese/fc0/class_46 tk/valoeghese/fc0/world/Ecozone
+	FIELD field_150 groundTile B
+	FIELD field_153 TEMPERATE_GRASSLAND Ltk/valoeghese/fc0/class_46;
+	FIELD field_154 id Ljava/lang/String;
+	FIELD field_155 beachTile B
+	FIELD field_157 TROPICAL_GRASSLAND Ltk/valoeghese/fc0/class_46;
+	FIELD field_159 TROPICAL_RAINFOREST Ltk/valoeghese/fc0/class_46;
+	FIELD field_160 TEMPERATE_RAINFOREST Ltk/valoeghese/fc0/class_46;
+	FIELD field_161 TEMPERATE_WOODLAND Ltk/valoeghese/fc0/class_46;
+	FIELD field_162 TUNDRA Ltk/valoeghese/fc0/class_46;
+	FIELD field_163 DESERT Ltk/valoeghese/fc0/class_46;
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 1 id
+	METHOD <init> (Ljava/lang/String;Ltk/valoeghese/fc0/class_14;Ltk/valoeghese/fc0/class_14;)V
+		ARG 1 id
+		ARG 2 ground
+		ARG 3 beach

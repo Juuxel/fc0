@@ -5,9 +5,16 @@ CLASS tk/valoeghese/fc0/class_37 tk/valoeghese/fc0/client/Player
 	FIELD field_121 pos Ltk/valoeghese/fc0/class_40;
 	FIELD field_122 falling Z
 	FIELD field_124 velocity Ltk/valoeghese/fc0/class_40;
+	FIELD field_172 terrainShader Ltk/valoeghese/fc0/class_28;
+	FIELD field_174 guiShader Ltk/valoeghese/fc0/class_28;
 	METHOD <init> (Ltk/valoeghese/fc0/class_27;Ltk/valoeghese/fc0/class_8;)V
 		ARG 1 camera
 		ARG 2 world
+	METHOD method_130 spawn (Ltk/valoeghese/fc0/class_8;)V
+		ARG 1 world
+	METHOD method_131 storeTexture (Ljava/awt/image/BufferedImage;)I
+		ARG 0 image
+	METHOD method_132 initAudio ()V
 	METHOD method_86 getPos ()Ltk/valoeghese/fc0/class_3;
 	METHOD method_87 getCamera ()Ltk/valoeghese/fc0/class_27;
 	METHOD method_88 tick ()V

@@ -3,7 +3,7 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 	FIELD field_28 textureX I
 	FIELD field_29 AIR Ltk/valoeghese/fc0/class_14;
 	FIELD field_30 solid Z
-	FIELD field_31 tiles [Ltk/valoeghese/fc0/class_14;
+	FIELD field_31 BY_ID [Ltk/valoeghese/fc0/class_14;
 	FIELD field_32 textureY I
 	FIELD field_33 STONE Ltk/valoeghese/fc0/class_14;
 	FIELD field_34 shouldRender Z
