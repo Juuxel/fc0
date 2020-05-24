@@ -1,0 +1,21 @@
+--- a/tk/valoeghese/fc0/client/render/RenderChunk.java
++++ b/tk/valoeghese/fc0/client/render/RenderChunk.java
+@@ -20,5 +20,5 @@
+ 
+     @Override
+-    public final void setTile(int n, int n2, int n3, byte by) {
++    public final void setTile(int n, int n2, int n3, final byte by) {
+         RenderChunk renderChunk;
+         RenderChunk renderChunk2;
+@@ -28,10 +28,7 @@
+         }
+         super.setTile(n, n2, n3, by);
+-        int n5 = n4;
+-        n4 = by;
+-        by = (byte)n5;
+         RenderChunk renderChunk3 = this;
+         if (renderChunk3.renderer != null) {
+-            renderChunk3.renderer.setTile(by, (byte)n4);
++            renderChunk3.renderer.setTile(n4, by);
+         }
+         if (n == 0) {
