@@ -59,7 +59,7 @@ dependencies {
 
 task intermediary(type: RemapJarTask) {
     inputJar = gameJar
-    mappings = file('mappings/intermediary.tiny')
+    mappings = file("intermediary/${version}.tiny")
     libraries = configurations.runtimeClasspath
     outputJar = intermediaryJar
     from = "official"
@@ -69,7 +69,7 @@ task intermediary(type: RemapJarTask) {
 task deobf(type: DeobfuscateTask, dependsOn: intermediary) {
     group = "fc0"
     mappings = mappingsDir
-    intermediaryMappings = file('mappings/intermediary.tiny')
+    intermediaryMappings = file("intermediary/${version}.tiny")
     inputJar = intermediaryJar
     outputJar = file("build/deobf-${gameJar.name}")
     libraries = configurations.runtimeClasspath

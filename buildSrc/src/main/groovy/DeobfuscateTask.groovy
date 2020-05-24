@@ -46,7 +46,7 @@ class DeobfuscateTask extends DefaultTask {
 
         // Convert to tiny v2
         converter.run("enigma", mappings.absolutePath, "tinyv2:intermediary:named", inputTiny.toString())
-        new InvertMappingsCommand().run("tinyv2", intermediaryMappings.absolutePath, "tinyv2:intermediary:official", invertedIntermediary.toString())
+        new InvertMappingsCommand().run("tiny", intermediaryMappings.absolutePath, "tinyv2:intermediary:official", invertedIntermediary.toString())
 
         // Propose names
         new CommandProposeV2FieldNames().run([inputJar.absolutePath, inputTiny.toString(), proposedTiny.toString(), "false"] as String[])

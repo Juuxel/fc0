@@ -17,7 +17,6 @@ CLASS tk/valoeghese/fc0/class_27 tk/valoeghese/fc0/client/render/Camera
 		ARG 2 transform
 	METHOD method_63 offset (Lorg/joml/Vector3f;)V
 		ARG 1 pos
-	METHOD method_64 getPitch ()F
 	METHOD method_65 refresh ()V
 	METHOD method_66 addPitch (F)V
 		ARG 1 pitch

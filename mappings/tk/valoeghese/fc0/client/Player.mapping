@@ -1,11 +1,9 @@
 CLASS tk/valoeghese/fc0/class_37 tk/valoeghese/fc0/client/Player
-	FIELD field_116 HALF_PI D
 	FIELD field_118 chunk Ltk/valoeghese/fc0/class_4;
 	FIELD field_119 world Ltk/valoeghese/fc0/class_8;
 	FIELD field_120 camera Ltk/valoeghese/fc0/class_27;
 	FIELD field_121 pos Ltk/valoeghese/fc0/class_40;
 	FIELD field_122 falling Z
-	FIELD field_123 THREE_HALF_PI D
 	FIELD field_124 velocity Ltk/valoeghese/fc0/class_40;
 	METHOD <init> (Ltk/valoeghese/fc0/class_27;Ltk/valoeghese/fc0/class_8;)V
 		ARG 1 camera
@@ -24,9 +22,6 @@ CLASS tk/valoeghese/fc0/class_37 tk/valoeghese/fc0/client/Player
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD method_93 toNearestFace (DI)D
-		ARG 0 yaw
-		ARG 2 pitch
 	METHOD method_95 setPos (Ltk/valoeghese/fc0/class_45;)V
 		ARG 1 pos
 	METHOD method_96 isSwimming ()Z

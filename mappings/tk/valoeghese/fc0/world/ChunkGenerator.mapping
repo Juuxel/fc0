@@ -5,11 +5,6 @@ CLASS tk/valoeghese/fc0/class_9 tk/valoeghese/fc0/world/ChunkGenerator
 	METHOD method_25 evalNoise (DD)D
 		ARG 0 x
 		ARG 2 y
-	METHOD method_26 generateChunk (Ltk/valoeghese/fc0/class_5;IIJ)Ltk/valoeghese/fc0/class_4;
-		ARG 0 world
-		ARG 1 x
-		ARG 2 z
-		ARG 3 seed
 	METHOD method_27 decorate (Ltk/valoeghese/fc0/class_8;Ltk/valoeghese/fc0/class_4;Ljava/util/Random;)V
 		ARG 0 world
 		ARG 1 chunk
