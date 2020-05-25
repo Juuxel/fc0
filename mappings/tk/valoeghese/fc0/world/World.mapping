@@ -1,3 +1,7 @@
 CLASS tk/valoeghese/fc0/class_6 tk/valoeghese/fc0/world/World
+	FIELD field_149 seed J
+	FIELD field_16 random Ljava/util/Random;
 	FIELD field_19 chunkSize I
+	METHOD <init> (Ltk/valoeghese/fc0/class_56;JILtk/valoeghese/fc0/class_47;Ljava/util/function/IntFunction;)V
+		ARG 2 seed
 	METHOD method_8 populate ()V

@@ -1,6 +1,1 @@
 CLASS tk/valoeghese/fc0/class_47 tk/valoeghese/fc0/world/ChunkFactory
-	METHOD create (Ltk/valoeghese/fc0/class_5;II[B)Ltk/valoeghese/fc0/class_4;
-		ARG 1 world
-		ARG 2 x
-		ARG 3 z
-		ARG 4 tiles

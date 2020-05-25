@@ -1,0 +1,532 @@
+v1	official	intermediary
+CLASS	A	tk/valoeghese/fc0/class_1
+FIELD	A	LE;	a	field_1
+FIELD	A	Lx;	a	field_2
+CLASS	B	tk/valoeghese/fc0/class_33
+FIELD	B	I	a	field_92
+FIELD	B	I	b	field_93
+METHOD	B	()Ljava/lang/String;	toString	toString
+CLASS	C	tk/valoeghese/fc0/class_40
+METHOD	C	(D)LC;	a	method_98
+METHOD	C	(DDD)LC;	a	method_102
+METHOD	C	(LD;)LC;	a	method_100
+METHOD	C	(D)LC;	b	method_101
+METHOD	C	(DDD)LC;	b	method_103
+CLASS	D	tk/valoeghese/fc0/class_45
+FIELD	D	D	a	field_143
+FIELD	D	LD;	a	field_178
+FIELD	D	D	b	field_144
+FIELD	D	D	c	field_145
+METHOD	D	()D	a	method_107
+METHOD	D	(DDD)LD;	a	method_108
+METHOD	D	()D	b	method_110
+METHOD	D	()D	c	method_111
+METHOD	D	()Ljava/lang/String;	toString	toString
+CLASS	E	tk/valoeghese/fc0/class_3
+FIELD	E	I	a	field_3
+FIELD	E	I	b	field_4
+FIELD	E	I	c	field_5
+METHOD	E	()LE;	a	method_133
+METHOD	E	()Ljava/lang/String;	toString	toString
+CLASS	F	tk/valoeghese/fc0/class_41
+FIELD	F	D	a	field_136
+FIELD	F	D	b	field_137
+CLASS	G	tk/valoeghese/fc0/class_42
+FIELD	G	[B	a	field_138
+FIELD	G	[S	a	field_139
+FIELD	G	[B	b	field_140
+FIELD	G	[S	b	field_141
+METHOD	G	(D)I	a	method_104
+METHOD	G	(DD)D	a	method_105
+METHOD	G	(IIDD)D	a	method_106
+CLASS	H	tk/valoeghese/fc0/class_2
+CLASS	I	tk/valoeghese/fc0/class_4
+FIELD	I	F	a	field_146
+FIELD	I	I	a	field_6
+FIELD	I	LJ;	a	field_7
+FIELD	I	Lit/unimi/dsi/fastutil/ints/IntSet;	a	field_9
+FIELD	I	Ljava/util/List;	a	field_10
+FIELD	I	Z	a	field_179
+FIELD	I	[B	a	field_11
+FIELD	I	I	b	field_12
+FIELD	I	[B	b	field_180
+FIELD	I	I	c	field_147
+FIELD	I	I	d	field_148
+METHOD	I	()V	a	method_3
+METHOD	I	(III)I	a	method_4
+METHOD	I	(LJ;LQ;Laf;)LI;	a	method_134
+METHOD	I	(LL;)V	a	method_5
+METHOD	I	(Laf;)V	a	method_135
+CLASS	J	tk/valoeghese/fc0/class_5
+METHOD	J	()J	a	method_136
+METHOD	J	(II)LI;	a	method_6
+CLASS	K	tk/valoeghese/fc0/class_6
+FIELD	K	I	a	field_13
+FIELD	K	J	a	field_149
+FIELD	K	Ljava/util/Random;	a	field_16
+FIELD	K	Ly;	a	field_181
+FIELD	K	[LI;	a	field_18
+FIELD	K	I	b	field_19
+FIELD	K	I	c	field_20
+FIELD	K	I	d	field_21
+METHOD	K	()[LI;	a	method_112
+METHOD	K	(LI;)F	a	method_9
+METHOD	K	()V	b	method_137
+METHOD	K	(II)LI;	b	method_10
+METHOD	K	()V	c	method_8
+CLASS	L	tk/valoeghese/fc0/class_49
+FIELD	L	J	a	field_182
+FIELD	L	LC;	a	field_183
+FIELD	L	LI;	a	field_184
+FIELD	L	LM;	a	field_185
+FIELD	L	Lac;	a	field_186
+FIELD	L	Z	a	field_187
+FIELD	L	LC;	b	field_188
+METHOD	L	()I	a	method_138
+METHOD	L	()LD;	a	method_139
+METHOD	L	()LE;	a	method_140
+METHOD	L	()V	a	method_88
+METHOD	L	()Z	a	method_141
+METHOD	L	(DDD)V	a	method_142
+METHOD	L	(DDD)Z	a	method_92
+METHOD	L	(LD;)V	a	method_95
+METHOD	L	(LM;)V	a	method_143
+METHOD	L	(LM;LD;)V	a	method_144
+METHOD	L	()I	b	method_145
+METHOD	L	()Z	b	method_146
+METHOD	L	()Z	c	method_147
+CLASS	M	tk/valoeghese/fc0/class_8
+METHOD	M	(II)I	a	method_16
+METHOD	M	(IIIB)V	a	method_19
+METHOD	M	(LE;)B	a	method_21
+METHOD	M	(LE;)Z	a	method_22
+METHOD	M	(LE;B)V	a	method_23
+METHOD	M	(LL;)V	b	method_24
+CLASS	N	tk/valoeghese/fc0/class_46
+FIELD	N	B	a	field_150
+FIELD	N	LN;	a	field_153
+FIELD	N	Ljava/lang/String;	a	field_154
+FIELD	N	Ljava/util/Map;	a	field_189
+FIELD	N	B	b	field_155
+FIELD	N	LN;	b	field_157
+FIELD	N	LN;	c	field_159
+FIELD	N	LN;	d	field_160
+FIELD	N	LN;	e	field_161
+FIELD	N	LN;	f	field_162
+FIELD	N	LN;	g	field_163
+METHOD	N	()Ljava/util/Set;	a	method_148
+METHOD	N	(LR;LS;)LN;	a	method_149
+METHOD	N	()Ljava/lang/String;	toString	toString
+CLASS	O	tk/valoeghese/fc0/class_50
+METHOD	O	(III)B	a	method_17
+METHOD	O	(III)Z	a	method_18
+METHOD	O	(IILjava/util/function/Predicate;)I	a	method_20
+METHOD	O	(IIIB)V	b	method_150
+CLASS	P	tk/valoeghese/fc0/class_9
+FIELD	P	J	a	field_22
+FIELD	P	LF;	a	field_23
+FIELD	P	LF;	b	field_24
+FIELD	P	LF;	c	field_25
+FIELD	P	LF;	d	field_164
+METHOD	P	(DD)D	a	method_25
+METHOD	P	(DD)LN;	a	method_116
+METHOD	P	(J)V	a	method_151
+METHOD	P	(LM;LI;Ljava/util/Random;)V	a	method_27
+METHOD	P	(LQ;LJ;II)LI;	a	method_26
+METHOD	P	(DD)LN;	b	method_117
+CLASS	Q	tk/valoeghese/fc0/class_47
+METHOD	Q	(LJ;II[B[B)LI;	create	create
+CLASS	R	tk/valoeghese/fc0/class_10
+FIELD	R	LR;	a	field_190
+FIELD	R	Ljava/lang/String;	a	field_191
+FIELD	R	LR;	b	field_192
+METHOD	R	(LO;II)I	a	method_152
+METHOD	R	(LO;LS;IILjava/util/Random;)V	a	method_28
+METHOD	R	(Lac;)Z	a	method_153
+METHOD	R	(Ljava/lang/Object;)Z	equals	equals
+METHOD	R	()I	hashCode	hashCode
+METHOD	R	()Ljava/lang/String;	toString	toString
+CLASS	S	tk/valoeghese/fc0/class_51
+CLASS	T	tk/valoeghese/fc0/class_52
+CLASS	U	tk/valoeghese/fc0/class_53
+FIELD	U	[Lac;	a	field_193
+METHOD	U	(Ljava/util/Random;)Lac;	a	method_154
+CLASS	V	tk/valoeghese/fc0/class_54
+FIELD	V	I	a	field_194
+FIELD	V	I	b	field_195
+METHOD	V	(Ljava/util/Random;)I	a	method_155
+CLASS	W	tk/valoeghese/fc0/class_11
+CLASS	X	tk/valoeghese/fc0/class_55
+FIELD	X	F	a	field_196
+FIELD	X	I	a	field_197
+FIELD	X	I	b	field_198
+FIELD	X	I	c	field_199
+METHOD	X	(II)I	a	method_156
+METHOD	X	(Ljava/util/Random;)I	a	method_157
+CLASS	Y	tk/valoeghese/fc0/class_56
+FIELD	Y	J	a	field_200
+FIELD	Y	LD;	a	field_201
+FIELD	Y	LZ;	a	field_202
+FIELD	Y	Ljava/io/File;	a	field_203
+FIELD	Y	Ljava/lang/Object;	a	field_204
+FIELD	Y	LD;	b	field_205
+FIELD	Y	Ljava/io/File;	b	field_206
+METHOD	Y	()J	a	method_158
+METHOD	Y	(LJ;IILQ;)LI;	a	method_159
+METHOD	Y	([LI;JLD;LD;)V	a	method_160
+METHOD	Y	([LI;LD;LD;J)V	a	method_161
+CLASS	Z	tk/valoeghese/fc0/class_57
+FIELD	Z	Z	a	field_207
+METHOD	Z	()V	a	method_162
+METHOD	Z	()Z	a	method_163
+METHOD	Z	()V	run	run
+CLASS	a	tk/valoeghese/fc0/class_58
+CLASS	aa	tk/valoeghese/fc0/class_13
+CLASS	ab	tk/valoeghese/fc0/class_12
+CLASS	ac	tk/valoeghese/fc0/class_14
+FIELD	ac	B	a	field_27
+FIELD	ac	F	a	field_165
+FIELD	ac	I	a	field_28
+FIELD	ac	Lac;	a	field_29
+FIELD	ac	Z	a	field_30
+FIELD	ac	[Lac;	a	field_31
+FIELD	ac	I	b	field_32
+FIELD	ac	Lac;	b	field_33
+FIELD	ac	Z	b	field_34
+FIELD	ac	Lac;	c	field_35
+FIELD	ac	Z	c	field_208
+FIELD	ac	Lac;	d	field_36
+FIELD	ac	Lac;	e	field_37
+FIELD	ac	Lac;	f	field_38
+FIELD	ac	Lac;	g	field_39
+FIELD	ac	Lac;	h	field_209
+FIELD	ac	Lac;	i	field_210
+FIELD	ac	Lac;	j	field_211
+FIELD	ac	Lac;	k	field_212
+FIELD	ac	Lac;	l	field_213
+METHOD	ac	()Lac;	a	method_30
+METHOD	ac	()Z	a	method_31
+METHOD	ac	(I)I	a	method_32
+METHOD	ac	(IB)I	a	method_35
+METHOD	ac	(Z)Z	a	method_33
+METHOD	ac	()Lac;	b	method_164
+METHOD	ac	()Z	b	method_165
+METHOD	ac	()Z	c	method_34
+CLASS	ad	tk/valoeghese/fc0/class_15
+CLASS	ae	tk/valoeghese/fc0/class_59
+METHOD	ae	(Ljava/lang/Object;)V	a	method_166
+CLASS	af	tk/valoeghese/fc0/class_60
+FIELD	af	Ljava/util/Map;	a	field_214
+METHOD	af	(Ljava/io/File;)Laf;	a	method_167
+METHOD	af	(Ljava/io/File;)V	a	method_168
+METHOD	af	(Ljava/lang/String;)Lag;	a	method_169
+METHOD	af	(Ljava/lang/String;)Lah;	a	method_170
+METHOD	af	(Ljava/lang/String;Lae;)V	a	method_171
+METHOD	af	()Ljava/util/Iterator;	iterator	iterator
+CLASS	ag	tk/valoeghese/fc0/class_61
+FIELD	ag	Lit/unimi/dsi/fastutil/bytes/ByteList;	a	field_215
+METHOD	ag	()I	a	method_172
+METHOD	ag	(B)V	a	method_173
+METHOD	ag	(I)B	a	method_174
+METHOD	ag	()Ljava/util/Iterator;	iterator	iterator
+CLASS	ah	tk/valoeghese/fc0/class_62
+FIELD	ah	Ljava/util/List;	a	field_216
+METHOD	ah	(D)V	a	method_175
+METHOD	ah	(I)D	a	method_176
+METHOD	ah	(I)I	a	method_177
+METHOD	ah	(I)J	a	method_178
+METHOD	ah	(I)V	a	method_179
+METHOD	ah	(I)Z	a	method_180
+METHOD	ah	(J)V	a	method_181
+METHOD	ah	(Z)V	a	method_182
+METHOD	ah	()Ljava/util/Iterator;	iterator	iterator
+CLASS	ai	tk/valoeghese/fc0/class_63
+FIELD	ai	B	a	field_217
+FIELD	ai	Lai;	a	field_218
+FIELD	ai	[Lai;	a	field_219
+FIELD	ai	Lai;	b	field_220
+FIELD	ai	Lai;	c	field_221
+FIELD	ai	Lai;	d	field_222
+FIELD	ai	Lai;	e	field_223
+FIELD	ai	Lai;	f	field_224
+FIELD	ai	Lai;	g	field_225
+FIELD	ai	Lai;	h	field_226
+FIELD	ai	Lai;	i	field_227
+FIELD	ai	Lai;	j	field_228
+FIELD	ai	Lai;	k	field_229
+FIELD	ai	Lai;	l	field_230
+FIELD	ai	Lai;	m	field_231
+FIELD	ai	Lai;	n	field_232
+FIELD	ai	Lai;	o	field_233
+METHOD	ai	()Lae;	a	method_183
+METHOD	ai	()[Lai;	a	method_184
+METHOD	ai	(B)Lai;	a	method_185
+CLASS	aj	tk/valoeghese/fc0/class_64
+FIELD	aj	[I	a	field_234
+CLASS	ak	tk/valoeghese/fc0/class_65
+FIELD	ak	Lit/unimi/dsi/fastutil/doubles/DoubleList;	a	field_235
+METHOD	ak	()I	a	method_186
+METHOD	ak	()Ljava/util/Iterator;	iterator	iterator
+CLASS	al	tk/valoeghese/fc0/class_66
+FIELD	al	Lit/unimi/dsi/fastutil/floats/FloatList;	a	field_236
+METHOD	al	()I	a	method_187
+METHOD	al	()Ljava/util/Iterator;	iterator	iterator
+CLASS	am	tk/valoeghese/fc0/class_67
+FIELD	am	Lit/unimi/dsi/fastutil/ints/IntList;	a	field_237
+METHOD	am	()I	a	method_188
+METHOD	am	()Ljava/util/Iterator;	iterator	iterator
+CLASS	an	tk/valoeghese/fc0/class_68
+FIELD	an	Lit/unimi/dsi/fastutil/longs/LongList;	a	field_238
+METHOD	an	()I	a	method_189
+METHOD	an	()Ljava/util/Iterator;	iterator	iterator
+CLASS	ao	tk/valoeghese/fc0/class_69
+METHOD	ao	(Laf;Ljava/io/DataOutputStream;)V	a	method_190
+METHOD	ao	(Ljava/io/DataInputStream;)Laf;	a	method_191
+CLASS	ap	tk/valoeghese/fc0/class_70
+FIELD	ap	[I	a	field_239
+CLASS	aq	tk/valoeghese/fc0/class_71
+FIELD	aq	Lit/unimi/dsi/fastutil/shorts/ShortList;	a	field_240
+METHOD	aq	()I	a	method_192
+METHOD	aq	()Ljava/util/Iterator;	iterator	iterator
+CLASS	ar	tk/valoeghese/fc0/class_72
+FIELD	ar	Ljava/util/List;	a	field_241
+METHOD	ar	()I	a	method_193
+METHOD	ar	()Ljava/util/Iterator;	iterator	iterator
+CLASS	as	tk/valoeghese/fc0/class_73
+CLASS	b	tk/valoeghese/fc0/class_17
+FIELD	b	I	a	field_40
+FIELD	b	Lit/unimi/dsi/fastutil/floats/FloatList;	a	field_41
+FIELD	b	Lit/unimi/dsi/fastutil/ints/IntList;	a	field_42
+FIELD	b	Ljava/util/List;	a	field_43
+FIELD	b	I	b	field_44
+FIELD	b	I	c	field_45
+METHOD	b	()V	a	method_194
+METHOD	b	(FFFF)I	a	method_37
+METHOD	b	(III)V	a	method_38
+METHOD	b	()V	b	method_36
+METHOD	b	()V	c	method_39
+CLASS	c	tk/valoeghese/fc0/class_18
+FIELD	c	I	a	field_46
+FIELD	c	J	a	field_242
+FIELD	c	Lp;	a	field_243
+FIELD	c	I	b	field_47
+FIELD	c	J	b	field_244
+FIELD	c	Lp;	b	field_245
+METHOD	c	()J	a	method_195
+METHOD	c	()V	a	method_196
+METHOD	c	(Lc;)I	a	method_40
+METHOD	c	(Ljava/awt/image/BufferedImage;)I	a	method_197
+METHOD	c	(Lc;)I	b	method_41
+METHOD	c	()Ljava/lang/String;	toString	toString
+CLASS	d	tk/valoeghese/fc0/class_16
+FIELD	d	F	a	field_246
+FIELD	d	F	b	field_247
+FIELD	d	F	c	field_248
+METHOD	d	(Ljava/lang/String;)V	a	method_198
+METHOD	d	([C)V	a	method_199
+CLASS	e	tk/valoeghese/fc0/class_19
+FIELD	e	Ljava/lang/String;	a	field_49
+FIELD	e	Z	a	field_51
+FIELD	e	Z	b	field_54
+METHOD	e	()Z	a	method_43
+METHOD	e	(I)Ljava/util/List;	a	method_45
+METHOD	e	(I)V	a	method_46
+METHOD	e	()Z	b	method_48
+METHOD	e	(I)Ljava/util/List;	b	method_49
+METHOD	e	()Ljava/lang/String;	toString	toString
+CLASS	f	tk/valoeghese/fc0/class_20
+FIELD	f	Lf;	a	field_55
+FIELD	f	Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;	a	field_56
+METHOD	f	(JIIII)V	invoke	invoke
+CLASS	g	tk/valoeghese/fc0/class_21
+FIELD	g	Lg;	a	field_57
+FIELD	g	Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;	a	field_58
+METHOD	g	(JIII)V	invoke	invoke
+CLASS	h	tk/valoeghese/fc0/class_74
+FIELD	h	Lh;	a	field_249
+FIELD	h	Ljava/lang/String;	a	field_250
+FIELD	h	Ljava/util/Properties;	a	field_251
+FIELD	h	Ljava/lang/String;	b	field_252
+METHOD	h	(Ljava/lang/String;)Ljava/lang/String;	a	method_200
+CLASS	i	tk/valoeghese/fc0/class_22
+FIELD	i	I	a	field_59
+FIELD	i	Ll;	a	field_61
+FIELD	i	Lorg/joml/Matrix4f;	a	field_62
+FIELD	i	Lw;	a	field_60
+FIELD	i	[B	a	field_63
+FIELD	i	I	b	field_64
+FIELD	i	Ll;	b	field_65
+FIELD	i	[B	b	field_253
+METHOD	i	()V	a	method_50
+METHOD	i	(IB)V	a	method_51
+METHOD	i	(III)I	a	method_52
+METHOD	i	(Lo;)V	a	method_118
+METHOD	i	()V	b	method_119
+METHOD	i	(Lo;)V	b	method_53
+CLASS	j	tk/valoeghese/fc0/class_75
+CLASS	k	tk/valoeghese/fc0/class_23
+FIELD	k	F	a	field_66
+FIELD	k	I	a	field_67
+FIELD	k	Lorg/joml/Vector3f;	a	field_68
+FIELD	k	I	b	field_69
+FIELD	k	I	c	field_70
+METHOD	k	(Lm;)V	a	method_54
+CLASS	l	tk/valoeghese/fc0/class_24
+CLASS	m	tk/valoeghese/fc0/class_25
+METHOD	m	(FFFFFF)I	a	method_55
+METHOD	m	(III)V	a	method_56
+CLASS	n	tk/valoeghese/fc0/class_26
+FIELD	n	I	a	field_71
+FIELD	n	I	b	field_72
+FIELD	n	I	c	field_73
+FIELD	n	I	d	field_166
+METHOD	n	(Ljava/lang/String;Z)I	a	method_57
+CLASS	o	tk/valoeghese/fc0/class_27
+FIELD	o	F	a	field_74
+FIELD	o	Lorg/joml/Matrix4f;	a	field_75
+FIELD	o	Lorg/joml/Vector3f;	a	field_76
+FIELD	o	F	b	field_77
+FIELD	o	F	c	field_78
+METHOD	o	()F	a	method_58
+METHOD	o	()Lorg/joml/Vector3f;	a	method_120
+METHOD	o	()V	a	method_59
+METHOD	o	(F)V	a	method_60
+METHOD	o	(FFF)V	a	method_61
+METHOD	o	(Lorg/joml/Vector3f;)V	a	method_63
+METHOD	o	(Lq;Lorg/joml/Matrix4f;)V	a	method_62
+METHOD	o	()V	b	method_65
+METHOD	o	(F)V	b	method_66
+CLASS	p	tk/valoeghese/fc0/class_28
+FIELD	p	I	a	field_79
+METHOD	p	()V	a	method_67
+METHOD	p	(JII)V	a	method_68
+METHOD	p	(Ljava/lang/String;F)V	a	method_121
+METHOD	p	(Ljava/lang/String;I)V	a	method_69
+METHOD	p	(Ljava/lang/String;Lorg/joml/Matrix4f;)V	a	method_70
+METHOD	p	(Lt;)V	a	method_71
+METHOD	p	()V	b	method_72
+CLASS	q	tk/valoeghese/fc0/class_29
+FIELD	q	I	a	field_80
+FIELD	q	Lit/unimi/dsi/fastutil/floats/FloatList;	a	field_81
+FIELD	q	Lit/unimi/dsi/fastutil/ints/IntList;	a	field_82
+FIELD	q	Ljava/util/List;	a	field_83
+FIELD	q	Lp;	a	field_84
+FIELD	q	I	b	field_85
+METHOD	q	()Lp;	a	method_73
+METHOD	q	()V	a	method_74
+METHOD	q	(Lorg/joml/Matrix4f;)V	a	method_75
+METHOD	q	()V	b	method_122
+METHOD	q	(FFFFFF)I	b	method_76
+METHOD	q	(III)V	b	method_77
+CLASS	r	tk/valoeghese/fc0/class_30
+FIELD	r	I	a	field_86
+FIELD	r	I	b	field_87
+METHOD	r	(Lr;)I	a	method_78
+METHOD	r	(Lr;)I	b	method_79
+CLASS	s	tk/valoeghese/fc0/class_31
+METHOD	s	(Ljava/lang/String;)Ljava/io/InputStream;	a	method_201
+METHOD	s	(Ljava/lang/String;)Ljava/lang/String;	a	method_80
+METHOD	s	(Ljava/lang/String;)Ljava/net/URL;	a	method_81
+CLASS	t	tk/valoeghese/fc0/class_32
+FIELD	t	F	a	field_88
+FIELD	t	I	a	field_89
+FIELD	t	J	a	field_90
+FIELD	t	I	b	field_91
+CLASS	tk/valoeghese/fc0/client/Main	tk/valoeghese/fc0/client/Main
+METHOD	tk/valoeghese/fc0/client/Main	([Ljava/lang/String;)V	main	main
+CLASS	tk/valoeghese/fc0/client/a	tk/valoeghese/fc0/class_36
+FIELD	tk/valoeghese/fc0/client/a	D	a	field_105
+FIELD	tk/valoeghese/fc0/client/a	I	a	field_168
+FIELD	tk/valoeghese/fc0/client/a	J	a	field_170
+FIELD	tk/valoeghese/fc0/client/a	LD;	a	field_254
+FIELD	tk/valoeghese/fc0/client/a	LY;	a	field_255
+FIELD	tk/valoeghese/fc0/client/a	Lb;	a	field_108
+FIELD	tk/valoeghese/fc0/client/a	Ld;	a	field_256
+FIELD	tk/valoeghese/fc0/client/a	Lh;	a	field_257
+FIELD	tk/valoeghese/fc0/client/a	Lorg/joml/Matrix4f;	a	field_109
+FIELD	tk/valoeghese/fc0/client/a	Lt;	a	field_110
+FIELD	tk/valoeghese/fc0/client/a	Ltk/valoeghese/fc0/client/a;	a	field_258
+FIELD	tk/valoeghese/fc0/client/a	Ltk/valoeghese/fc0/client/b;	a	field_111
+FIELD	tk/valoeghese/fc0/client/a	Lv;	a	field_107
+FIELD	tk/valoeghese/fc0/client/a	Z	a	field_169
+FIELD	tk/valoeghese/fc0/client/a	D	b	field_112
+FIELD	tk/valoeghese/fc0/client/a	J	b	field_106
+FIELD	tk/valoeghese/fc0/client/a	Lb;	b	field_113
+FIELD	tk/valoeghese/fc0/client/a	Lorg/joml/Matrix4f;	b	field_114
+FIELD	tk/valoeghese/fc0/client/a	Lb;	c	field_115
+FIELD	tk/valoeghese/fc0/client/a	Lb;	d	field_171
+METHOD	tk/valoeghese/fc0/client/a	()Ltk/valoeghese/fc0/client/a;	a	method_202
+METHOD	tk/valoeghese/fc0/client/a	()V	a	method_203
+METHOD	tk/valoeghese/fc0/client/a	(I)V	a	method_129
+METHOD	tk/valoeghese/fc0/client/a	()V	b	method_128
+METHOD	tk/valoeghese/fc0/client/a	(JDD)V	invoke	invoke
+METHOD	tk/valoeghese/fc0/client/a	()V	run	run
+CLASS	tk/valoeghese/fc0/client/b	tk/valoeghese/fc0/class_37
+FIELD	tk/valoeghese/fc0/client/b	LN;	a	field_259
+FIELD	tk/valoeghese/fc0/client/b	Lo;	a	field_120
+METHOD	tk/valoeghese/fc0/client/b	()Lo;	a	method_87
+METHOD	tk/valoeghese/fc0/client/b	(D)LA;	a	method_90
+CLASS	tk/valoeghese/fc0/client/c	tk/valoeghese/fc0/class_39
+FIELD	tk/valoeghese/fc0/client/c	Le;	a	field_126
+FIELD	tk/valoeghese/fc0/client/c	Le;	b	field_127
+FIELD	tk/valoeghese/fc0/client/c	Le;	c	field_128
+FIELD	tk/valoeghese/fc0/client/c	Le;	d	field_129
+FIELD	tk/valoeghese/fc0/client/c	Le;	e	field_130
+FIELD	tk/valoeghese/fc0/client/c	Le;	f	field_131
+FIELD	tk/valoeghese/fc0/client/c	Le;	g	field_132
+FIELD	tk/valoeghese/fc0/client/c	Le;	h	field_133
+FIELD	tk/valoeghese/fc0/client/c	Le;	i	field_134
+FIELD	tk/valoeghese/fc0/client/c	Le;	j	field_135
+FIELD	tk/valoeghese/fc0/client/c	Le;	k	field_176
+FIELD	tk/valoeghese/fc0/client/c	Le;	l	field_177
+FIELD	tk/valoeghese/fc0/client/c	Le;	m	field_260
+FIELD	tk/valoeghese/fc0/client/c	Le;	n	field_261
+FIELD	tk/valoeghese/fc0/client/c	Le;	o	field_262
+FIELD	tk/valoeghese/fc0/client/c	Le;	p	field_263
+FIELD	tk/valoeghese/fc0/client/c	Le;	q	field_264
+FIELD	tk/valoeghese/fc0/client/c	Le;	r	field_265
+FIELD	tk/valoeghese/fc0/client/c	Le;	s	field_266
+FIELD	tk/valoeghese/fc0/client/c	Le;	t	field_267
+FIELD	tk/valoeghese/fc0/client/c	Le;	u	field_268
+FIELD	tk/valoeghese/fc0/client/c	Le;	v	field_269
+CLASS	u	tk/valoeghese/fc0/class_48
+FIELD	u	Li;	a	field_167
+METHOD	u	()Li;	a	method_123
+METHOD	u	()V	b	method_124
+CLASS	v	tk/valoeghese/fc0/class_76
+FIELD	v	Ljava/util/List;	a	field_270
+FIELD	v	Ljava/util/Queue;	a	field_271
+FIELD	v	Z	a	field_272
+METHOD	v	()Ljava/util/List;	a	method_204
+METHOD	v	()V	a	method_205
+METHOD	v	(I)[Lu;	a	method_206
+CLASS	w	tk/valoeghese/fc0/class_7
+METHOD	w	(I)Z	a	method_11
+METHOD	w	(II)Lac;	a	method_12
+METHOD	w	(II)Lac;	b	method_13
+METHOD	w	(II)Lac;	c	method_14
+METHOD	w	(II)Lac;	d	method_15
+CLASS	x	tk/valoeghese/fc0/class_34
+FIELD	x	I	a	field_94
+FIELD	x	Lx;	a	field_95
+FIELD	x	I	b	field_97
+FIELD	x	Lx;	b	field_98
+FIELD	x	I	c	field_99
+FIELD	x	Lx;	c	field_100
+FIELD	x	Lx;	d	field_101
+FIELD	x	Lx;	e	field_102
+FIELD	x	Lx;	f	field_103
+METHOD	x	()I	a	method_125
+METHOD	x	(LE;)LE;	a	method_85
+METHOD	x	(Ljava/lang/Object;)Ljava/lang/Object;	apply	apply
+METHOD	x	()I	b	method_126
+METHOD	x	()I	c	method_127
+CLASS	y	tk/valoeghese/fc0/class_43
+FIELD	y	Lz;	a	field_142
+METHOD	y	(ILjava/lang/Object;)V	add	add
+METHOD	y	(Ljava/lang/Object;)Z	add	add
+CLASS	z	tk/valoeghese/fc0/class_44
+METHOD	z	(Ljava/lang/Object;)F	apply	apply
+# INTERMEDIARY-COUNTER field 273
+# INTERMEDIARY-COUNTER method 207
+# INTERMEDIARY-COUNTER class 77
