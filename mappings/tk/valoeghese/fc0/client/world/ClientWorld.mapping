@@ -1,0 +1,7 @@
+CLASS tk/valoeghese/fc0/class_76 tk/valoeghese/fc0/client/world/ClientWorld
+	FIELD field_270 chunkList Ljava/util/List;
+	FIELD field_271 chunkQueue Ljava/util/Queue;
+	METHOD <init> (Ltk/valoeghese/fc0/class_56;JI)V
+		ARG 1 tscs
+		ARG 2 seed
+	METHOD method_204 getClientChunks ()Ljava/util/List;

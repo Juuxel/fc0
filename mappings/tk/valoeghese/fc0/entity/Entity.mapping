@@ -1,0 +1,30 @@
+CLASS tk/valoeghese/fc0/class_49 tk/valoeghese/fc0/entity/Entity
+	FIELD field_183 pos Ltk/valoeghese/fc0/class_40;
+	FIELD field_184 chunk Ltk/valoeghese/fc0/class_4;
+	FIELD field_185 world Ltk/valoeghese/fc0/class_8;
+	FIELD field_186 heldTile Ltk/valoeghese/fc0/class_14;
+	FIELD field_187 falling Z
+	FIELD field_188 velocity Ltk/valoeghese/fc0/class_40;
+	METHOD method_138 getX ()I
+	METHOD method_139 getPos ()Ltk/valoeghese/fc0/class_45;
+	METHOD method_140 getTilePos ()Ltk/valoeghese/fc0/class_3;
+	METHOD method_141 isInWater ()Z
+	METHOD method_142 addVelocity (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_143 respawn (Ltk/valoeghese/fc0/class_8;)V
+		ARG 1 world
+	METHOD method_144 setWorld (Ltk/valoeghese/fc0/class_8;Ltk/valoeghese/fc0/class_45;)V
+		ARG 1 world
+		ARG 2 pos
+	METHOD method_145 getZ ()I
+	METHOD method_146 canJump ()Z
+	METHOD method_147 isUnderwater ()Z
+	METHOD method_88 tick ()V
+	METHOD method_92 move (DDD)Z
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_95 setPos (Ltk/valoeghese/fc0/class_45;)V
+		ARG 1 pos

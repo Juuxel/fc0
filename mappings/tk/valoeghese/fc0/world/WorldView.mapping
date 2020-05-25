@@ -1,0 +1,18 @@
+CLASS tk/valoeghese/fc0/class_8 tk/valoeghese/fc0/world/WorldView
+	METHOD method_16 getGroundY (II)I
+		ARG 1 x
+		ARG 2 z
+	METHOD method_19 setAndUpdateTile (IIIB)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tile
+	METHOD method_21 getTile (Ltk/valoeghese/fc0/class_3;)B
+		ARG 1 pos
+	METHOD method_22 isInWorld (Ltk/valoeghese/fc0/class_3;)Z
+		ARG 1 pos
+	METHOD method_23 setTile (Ltk/valoeghese/fc0/class_3;B)V
+		ARG 1 pos
+		ARG 2 tile
+	METHOD method_24 addEntity (Ltk/valoeghese/fc0/class_49;)V
+		ARG 1 entity

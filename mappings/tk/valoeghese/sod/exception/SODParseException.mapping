@@ -1,0 +1,6 @@
+CLASS tk/valoeghese/fc0/class_73 tk/valoeghese/sod/exception/SODParseException
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 1 message
+	METHOD <init> (Ljava/lang/String;Ljava/lang/Exception;)V
+		ARG 1 message
+		ARG 2 parent

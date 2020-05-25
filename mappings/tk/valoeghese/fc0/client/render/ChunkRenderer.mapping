@@ -1,4 +1,5 @@
 CLASS tk/valoeghese/fc0/class_22 tk/valoeghese/fc0/client/render/ChunkRenderer
+	FIELD field_253 meta [B
 	FIELD field_59 x I
 	FIELD field_60 chunk Ltk/valoeghese/fc0/class_7;
 	FIELD field_61 terrainRenderer Ltk/valoeghese/fc0/class_24;
@@ -6,9 +7,15 @@ CLASS tk/valoeghese/fc0/class_22 tk/valoeghese/fc0/client/render/ChunkRenderer
 	FIELD field_63 tiles [B
 	FIELD field_64 z I
 	FIELD field_65 waterRenderer Ltk/valoeghese/fc0/class_24;
+	METHOD <init> (Ltk/valoeghese/fc0/class_48;[B[BII)V
+		ARG 1 chunk
+		ARG 2 tiles
+		ARG 3 meta
+		ARG 4 x
+		ARG 5 z
 	METHOD method_118 renderTerrain (Ltk/valoeghese/fc0/class_27;)V
 		ARG 1 camera
-	METHOD method_119 clear ()V
+	METHOD method_119 reset ()V
 	METHOD method_50 refresh ()V
 	METHOD method_51 setTile (IB)V
 		ARG 1 index

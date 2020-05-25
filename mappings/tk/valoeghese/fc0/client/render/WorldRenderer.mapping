@@ -8,8 +8,9 @@ CLASS tk/valoeghese/fc0/class_29 tk/valoeghese/fc0/client/render/WorldRenderer
 	METHOD <init> (ILtk/valoeghese/fc0/class_28;)V
 		ARG 1 usage
 		ARG 2 shader
-	METHOD method_122 clear ()V
+	METHOD method_122 reset ()V
 	METHOD method_73 getShader ()Ltk/valoeghese/fc0/class_28;
+	METHOD method_74 build ()V
 	METHOD method_75 render (Lorg/joml/Matrix4f;)V
 		ARG 1 transform
 	METHOD method_76 addVertex (FFFFFF)I

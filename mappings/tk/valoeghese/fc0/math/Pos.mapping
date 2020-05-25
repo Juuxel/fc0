@@ -7,6 +7,8 @@ CLASS tk/valoeghese/fc0/class_45 tk/valoeghese/fc0/math/Pos
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD <init> (Ltk/valoeghese/fc0/class_45;)V
+		ARG 1 other
 	METHOD method_107 getX ()D
 	METHOD method_108 add (DDD)Ltk/valoeghese/fc0/class_45;
 		ARG 1 x

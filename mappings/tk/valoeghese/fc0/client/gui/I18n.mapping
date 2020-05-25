@@ -1,0 +1,14 @@
+CLASS tk/valoeghese/fc0/class_74 tk/valoeghese/fc0/client/gui/I18n
+	FIELD field_249 INSTANCE Ltk/valoeghese/fc0/class_74;
+	FIELD field_250 id Ljava/lang/String;
+	FIELD field_251 translations Ljava/util/Properties;
+	FIELD field_252 parent Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 id
+		ARG 2 name
+	METHOD <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+		ARG 1 id
+		ARG 2 name
+		ARG 3 parent
+	METHOD method_200 translate (Ljava/lang/String;)Ljava/lang/String;
+		ARG 1 key

@@ -1,0 +1,11 @@
+CLASS tk/valoeghese/fc0/class_56 tk/valoeghese/fc0/io/ThreadedSodChunkStorage
+	FIELD field_202 saveThread Ltk/valoeghese/fc0/class_57;
+	FIELD field_203 saveDirectory Ljava/io/File;
+	FIELD field_204 LOCK Ljava/lang/Object;
+	FIELD field_206 saveFile Ljava/io/File;
+	METHOD <init> (Ljava/lang/String;J)V
+		ARG 1 path
+	METHOD method_159 loadOrCreate (Ltk/valoeghese/fc0/class_5;IILtk/valoeghese/fc0/class_47;)Ltk/valoeghese/fc0/class_4;
+		ARG 2 x
+		ARG 3 z
+		ARG 4 factory

@@ -1,0 +1,7 @@
+CLASS tk/valoeghese/fc0/class_61 tk/valoeghese/sod/ByteArrayDataSection
+	FIELD field_215 array Lit/unimi/dsi/fastutil/bytes/ByteList;
+	METHOD method_172 size ()I
+	METHOD method_173 writeByte (B)V
+		ARG 1 value
+	METHOD method_174 readByte (I)B
+		ARG 1 index

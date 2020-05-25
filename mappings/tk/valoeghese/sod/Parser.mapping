@@ -1,0 +1,6 @@
+CLASS tk/valoeghese/fc0/class_69 tk/valoeghese/sod/Parser
+	METHOD method_190 write (Ltk/valoeghese/fc0/class_60;Ljava/io/DataOutputStream;)V
+		ARG 0 data
+		ARG 1 dos
+	METHOD method_191 parse (Ljava/io/DataInputStream;)Ltk/valoeghese/fc0/class_60;
+		ARG 0 input

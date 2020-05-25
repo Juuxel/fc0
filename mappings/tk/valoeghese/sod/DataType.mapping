@@ -1,0 +1,9 @@
+CLASS tk/valoeghese/fc0/class_63 tk/valoeghese/sod/DataType
+	FIELD field_217 id B
+	FIELD field_219 _VALUES [Ltk/valoeghese/fc0/class_63;
+	METHOD <init> (Ljava/lang/String;II)V
+		ARG 3 id
+	METHOD method_183 createSection ()Ltk/valoeghese/fc0/class_59;
+	METHOD method_184 values ()[Ltk/valoeghese/fc0/class_63;
+	METHOD method_185 of (B)Ltk/valoeghese/fc0/class_63;
+		ARG 0 id

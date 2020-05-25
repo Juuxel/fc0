@@ -8,3 +8,4 @@ CLASS tk/valoeghese/fc0/class_3 tk/valoeghese/fc0/math/TilePos
 		ARG 3 z
 	METHOD <init> (Ltk/valoeghese/fc0/class_45;)V
 		ARG 1 vec
+	METHOD method_133 down ()Ltk/valoeghese/fc0/class_3;
