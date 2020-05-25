@@ -1,0 +1,10 @@
+--- a/tk/valoeghese/sod/StringArrayDataSection.java
++++ b/tk/valoeghese/sod/StringArrayDataSection.java
+@@ -21,6 +21,5 @@
+         if (object instanceof String) {
+             String string = (String)object;
+-            object = this;
+-            ((StringArrayDataSection)object).array.add(string);
++            array.add(string);
+             return;
+         }

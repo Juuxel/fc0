@@ -1,0 +1,10 @@
+--- a/tk/valoeghese/sod/IntArrayDataSection.java
++++ b/tk/valoeghese/sod/IntArrayDataSection.java
+@@ -21,6 +21,5 @@
+         if (object instanceof Integer) {
+             int n = (Integer)object;
+-            object = this;
+-            ((IntArrayDataSection)object).array.add(n);
++            array.add(n);
+             return;
+         }

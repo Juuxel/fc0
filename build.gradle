@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'org.jetbrains.gradle.plugin.idea-ext' version '0.7'
 }
 
 mainClassName = 'tk.valoeghese.fc0.client.Main'
@@ -31,6 +32,11 @@ configurations {
 def gameJar = project.file("2fc0f18-${version}.jar")
 def mappingsDir = project.file('mappings')
 def intermediaryJar = project.file("build/intermediary-${gameJar.name}")
+def runDirectory = project.file('run')
+
+if (!runDirectory.exists()) {
+    runDirectory.mkdir()
+}
 
 dependencies {
     game files(gameJar)
@@ -155,6 +161,11 @@ task runUnmoddedGame(type: JavaExec) {
     group = "fc0"
     classpath = configurations.game
     main = "tk.valoeghese.fc0.client.Main"
+    workingDir = runDirectory
+}
+
+run {
+    workingDir = runDirectory
 }
 
 build.dependsOn modJar, fullPatchZip
@@ -174,6 +185,22 @@ task enigma(dependsOn: intermediary) {
             arg(value: intermediaryJar.getAbsolutePath())
             arg(value: '-mappings')
             arg(value: mappingsDir.getAbsolutePath())
+        }
+    }
+}
+
+idea {
+    project.settings {
+        delegateActions {
+            delegateBuildRunToGradle = false
+        }
+
+        runConfigurations {
+            "Run"(org.jetbrains.gradle.ext.Application) {
+                mainClass = application.mainClassName
+                workingDirectory = runDirectory.absolutePath
+                moduleName = module.name + ".main"
+            }
         }
     }
 }

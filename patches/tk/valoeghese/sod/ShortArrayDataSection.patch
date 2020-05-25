@@ -1,0 +1,10 @@
+--- a/tk/valoeghese/sod/ShortArrayDataSection.java
++++ b/tk/valoeghese/sod/ShortArrayDataSection.java
+@@ -21,6 +21,5 @@
+         if (object instanceof Short) {
+             short s = (Short)object;
+-            object = this;
+-            ((ShortArrayDataSection)object).array.add(s);
++            array.add(s);
+             return;
+         }

@@ -1,0 +1,53 @@
+--- a/tk/valoeghese/sod/DataType.java
++++ b/tk/valoeghese/sod/DataType.java
+@@ -15,28 +15,22 @@
+ import tk.valoeghese.sod.exception.SODParseException;
+ 
+-final class DataType
+-extends Enum<DataType> {
+-    public static final /* enum */ DataType SECTION = new DataType(0);
+-    public static final /* enum */ DataType BYTE = new DataType(1);
+-    public static final /* enum */ DataType SHORT = new DataType(2);
+-    public static final /* enum */ DataType INT = new DataType(3);
+-    public static final /* enum */ DataType LONG = new DataType(4);
+-    public static final /* enum */ DataType FLOAT = new DataType(5);
+-    public static final /* enum */ DataType DOUBLE = new DataType(6);
+-    public static final /* enum */ DataType STRING = new DataType(7);
+-    public static final /* enum */ DataType BYTE_ARRAY_SECTION = new DataType(8);
+-    public static final /* enum */ DataType SHORT_ARRAY_SECTION = new DataType(9);
+-    public static final /* enum */ DataType INT_ARRAY_SECTION = new DataType(10);
+-    public static final /* enum */ DataType LONG_ARRAY_SECTION = new DataType(11);
+-    public static final /* enum */ DataType FLOAT_ARRAY_SECTION = new DataType(12);
+-    public static final /* enum */ DataType DOUBLE_ARRAY_SECTION = new DataType(13);
+-    public static final /* enum */ DataType STRING_ARRAY_SECTION = new DataType(14);
++enum DataType {
++    SECTION(0),
++    BYTE(1),
++    SHORT(2),
++    INT(3),
++    LONG(4),
++    FLOAT(5),
++    DOUBLE(6),
++    STRING(7),
++    BYTE_ARRAY_SECTION(8),
++    SHORT_ARRAY_SECTION(9),
++    INT_ARRAY_SECTION(10),
++    LONG_ARRAY_SECTION(11),
++    FLOAT_ARRAY_SECTION(12),
++    DOUBLE_ARRAY_SECTION(13),
++    STRING_ARRAY_SECTION(14);
+     public final byte id;
+-    private static final /* synthetic */ DataType[] _VALUES;
+ 
+-    public static DataType[] values() {
+-        return (DataType[])_VALUES.clone();
+-    }
+-
+     private DataType(int n2) {
+         this.id = (byte)n2;
+@@ -125,5 +119,4 @@
+ 
+     static {
+-        _VALUES = new DataType[]{SECTION, BYTE, SHORT, INT, LONG, FLOAT, DOUBLE, STRING, BYTE_ARRAY_SECTION, SHORT_ARRAY_SECTION, INT_ARRAY_SECTION, LONG_ARRAY_SECTION, FLOAT_ARRAY_SECTION, DOUBLE_ARRAY_SECTION, STRING_ARRAY_SECTION};
+     }
+ }

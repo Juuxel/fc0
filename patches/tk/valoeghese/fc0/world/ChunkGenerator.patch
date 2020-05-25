@@ -1,6 +1,6 @@
 --- a/tk/valoeghese/fc0/world/ChunkGenerator.java
 +++ b/tk/valoeghese/fc0/world/ChunkGenerator.java
-@@ -46,5 +46,5 @@
+@@ -52,5 +52,5 @@
                  int n9 = (int)(2.1 * sandNoise.eval((double)n5 / 21.0, (double)n7 / 21.0));
                  double d3 = noise.eval((double)n5 / 86.0, (double)n7 / 86.0);
 -                if (d > noise.eval((double)(n5 + 121) / 66.5, (double)(n7 + 121) / 66.5)) {

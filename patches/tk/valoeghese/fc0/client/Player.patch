@@ -1,13 +1,13 @@
 --- a/tk/valoeghese/fc0/client/Player.java
 +++ b/tk/valoeghese/fc0/client/Player.java
-@@ -135,5 +135,5 @@
+@@ -77,5 +77,5 @@
          f2 = (f2 > f5 ? f2 - f12 : f13 - f2) * f8;
          f3 = (f3 > f6 ? f3 - f14 : f15 - f3) * f9;
 -        Object object2 = new ArrayList<TilePos>();
 +        ArrayList<TilePos> object2 = new ArrayList<>();
          int n7 = 0;
          while ((double)n7 < 10.0) {
-@@ -159,31 +159,31 @@
+@@ -101,31 +101,31 @@
                  n8 = ((TilePos)object2.get((int)(n7 - 1))).y - tilePos.y;
                  int n10 = ((TilePos)object2.get((int)(n7 - 1))).z - tilePos.z;
 -                object2 = null;
@@ -31,8 +31,7 @@
 -                    object2 = Direction.NORTH;
 +                    direction = Direction.NORTH;
                  }
--                if (object2 == null) {
-+                if (direction == null) {
+                 if (object2 == null) {
                      throw new RuntimeException("tf\n//I blame p0nki.");
                  }
 -                if (n9 != ((Direction)object2).getX()) {
@@ -54,10 +53,3 @@
 +                return new RaycastResult(new TilePos(tilePos.x, tilePos.y, tilePos.z), (Direction)direction);
              }
              ++n7;
-@@ -215,5 +215,5 @@
- 
-     public static void initAudio() {
--        field_173 = ALC10.alcOpenDevice(null);
-+        field_173 = ALC10.alcOpenDevice((ByteBuffer) null);
-         ALCCapabilities aLCCapabilities = ALC.createCapabilities(field_173);
-         IntBuffer intBuffer = BufferUtils.createIntBuffer(16);

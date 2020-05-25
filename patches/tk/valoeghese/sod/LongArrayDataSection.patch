@@ -1,0 +1,10 @@
+--- a/tk/valoeghese/sod/LongArrayDataSection.java
++++ b/tk/valoeghese/sod/LongArrayDataSection.java
+@@ -21,6 +21,5 @@
+         if (object instanceof Long) {
+             long l = (Long)object;
+-            object = this;
+-            ((LongArrayDataSection)object).array.add(l);
++            array.add(l);
+             return;
+         }

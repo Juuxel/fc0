@@ -4,11 +4,11 @@
      }
  
 -    public Shader(String object, String string) {
-+    public Shader(String path, String string) {
++    public Shader(String object2, String string) {
          int n = GL20.glCreateShader(35633);
          try {
--            GL20.glShaderSource(n, (CharSequence)ResourceLoader.readResource((String)object));
-+            GL20.glShaderSource(n, (CharSequence)ResourceLoader.readResource((String)path));
+-            GL20.glShaderSource(n, (CharSequence)ResourceLoader.read((String)object));
++            GL20.glShaderSource(n, (CharSequence)ResourceLoader.read((String)object2));
          }
          catch (IOException iOException) {
 @@ -39,7 +39,7 @@

@@ -1,0 +1,84 @@
+--- a/tk/valoeghese/sod/BinaryData.java
++++ b/tk/valoeghese/sod/BinaryData.java
+@@ -40,32 +40,11 @@
+     }
+ 
+-    public final void writeGzipped(File object) {
+-        object = new DataOutputStream(new GZIPOutputStream(new FileOutputStream((File)object)));
++    public final void writeGzipped(File file) {
+         Throwable throwable = null;
+-        try {
+-            Parser.write(this, (DataOutputStream)object);
++        try (DataOutputStream dos = new DataOutputStream(new GZIPOutputStream(new FileOutputStream(file)))) {
++            Parser.write(this, dos);
++        } catch (Throwable t) {
++            throw new RuntimeException(t);
+         }
+-        catch (Throwable throwable2) {
+-            try {
+-                Throwable throwable3 = throwable2;
+-                throwable = throwable2;
+-                throw throwable3;
+-            }
+-            catch (Throwable throwable4) {
+-                if (throwable != null) {
+-                    try {
+-                        ((FilterOutputStream)object).close();
+-                    }
+-                    catch (Throwable throwable5) {
+-                        throwable.addSuppressed(throwable5);
+-                    }
+-                } else {
+-                    ((FilterOutputStream)object).close();
+-                }
+-                throw throwable4;
+-            }
+-        }
+-        ((FilterOutputStream)object).close();
+-        return;
+     }
+ 
+@@ -77,7 +56,6 @@
+     public static BinaryData readGzipped(File file) {
+         Object object;
+-        GZIPInputStream gZIPInputStream = new GZIPInputStream(new FileInputStream(file));
+         Throwable throwable = null;
+-        try {
++        try (GZIPInputStream gZIPInputStream = new GZIPInputStream(new FileInputStream(file))) {
+             int n;
+             object = new ByteArrayOutputStream();
+@@ -92,31 +70,8 @@
+             object = Parser.parse((DataInputStream)object);
+         }
+-        catch (Throwable throwable2) {
+-            try {
+-                try {
+-                    Throwable throwable3 = throwable2;
+-                    throwable = throwable2;
+-                    throw throwable3;
+-                }
+-                catch (Throwable throwable4) {
+-                    if (throwable != null) {
+-                        try {
+-                            gZIPInputStream.close();
+-                        }
+-                        catch (Throwable throwable5) {
+-                            throwable.addSuppressed(throwable5);
+-                        }
+-                    } else {
+-                        gZIPInputStream.close();
+-                    }
+-                    throw throwable4;
+-                }
+-            }
+-            catch (IOException iOException) {
+-                throw new SODParseException("Unhandled IOException in parsing file " + file.toString(), iOException);
+-            }
++        catch (IOException iOException) {
++            throw new SODParseException("Unhandled IOException in parsing file " + file.toString(), iOException);
+         }
+-        gZIPInputStream.close();
+-        return object;
++        return (BinaryData) object;
+     }
+ }

@@ -1,0 +1,10 @@
+--- a/tk/valoeghese/sod/FloatArrayDataSection.java
++++ b/tk/valoeghese/sod/FloatArrayDataSection.java
+@@ -21,6 +21,5 @@
+         if (object instanceof Float) {
+             float f = ((Float)object).floatValue();
+-            object = this;
+-            ((FloatArrayDataSection)object).array.add(f);
++            array.add(f);
+             return;
+         }

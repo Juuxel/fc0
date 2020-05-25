@@ -1,0 +1,56 @@
+--- a/tk/valoeghese/fc0/client/gui/I18n.java
++++ b/tk/valoeghese/fc0/client/gui/I18n.java
+@@ -18,7 +18,7 @@
+     private final String parent;
+     private Properties translations;
+-    public static final I18n INSTANCE = new I18n("en.gb", "British English");
++    public static final I18n INSTANCE;
+ 
+-    private I18n(String string, String string2) {
++    private I18n(String string, String string2) throws Throwable {
+         this(string, string2, null);
+     }
+@@ -29,11 +29,12 @@
+      * Enabled aggressive exception aggregation
+      */
+-    private I18n(String object, String object2, @Nullable String object3) {
++    private I18n(String id, String name, @Nullable String parent) throws Throwable {
+         Throwable throwable;
++        Object object = this;
++        Object object2 = null;
++        Object object3;
+         block19: {
+-            this.id = object;
+-            this.parent = object3;
+-            object = this;
+-            object2 = null;
++            this.id = id;
++            this.parent = parent;
+             if (((I18n)object).parent != null) {
+                 object2 = new Properties();
+@@ -49,5 +50,5 @@
+                             object = throwable2;
+                             throwable = throwable2;
+-                            throw object;
++                            throw (Throwable) object;
+                         }
+                         catch (Throwable throwable3) {
+@@ -86,5 +87,5 @@
+                     object = throwable5;
+                     throwable = throwable5;
+-                    throw object;
++                    throw (Throwable) object;
+                 }
+                 catch (Throwable throwable6) {
+@@ -118,5 +119,10 @@
+ 
+     static {
+-        new I18n("en.us", "American English", "en.gb");
++        try {
++            INSTANCE = new I18n("en.gb", "British English");
++            new I18n("en.us", "American English", "en.gb");
++        } catch (Throwable t) {
++            throw new RuntimeException("Could not load languages", t);
++        }
+     }
+ }
