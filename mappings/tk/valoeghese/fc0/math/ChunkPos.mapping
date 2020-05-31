@@ -4,3 +4,10 @@ CLASS tk/valoeghese/fc0/class_33 tk/valoeghese/fc0/math/ChunkPos
 	METHOD <init> (II)V
 		ARG 1 x
 		ARG 2 y
+	METHOD method_207 distanceTo (II)I
+		COMMENT Gets the Manhattan distance to the specified coordinates.
+		ARG 1 x
+		ARG 2 y
+	METHOD method_208 distanceTo (Ltk/valoeghese/fc0/class_33;)I
+		COMMENT Gets the Manhattan distance to the other position.
+		ARG 1 other

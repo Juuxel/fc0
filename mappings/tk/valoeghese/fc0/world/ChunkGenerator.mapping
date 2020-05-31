@@ -20,7 +20,7 @@ CLASS tk/valoeghese/fc0/class_9 tk/valoeghese/fc0/world/ChunkGenerator
 		ARG 1 world
 		ARG 2 x
 		ARG 3 z
-	METHOD method_27 populate (Ltk/valoeghese/fc0/class_8;Ltk/valoeghese/fc0/class_4;Ljava/util/Random;)V
+	METHOD method_27 populate (Ltk/valoeghese/fc0/class_50;Ltk/valoeghese/fc0/class_4;Ljava/util/Random;)V
 		ARG 0 world
 		ARG 1 chunk
 		ARG 2 random

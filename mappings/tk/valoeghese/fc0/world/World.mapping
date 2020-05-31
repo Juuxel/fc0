@@ -1,20 +1,25 @@
 CLASS tk/valoeghese/fc0/class_6 tk/valoeghese/fc0/world/World
-	FIELD field_13 chunkRadius I
 	FIELD field_149 seed J
 	FIELD field_16 random Ljava/util/Random;
-	FIELD field_181 orderedChunks Ltk/valoeghese/fc0/class_43;
-	FIELD field_18 chunks [Ltk/valoeghese/fc0/class_4;
-	FIELD field_19 chunkSize I
+	FIELD field_18 chunks Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;
 	FIELD field_20 start I
 	FIELD field_21 end I
-	METHOD <init> (Ltk/valoeghese/fc0/class_56;JILtk/valoeghese/fc0/class_47;Ljava/util/function/IntFunction;)V
-		ARG 1 tscs
+	FIELD field_280 generatingView Ltk/valoeghese/fc0/class_50;
+	FIELD field_281 chunkFactory Ltk/valoeghese/fc0/class_47;
+	FIELD field_282 chunkStorage Ltk/valoeghese/fc0/class_56;
+	METHOD <init> (Ltk/valoeghese/fc0/class_56;JILtk/valoeghese/fc0/class_47;)V
+		ARG 1 chunkStorage
 		ARG 2 seed
+		ARG 4 radius
 		ARG 5 chunkFactory
-		ARG 6 chunkOrder
-	METHOD method_10 getChunkAt (II)Ltk/valoeghese/fc0/class_4;
+	METHOD method_112 getChunks ()Ljava/util/Iterator;
+	METHOD method_137 resetRenderers ()V
+	METHOD method_213 getChunkKey (II)J
+		ARG 0 x
+		ARG 1 z
+	METHOD method_214 onChunkRemoved (Ltk/valoeghese/fc0/class_4;)V
+		ARG 1 chunk
+	METHOD method_216 getStoredChunk (II)Ltk/valoeghese/fc0/class_4;
 		ARG 1 x
 		ARG 2 z
-	METHOD method_112 getChunks ()[Ltk/valoeghese/fc0/class_4;
-	METHOD method_137 resetRenderers ()V
-	METHOD method_8 populate ()V
+	METHOD method_8 generateSpawn ()V

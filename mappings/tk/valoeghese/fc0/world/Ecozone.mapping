@@ -16,7 +16,7 @@ CLASS tk/valoeghese/fc0/class_46 tk/valoeghese/fc0/world/Ecozone
 		ARG 1 id
 		ARG 2 ground
 		ARG 3 beach
-	METHOD method_148 getDecorators ()Ljava/util/Set;
+	METHOD method_148 getGenerators ()Ljava/util/Set;
 	METHOD method_149 addGenerator (Ltk/valoeghese/fc0/class_10;Ltk/valoeghese/fc0/class_51;)Ltk/valoeghese/fc0/class_46;
 		ARG 1 generator
 		ARG 2 config

@@ -9,3 +9,4 @@ CLASS tk/valoeghese/fc0/class_3 tk/valoeghese/fc0/math/TilePos
 	METHOD <init> (Ltk/valoeghese/fc0/class_45;)V
 		ARG 1 vec
 	METHOD method_133 down ()Ltk/valoeghese/fc0/class_3;
+	METHOD method_209 toChunkPos ()Ltk/valoeghese/fc0/class_33;

@@ -6,17 +6,26 @@ CLASS tk/valoeghese/fc0/class_4 tk/valoeghese/fc0/world/Chunk
 	FIELD field_148 worldZ I
 	FIELD field_179 populated Z
 	FIELD field_180 meta [B
+	FIELD field_273 pos Ltk/valoeghese/fc0/class_33;
+	FIELD field_274 finished Z
 	FIELD field_6 x I
 	FIELD field_7 world Ltk/valoeghese/fc0/class_5;
+	FIELD field_9 presentYLevels Lit/unimi/dsi/fastutil/ints/IntSet;
 	METHOD <init> (Ltk/valoeghese/fc0/class_5;II[B[B)V
 		ARG 1 world
 		ARG 2 x
 		ARG 3 z
 		ARG 4 tiles
 		ARG 5 meta
+	METHOD method_134 deserialize (Ltk/valoeghese/fc0/class_5;Ltk/valoeghese/fc0/class_47;Ltk/valoeghese/fc0/class_60;)Ltk/valoeghese/fc0/class_4;
+		ARG 0 world
+		ARG 1 factory
+		ARG 2 data
 	METHOD method_135 serialize (Ltk/valoeghese/fc0/class_60;)V
+		ARG 1 data
+	METHOD method_210 getPos ()Ltk/valoeghese/fc0/class_33;
 	METHOD method_3 resetRenderer ()V
-	METHOD method_4 encode (III)I
+	METHOD method_4 encodePosition (III)I
 		ARG 0 x
 		ARG 1 y
 		ARG 2 z
