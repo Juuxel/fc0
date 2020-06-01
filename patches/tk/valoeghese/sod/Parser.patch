@@ -1,6 +1,6 @@
 --- a/tk/valoeghese/sod/Parser.java
 +++ b/tk/valoeghese/sod/Parser.java
-@@ -1,328 +1,324 @@
+@@ -1,328 +1,325 @@
 -/*
 - * Decompiled with CFR 0.150.
 - */
@@ -47,6 +47,8 @@
 -            baseDataSection = dataType.createSection();
 -            binaryData.put(dataInputStream.readUTF(), baseDataSection);
 +            currentSection = dataType.createSection();
++            data.put(input.readUTF(), currentSection);
++
              if (dataType != DataType.SECTION) {
 -                n = dataInputStream.readInt();
 +                arraySizeCountdown = input.readInt();
@@ -62,9 +64,8 @@
 -                    while (n-- > 0) {
 -                        baseDataSection.writeForParser(dataInputStream.readByte());
 +
-+        data.put(input.readUTF(), currentSection);
-+
 +        while (input.available() > 0) {
++            //System.out.println(input.available());
 +            switch (sectionType) {
 +                case BYTE_ARRAY_SECTION:
 +                    while (arraySizeCountdown --> 0) {

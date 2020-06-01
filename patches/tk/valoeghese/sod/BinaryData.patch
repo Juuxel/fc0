@@ -1,22 +1,18 @@
 --- a/tk/valoeghese/sod/BinaryData.java
 +++ b/tk/valoeghese/sod/BinaryData.java
-@@ -1,9 +1,4 @@
+@@ -1,5 +1,2 @@
 -/*
 - * Decompiled with CFR 0.150.
 - */
  package tk.valoeghese.sod;
  
--import java.io.ByteArrayInputStream;
--import java.io.ByteArrayOutputStream;
- import java.io.DataInputStream;
- import java.io.DataOutputStream;
-@@ -11,5 +6,4 @@
+@@ -11,5 +8,4 @@
  import java.io.FileInputStream;
  import java.io.FileOutputStream;
 -import java.io.FilterOutputStream;
  import java.io.IOException;
  import java.util.HashMap;
-@@ -18,110 +12,106 @@
+@@ -18,110 +14,120 @@
  import java.util.zip.GZIPInputStream;
  import java.util.zip.GZIPOutputStream;
 -import tk.valoeghese.sod.BaseDataSection;
@@ -156,20 +152,8 @@
              }
 -            long l = ((DataInputStream)(object = new DataInputStream(new ByteArrayInputStream(((ByteArrayOutputStream)object).toByteArray())))).readLong();
 -            if (l != 10976542L) {
-+
-+            return Parser.parse(dis);
-+        } catch (IOException e) {
-+            throw new SODParseException("Unhandled IOException in parsing file " + file.toString(), e);
-+        }
-+    }
-+
-+    public static BinaryData readGzipped(File file) throws SODParseException {
-+        try (DataInputStream dis = new DataInputStream(new GZIPInputStream(new FileInputStream(file)))) {
-+            long magic = dis.readLong();
-+
-+            if (magic != 0xA77D1E) {
-                 throw new SODParseException("Not a valid GZIPPED SOD file!");
-             }
+-                throw new SODParseException("Not a valid GZIPPED SOD file!");
+-            }
 -            object = Parser.parse((DataInputStream)object);
 +
 +            return Parser.parse(dis);
@@ -196,11 +180,36 @@
 -                    }
 -                    throw throwable4;
 -                }
--            }
++    }
++
++    public static BinaryData readGzipped(File file) throws SODParseException {
++        try (GZIPInputStream gis = new GZIPInputStream(new FileInputStream(file))) {
++            // thanks stack overflow for having more efficient code than I probably would have written
++            ByteArrayOutputStream uncompressed = new ByteArrayOutputStream();
++            byte[] buf = new byte[0x1000];
++            int bytesRead;
++
++            // while file has not ended, copy up to 0x4000 bytes of data into a byte[] buffer
++            // and store the number of bytes read
++            while ((bytesRead = gis.read(buf, 0, buf.length)) != -1) {
++                // add to uncompressed output stream, omitting any bytes that weren't part of the read data
++                uncompressed.write(buf, 0, bytesRead);
+             }
 -            catch (IOException iOException) {
 -                throw new SODParseException("Unhandled IOException in parsing file " + file.toString(), iOException);
--            }
--        }
++
++            DataInputStream dis = new DataInputStream(new ByteArrayInputStream(uncompressed.toByteArray()));
++
++            long magic = dis.readLong();
++
++            if (magic != 0xA77D1E) {
++                throw new SODParseException("Not a valid GZIPPED SOD file!");
+             }
++
++            return Parser.parse(dis);
++        } catch (IOException e) {
++            throw new SODParseException("Unhandled IOException in parsing file " + file.toString(), e);
+         }
 -        gZIPInputStream.close();
 -        return object;
      }
