@@ -1,18 +1,106 @@
 --- a/tk/valoeghese/sod/BinaryData.java
 +++ b/tk/valoeghese/sod/BinaryData.java
-@@ -40,32 +40,11 @@
+@@ -1,9 +1,4 @@
+-/*
+- * Decompiled with CFR 0.150.
+- */
+ package tk.valoeghese.sod;
+ 
+-import java.io.ByteArrayInputStream;
+-import java.io.ByteArrayOutputStream;
+ import java.io.DataInputStream;
+ import java.io.DataOutputStream;
+@@ -11,5 +6,4 @@
+ import java.io.FileInputStream;
+ import java.io.FileOutputStream;
+-import java.io.FilterOutputStream;
+ import java.io.IOException;
+ import java.util.HashMap;
+@@ -18,110 +12,106 @@
+ import java.util.zip.GZIPInputStream;
+ import java.util.zip.GZIPOutputStream;
+-import tk.valoeghese.sod.BaseDataSection;
+-import tk.valoeghese.sod.ByteArrayDataSection;
+-import tk.valoeghese.sod.DataSection;
+-import tk.valoeghese.sod.Parser;
++
+ import tk.valoeghese.sod.exception.SODParseException;
+ 
+-public final class BinaryData
+-implements Iterable<Map.Entry<String, BaseDataSection>> {
+-    private final Map<String, BaseDataSection> sections = new HashMap<String, BaseDataSection>();
++@SuppressWarnings("rawtypes")
++public class BinaryData implements Iterable<Map.Entry<String, BaseDataSection>> {
++    public BinaryData() {
++        this.sections = new HashMap<>();
++    }
+ 
+-    public final DataSection get(String string) {
+-        return (DataSection)this.sections.get(string);
++    private final Map<String, BaseDataSection> sections;
++
++    public DataSection get(String name) {
++        return (DataSection) this.sections.get(name);
+     }
+ 
+-    public final ByteArrayDataSection getByteArray(String string) {
+-        return (ByteArrayDataSection)this.sections.get(string);
++    public ByteArrayDataSection getByteArray(String name) {
++        return (ByteArrayDataSection) this.sections.get(name);
+     }
+ 
+-    public final void put(String string, BaseDataSection baseDataSection) {
+-        this.sections.put(string, baseDataSection);
++    public ShortArrayDataSection getShortArray(String name) {
++        return (ShortArrayDataSection) this.sections.get(name);
+     }
+ 
+-    public final boolean method_242(String string) {
+-        return this.sections.containsKey(string);
++    public IntArrayDataSection getIntArray(String name) {
++        return (IntArrayDataSection) this.sections.get(name);
      }
  
 -    public final void writeGzipped(File object) {
 -        object = new DataOutputStream(new GZIPOutputStream(new FileOutputStream((File)object)));
-+    public final void writeGzipped(File file) {
-         Throwable throwable = null;
+-        Throwable throwable = null;
 -        try {
 -            Parser.write(this, (DataOutputStream)object);
-+        try (DataOutputStream dos = new DataOutputStream(new GZIPOutputStream(new FileOutputStream(file)))) {
++    public LongArrayDataSection getLongArray(String name) {
++        return (LongArrayDataSection) this.sections.get(name);
++    }
++
++    public FloatArrayDataSection getFloatArray(String name) {
++        return (FloatArrayDataSection) this.sections.get(name);
++    }
++
++    public DoubleArrayDataSection getDoubleArray(String name) {
++        return (DoubleArrayDataSection) this.sections.get(name);
++    }
++
++    public StringArrayDataSection getStringArray(String name) {
++        return (StringArrayDataSection) this.sections.get(name);
++    }
++
++    public DataSection getOrCreate(String name) {
++        return (DataSection) this.sections.computeIfAbsent(name, k -> new DataSection());
++    }
++
++    public void put(String name, BaseDataSection section) {
++        this.sections.put(name, section);
++    }
++
++    public boolean method_242(String name) {
++        return this.sections.containsKey(name);
++    }
++
++    public boolean write(File file) {
++        try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(file))) {
 +            Parser.write(this, dos);
-+        } catch (Throwable t) {
-+            throw new RuntimeException(t);
++            return true;
++        } catch (IOException e) {
++            e.printStackTrace();
++            return false;
          }
 -        catch (Throwable throwable2) {
 -            try {
@@ -33,22 +121,60 @@
 -                }
 -                throw throwable4;
 -            }
--        }
++    }
++
++    public void writeGzipped(File file) throws IOException {
++        try (DataOutputStream dos = new DataOutputStream(new GZIPOutputStream(new FileOutputStream(file)))) {
++            Parser.write(this, dos);
+         }
 -        ((FilterOutputStream)object).close();
 -        return;
      }
  
-@@ -77,7 +56,6 @@
-     public static BinaryData readGzipped(File file) {
-         Object object;
+     @Override
+-    public final Iterator<Map.Entry<String, BaseDataSection>> iterator() {
++    public Iterator<Map.Entry<String, BaseDataSection>> iterator() {
+         return this.sections.entrySet().iterator();
+     }
+ 
+-    public static BinaryData readGzipped(File file) {
+-        Object object;
 -        GZIPInputStream gZIPInputStream = new GZIPInputStream(new FileInputStream(file));
-         Throwable throwable = null;
+-        Throwable throwable = null;
 -        try {
-+        try (GZIPInputStream gZIPInputStream = new GZIPInputStream(new FileInputStream(file))) {
-             int n;
-             object = new ByteArrayOutputStream();
-@@ -92,31 +70,8 @@
-             object = Parser.parse((DataInputStream)object);
+-            int n;
+-            object = new ByteArrayOutputStream();
+-            byte[] arrby = new byte[4096];
+-            while ((n = gZIPInputStream.read(arrby, 0, 4096)) != -1) {
+-                ((ByteArrayOutputStream)object).write(arrby, 0, n);
++    public static BinaryData read(File file) throws SODParseException {
++        try (DataInputStream dis = new DataInputStream(new FileInputStream(file))) {
++            long magic = dis.readLong();
++
++            if (magic != 0xA77D1E) {
++                throw new SODParseException("Not a valid SOD file!");
+             }
+-            long l = ((DataInputStream)(object = new DataInputStream(new ByteArrayInputStream(((ByteArrayOutputStream)object).toByteArray())))).readLong();
+-            if (l != 10976542L) {
++
++            return Parser.parse(dis);
++        } catch (IOException e) {
++            throw new SODParseException("Unhandled IOException in parsing file " + file.toString(), e);
++        }
++    }
++
++    public static BinaryData readGzipped(File file) throws SODParseException {
++        try (DataInputStream dis = new DataInputStream(new GZIPInputStream(new FileInputStream(file)))) {
++            long magic = dis.readLong();
++
++            if (magic != 0xA77D1E) {
+                 throw new SODParseException("Not a valid GZIPPED SOD file!");
+             }
+-            object = Parser.parse((DataInputStream)object);
++
++            return Parser.parse(dis);
++        } catch (IOException e) {
++            throw new SODParseException("Unhandled IOException in parsing file " + file.toString(), e);
          }
 -        catch (Throwable throwable2) {
 -            try {
@@ -74,11 +200,9 @@
 -            catch (IOException iOException) {
 -                throw new SODParseException("Unhandled IOException in parsing file " + file.toString(), iOException);
 -            }
-+        catch (IOException iOException) {
-+            throw new SODParseException("Unhandled IOException in parsing file " + file.toString(), iOException);
-         }
+-        }
 -        gZIPInputStream.close();
 -        return object;
-+        return (BinaryData) object;
      }
  }
+-

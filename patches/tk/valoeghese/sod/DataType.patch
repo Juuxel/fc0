@@ -1,6 +1,6 @@
 --- a/tk/valoeghese/sod/DataType.java
 +++ b/tk/valoeghese/sod/DataType.java
-@@ -15,28 +15,22 @@
+@@ -15,116 +15,86 @@
  import tk.valoeghese.sod.exception.SODParseException;
  
 -final class DataType
@@ -20,6 +20,8 @@
 -    public static final /* enum */ DataType FLOAT_ARRAY_SECTION = new DataType(12);
 -    public static final /* enum */ DataType DOUBLE_ARRAY_SECTION = new DataType(13);
 -    public static final /* enum */ DataType STRING_ARRAY_SECTION = new DataType(14);
+-    public final byte id;
+-    private static final /* synthetic */ DataType[] _VALUES;
 +enum DataType {
 +    SECTION(0),
 +    BYTE(1),
@@ -36,18 +38,132 @@
 +    FLOAT_ARRAY_SECTION(12),
 +    DOUBLE_ARRAY_SECTION(13),
 +    STRING_ARRAY_SECTION(14);
-     public final byte id;
--    private static final /* synthetic */ DataType[] _VALUES;
  
 -    public static DataType[] values() {
 -        return (DataType[])_VALUES.clone();
--    }
--
-     private DataType(int n2) {
-         this.id = (byte)n2;
-@@ -125,5 +119,4 @@
- 
-     static {
--        _VALUES = new DataType[]{SECTION, BYTE, SHORT, INT, LONG, FLOAT, DOUBLE, STRING, BYTE_ARRAY_SECTION, SHORT_ARRAY_SECTION, INT_ARRAY_SECTION, LONG_ARRAY_SECTION, FLOAT_ARRAY_SECTION, DOUBLE_ARRAY_SECTION, STRING_ARRAY_SECTION};
++    private DataType(int id) {
++        this.id = (byte) id;
      }
+ 
+-    private DataType(int n2) {
+-        this.id = (byte)n2;
+-    }
++    public final byte id;
+ 
+-    public static DataType of(byte by) {
+-        switch (by) {
+-            case 0: {
++    public static DataType of(byte id) throws SODParseException {
++        switch (id) {
++            case 0:
+                 return SECTION;
+-            }
+-            case 1: {
++            case 1:
+                 return BYTE;
+-            }
+-            case 2: {
++            case 2:
+                 return SHORT;
+-            }
+-            case 3: {
++            case 3:
+                 return INT;
+-            }
+-            case 4: {
++            case 4:
+                 return LONG;
+-            }
+-            case 5: {
++            case 5:
+                 return FLOAT;
+-            }
+-            case 6: {
++            case 6:
+                 return DOUBLE;
+-            }
+-            case 7: {
++            case 7:
+                 return STRING;
+-            }
+-            case 8: {
++            case 8:
+                 return BYTE_ARRAY_SECTION;
+-            }
+-            case 9: {
++            case 9:
+                 return SHORT_ARRAY_SECTION;
+-            }
+-            case 10: {
++            case 10:
+                 return INT_ARRAY_SECTION;
+-            }
+-            case 11: {
++            case 11:
+                 return LONG_ARRAY_SECTION;
+-            }
+-            case 12: {
++            case 12:
+                 return FLOAT_ARRAY_SECTION;
+-            }
+-            case 13: {
++            case 13:
+                 return DOUBLE_ARRAY_SECTION;
+-            }
+-            case 14: {
++            case 14:
+                 return STRING_ARRAY_SECTION;
+-            }
++            default:
++                throw new SODParseException("Unknown data type " + String.valueOf(id));
+         }
+-        throw new SODParseException("Unknown data type " + String.valueOf(by));
+     }
+ 
+-    final BaseDataSection createSection() {
++    @SuppressWarnings("rawtypes")
++    BaseDataSection createSection() {
+         switch (this) {
+-            case SECTION: {
++            case SECTION:
+                 return new DataSection();
+-            }
+-            case BYTE_ARRAY_SECTION: {
++            case BYTE_ARRAY_SECTION:
+                 return new ByteArrayDataSection();
+-            }
+-            case DOUBLE_ARRAY_SECTION: {
++            case DOUBLE_ARRAY_SECTION:
+                 return new DoubleArrayDataSection();
+-            }
+-            case FLOAT_ARRAY_SECTION: {
++            case FLOAT_ARRAY_SECTION:
+                 return new FloatArrayDataSection();
+-            }
+-            case INT_ARRAY_SECTION: {
++            case INT_ARRAY_SECTION:
+                 return new IntArrayDataSection();
+-            }
+-            case LONG_ARRAY_SECTION: {
++            case LONG_ARRAY_SECTION:
+                 return new LongArrayDataSection();
+-            }
+-            case SHORT_ARRAY_SECTION: {
++            case SHORT_ARRAY_SECTION:
+                 return new ShortArrayDataSection();
+-            }
+-            case STRING_ARRAY_SECTION: {
++            case STRING_ARRAY_SECTION:
+                 return new StringArrayDataSection();
+-            }
++            default:
++                throw new SODParseException("Tried to create section from non-section data type!");
+         }
+-        throw new SODParseException("Tried to create section from non-section data type!");
+     }
+-
+-    static {
+-        _VALUES = new DataType[]{SECTION, BYTE, SHORT, INT, LONG, FLOAT, DOUBLE, STRING, BYTE_ARRAY_SECTION, SHORT_ARRAY_SECTION, INT_ARRAY_SECTION, LONG_ARRAY_SECTION, FLOAT_ARRAY_SECTION, DOUBLE_ARRAY_SECTION, STRING_ARRAY_SECTION};
+-    }
  }
+-

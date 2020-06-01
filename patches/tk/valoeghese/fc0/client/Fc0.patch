@@ -1,64 +1,31 @@
 --- a/tk/valoeghese/fc0/client/Fc0.java
 +++ b/tk/valoeghese/fc0/client/Fc0.java
-@@ -93,5 +93,5 @@
-     @Override
-     public final void run() {
--        Object object = this;
-+        Fc0 object = this;
+@@ -106,11 +106,11 @@
+         object = this;
+         long l = System.currentTimeMillis();
+-        GLFW.glfwSetKeyCallback(object.window.pointer, KeyboardInputHandler.INSTANCE);
+-        GLFW.glfwSetMouseButtonCallback(object.window.pointer, MouseInputHandler.INSTANCE);
++        GLFW.glfwSetKeyCallback(this.window.pointer, KeyboardInputHandler.INSTANCE);
++        GLFW.glfwSetMouseButtonCallback(this.window.pointer, MouseInputHandler.INSTANCE);
          GL11.glEnable(2929);
          GL11.glClearColor(0.3f, 0.5f, 0.9f, 1.0f);
-@@ -109,6 +109,5 @@
-         ((Fc0)object).ecozoneOverlay = new Text(((Fc0)object).i18n.translate("ecozone.temperate_grassland"), -0.85f, 0.8f, 1.0f);
-         while (true) {
--            object = this.window;
--            if (!(!GLFW.glfwWindowShouldClose(((Window)object).pointer))) break;
-+            if (!(!GLFW.glfwWindowShouldClose((window.pointer)))) break;
-             long l = System.currentTimeMillis();
-             if (l >= this.field_106) {
-@@ -118,5 +117,5 @@
-                     fc0.player.getCamera().addYaw(0.002f);
+-        GLFW.glfwSetCursorPosCallback(object.window.pointer, (GLFWCursorPosCallbackI)object);
+-        ((Fc0)object).field_105 = (float)object.window.height / 2.0f;
+-        ((Fc0)object).field_112 = (float)object.window.width / 2.0f;
++        GLFW.glfwSetCursorPosCallback(this.window.pointer, (GLFWCursorPosCallbackI)object);
++        ((Fc0)object).field_105 = (float)this.window.height / 2.0f;
++        ((Fc0)object).field_112 = (float)this.window.width / 2.0f;
+         ((Fc0)object).field_356 = new class_100((Fc0)object);
+         ((Fc0)object).field_171 = new class_102((Fc0)object);
+@@ -145,8 +145,8 @@
+                 ((Fc0)object).player.tick();
+                 Ecozone ecozone = ChunkGenerator.getEcozone(((Fc0)object).player.getX(), ((Fc0)object).player.getZ());
+-                if (!bl && ecozone != object.player.currentEcozone) {
+-                    object.player.currentEcozone = ecozone;
++                if (!bl && ecozone != this.player.currentEcozone) {
++                    this.player.currentEcozone = ecozone;
+                     object2 = ((Fc0)object).i18n.translate(ecozone.toString());
+-                    object.field_356.ecozoneOverlay.method_198((String)object2);
++                    this.field_356.ecozoneOverlay.method_198((String)object2);
                  }
--                Object object2 = fc0;
-+                Fc0 object2 = fc0;
-                 if (((Fc0)object2).field_169) {
-                     if (Keybinds.DESTROY.isPressed()) {
-@@ -223,10 +222,10 @@
-                 }
-                 fc0.player.tick();
--                object2 = ChunkGenerator.getEcozone(fc0.player.getX(), fc0.player.getZ());
--                if (!fc0.field_169 && object2 != fc0.player.currentEcozone) {
--                    fc0.player.currentEcozone = object2;
--                    object2 = fc0.i18n.translate(((Ecozone)object2).toString());
--                    System.out.println((String)object2);
--                    fc0.ecozoneOverlay.method_198((String)object2);
-+                Ecozone ecozone = ChunkGenerator.getEcozone(fc0.player.getX(), fc0.player.getZ());
-+                if (!fc0.field_169 && ecozone != fc0.player.currentEcozone) {
-+                    fc0.player.currentEcozone = ecozone;
-+                    String translated = fc0.i18n.translate(((Ecozone)ecozone).toString());
-+                    System.out.println((String)translated);
-+                    fc0.ecozoneOverlay.method_198((String)translated);
-                 }
-                 ++fc0.field_170;
-@@ -234,6 +233,5 @@
-             GL11.glClear(16640);
-             this.render();
--            object = this.window;
--            GLFW.glfwSwapBuffers(((Window)object).pointer);
-+            GLFW.glfwSwapBuffers(window.pointer);
-             GLFW.glfwPollEvents();
-             if (!Keybinds.ESCAPE.isPressed()) continue;
-@@ -248,6 +246,5 @@
-             this.field_169 = true;
-         }
--        object = this.window;
--        GLFW.glfwDestroyWindow(((Window)object).pointer);
-+        GLFW.glfwDestroyWindow(window.pointer);
-         ALC10.alcCloseDevice(GuiVertex.getAudioDevice());
-     }
-@@ -264,5 +261,5 @@
-         f2 /= 2.0f;
-         f2 = 0.125f + f2 * 1.025f;
--        f2 = f > 1.15f ? 1.15f : (f2 < 0.125f ? 0.125f : f2);
-+        f2 = f2 > 1.15f ? 1.15f : (f2 < 0.125f ? 0.125f : f2);
-         GL11.glClearColor(0.35f * f2, 0.55f * f2, 0.95f * f2, 1.0f);
-         GuiVertex.terrainShader.apply();
+                 ++((Fc0)object).time;

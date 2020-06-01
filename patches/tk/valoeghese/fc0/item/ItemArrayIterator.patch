@@ -1,0 +1,12 @@
+--- a/tk/valoeghese/fc0/item/ItemArrayIterator.java
++++ b/tk/valoeghese/fc0/item/ItemArrayIterator.java
+@@ -18,4 +18,9 @@
+ 
+     @Override
++    public Item next() {
++        return iterator[index++];
++    }
++
++    @Override
+     public final boolean hasNext() {
+         return this.index < this.iterator.length;

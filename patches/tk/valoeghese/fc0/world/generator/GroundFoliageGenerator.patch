@@ -4,6 +4,6 @@
  
      @Override
 -    public final /* synthetic */ void generate(TileView tileView, GeneratorConfig generatorConfig, int n, int n2, Random random) {
-+    public final void generate(TileView tileView, GroundFoliageGeneratorConfig generatorConfig, int n, int n2, Random random) {
++    public final /* synthetic */ void generate(TileView tileView, GroundFoliageGeneratorConfig generatorConfig, int n, int n2, Random random) {
          generatorConfig = (GroundFoliageGeneratorConfig)generatorConfig;
          int n3 = ((RandomGeneratorConfig)generatorConfig).getRandomValue(random);

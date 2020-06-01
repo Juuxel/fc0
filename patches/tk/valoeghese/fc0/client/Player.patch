@@ -31,7 +31,8 @@
 -                    object2 = Direction.NORTH;
 +                    direction = Direction.NORTH;
                  }
-                 if (object2 == null) {
+-                if (object2 == null) {
++                if (direction == null) {
                      throw new RuntimeException("tf\n//I blame p0nki.");
                  }
 -                if (n9 != ((Direction)object2).getX()) {

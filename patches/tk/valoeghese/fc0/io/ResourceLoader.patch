@@ -7,6 +7,6 @@
 +    public static String read(String location) throws java.io.IOException {
          int n;
 -        object = ResourceLoader.load((String)object);
-+        InputStream object = ResourceLoader.load((String)location);
++        Object object = ResourceLoader.load((String)location);
          ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
          byte[] arrby = new byte[16384];

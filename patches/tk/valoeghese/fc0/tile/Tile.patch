@@ -1,0 +1,12 @@
+--- a/tk/valoeghese/fc0/tile/Tile.java
++++ b/tk/valoeghese/fc0/tile/Tile.java
+@@ -136,7 +136,7 @@
+         GRAY_BRICKS = new Tile(11, 5, 2, 0.015f, 0.011f).setTranslationKey("stone_bricks");
+         IceTile iceTile = new IceTile(12, 5, 0, 0.05f, 0.14f);
+-        new IceTile(12, 5, 0, 0.05f, 0.14f).field_300 = true;
+         tile = iceTile;
+-        iceTile.solid = false;
++        tile.field_300 = true;
++        tile.solid = false;
+         ICE = iceTile.setTranslationKey("ice");
+         GALENA = new Tile(13, 5, 2, 0.01f, 0.01f).setTranslationKey("galena");

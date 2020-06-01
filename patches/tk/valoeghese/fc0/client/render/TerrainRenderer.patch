@@ -2,7 +2,7 @@
 +++ b/tk/valoeghese/fc0/client/render/TerrainRenderer.java
 @@ -15,7 +15,5 @@
      public TerrainRenderer(List<TileRenderer> object) {
-         super(35048, GuiVertex.terrainShader);
+         super(35048, Keybind.terrainShader);
 -        object = object.iterator();
 -        while (object.hasNext()) {
 -            TileRenderer tileRenderer = (TileRenderer)object.next();

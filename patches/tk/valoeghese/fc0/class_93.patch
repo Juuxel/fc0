@@ -1,0 +1,11 @@
+--- a/tk/valoeghese/fc0/class_93.java
++++ b/tk/valoeghese/fc0/class_93.java
+@@ -63,6 +63,6 @@
+         }
+         if ((object = class_89.field_310.method_248(((Item)object).getTileId())) != null) {
+-            for (int i = 0; i < object.size(); ++i) {
+-                Item item = (Item)object.get(i);
++            for (int i = 0; i < ((java.util.List<?>)object).size(); ++i) {
++                Item item = (Item)((java.util.List<?>)object).get(i);
+                 class_94 class_942 = new class_94(new Item(item), -0.8f, 0.87f - 0.14f * (float)i);
+                 String[] arrstring = item.show();

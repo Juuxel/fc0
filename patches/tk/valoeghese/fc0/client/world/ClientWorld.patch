@@ -1,0 +1,12 @@
+--- a/tk/valoeghese/fc0/client/world/ClientWorld.java
++++ b/tk/valoeghese/fc0/client/world/ClientWorld.java
+@@ -25,7 +25,6 @@
+     private final OrderedList<ClientChunk> sortedChunks = new OrderedList<ClientChunk>(object -> {
+         ChunkPos chunkPos = Fc0.get().getPlayer().chunk.getPos();
+-        object = ((Chunk)object).getPos();
+-        int n = chunkPos.x - ((ChunkPos)object).x;
+-        int n2 = chunkPos.y - ((ChunkPos)object).y;
++        int n = chunkPos.x - object.getPos().x;
++        int n2 = chunkPos.y - object.getPos().y;
+         int n3 = n;
+         int n4 = n2;

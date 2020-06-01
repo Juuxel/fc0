@@ -10,39 +10,37 @@
 +    private I18n(String string, String string2) throws Throwable {
          this(string, string2, null);
      }
-@@ -29,11 +29,12 @@
+@@ -29,9 +29,12 @@
       * Enabled aggressive exception aggregation
       */
 -    private I18n(String object, String object2, @Nullable String object3) {
 +    private I18n(String id, String name, @Nullable String parent) throws Throwable {
          Throwable throwable;
-+        Object object = this;
-+        Object object2 = null;
++        Object object;
++        Object object2;
 +        Object object3;
          block19: {
 -            this.id = object;
 -            this.parent = object3;
--            object = this;
--            object2 = null;
 +            this.id = id;
 +            this.parent = parent;
-             if (((I18n)object).parent != null) {
-                 object2 = new Properties();
-@@ -49,5 +50,5 @@
+             object = this;
+             object2 = null;
+@@ -49,5 +52,5 @@
                              object = throwable2;
                              throwable = throwable2;
 -                            throw object;
-+                            throw (Throwable) object;
++                            throw throwable2;
                          }
                          catch (Throwable throwable3) {
-@@ -86,5 +87,5 @@
+@@ -86,5 +89,5 @@
                      object = throwable5;
                      throwable = throwable5;
 -                    throw object;
-+                    throw (Throwable) object;
++                    throw throwable5;
                  }
                  catch (Throwable throwable6) {
-@@ -118,5 +119,10 @@
+@@ -118,5 +121,10 @@
  
      static {
 -        new I18n("en.us", "American English", "en.gb");
@@ -50,7 +48,7 @@
 +            INSTANCE = new I18n("en.gb", "British English");
 +            new I18n("en.us", "American English", "en.gb");
 +        } catch (Throwable t) {
-+            throw new RuntimeException("Could not load languages", t);
++            throw new RuntimeException(t);
 +        }
      }
  }

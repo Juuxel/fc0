@@ -61,6 +61,7 @@ class DeobfuscateTask extends DefaultTask {
             .fixPackageAccess(true)
             .withMappings(TinyUtils.createTinyMappingProvider(outputMappings.toPath(), "intermediary", "named"))
             .renameInvalidLocals(true)
+            .fixPackageAccess(true)
             .build()
 
         JarRemapping.remapJar(remapper, inputJar, outputJar, libraries)

@@ -1,0 +1,9 @@
+--- a/tk/valoeghese/fc0/world/generator/ScatteredOreGenerator.java
++++ b/tk/valoeghese/fc0/world/generator/ScatteredOreGenerator.java
+@@ -20,5 +20,5 @@
+ 
+     @Override
+-    public final /* synthetic */ void generate(TileView tileView, GeneratorConfig generatorConfig, int n, int n2, Random random) {
++    public final /* synthetic */ void generate(TileView tileView, ScatteredOreGeneratorConfig generatorConfig, int n, int n2, Random random) {
+         generatorConfig = (ScatteredOreGeneratorConfig)generatorConfig;
+         int n3 = ((ScatteredOreGeneratorConfig)generatorConfig).method_245();

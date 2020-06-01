@@ -1,12 +1,37 @@
 --- a/tk/valoeghese/fc0/world/World.java
 +++ b/tk/valoeghese/fc0/world/World.java
-@@ -44,7 +44,7 @@
-             System.out.println("Generating World.");
+@@ -36,5 +36,5 @@
+     private final Random random;
+     private final long seed;
+-    private final TileView generatingView = new GeneratingTileView(this, 0);
++    private final TileView generatingView = new GeneratingTileView(this, (byte) 0);
+     private final ChunkFactory<T> chunkFactory;
+     @Nullable
+@@ -91,5 +91,4 @@
+             t = world.chunkStorage.loadOrCreate(world, n3, n4, world.chunkFactory);
          }
--        this.chunks = (Chunk[])intFunction.apply(this.chunkSize * this.chunkSize);
-+        this.chunks = intFunction.apply(this.chunkSize * this.chunkSize);
-         this.random = new Random(l);
--        this.orderedChunks = new OrderedList<Chunk>(chunk -> Math.abs(chunk.x) + Math.abs(chunk.z));
-+        this.orderedChunks = new OrderedList<>(chunk -> Math.abs(chunk.x) + Math.abs(chunk.z));
-         for (int i = -n + 1; i < n; ++i) {
-             for (int j = -n + 1; j < n; ++j) {
+-        world = t;
+         switch (chunkStatus) {
+             case GENERATE: {
+@@ -99,14 +98,14 @@
+             case TICK: 
+             case POPULATE: {
+-                if (((Chunk)world).populated) break;
+-                this.random.setSeed(this.seed + (long)(134 * ((Chunk)world).x) + (long)(-529 * ((Chunk)world).z) + 127L);
+-                ChunkGenerator.populate(this.generatingView, (Chunk)((Object)world), this.random);
+-                ((Chunk)world).populated = true;
++                if (((Chunk)t).populated) break;
++                this.random.setSeed(this.seed + (long)(134 * ((Chunk)t).x) + (long)(-529 * ((Chunk)t).z) + 127L);
++                ChunkGenerator.populate(this.generatingView, (Chunk)((Object)t), this.random);
++                ((Chunk)t).populated = true;
+             }
+         }
+-        if (world != null) {
+-            this.chunks.put(World.getChunkKey(n, n2), (T)world);
++        if (t != null) {
++            this.chunks.put(World.getChunkKey(n, n2), (T)t);
+         }
+-        return world;
++        return t;
+     }
+ 

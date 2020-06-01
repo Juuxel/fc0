@@ -4,6 +4,6 @@
  
      @Override
 -    public final /* synthetic */ void generate(TileView tileView, GeneratorConfig generatorConfig, int n, int n2, Random random) {
-+    public final void generate(TileView tileView, TreeGeneratorConfig generatorConfig, int n, int n2, Random random) {
++    public final /* synthetic */ void generate(TileView tileView, TreeGeneratorConfig generatorConfig, int n, int n2, Random random) {
          generatorConfig = (TreeGeneratorConfig)generatorConfig;
          int n3 = ((TreeGeneratorConfig)generatorConfig).getTreeGenAmount(n, n2);

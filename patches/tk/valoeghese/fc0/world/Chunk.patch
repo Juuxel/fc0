@@ -1,24 +1,17 @@
 --- a/tk/valoeghese/fc0/world/Chunk.java
 +++ b/tk/valoeghese/fc0/world/Chunk.java
-@@ -33,8 +33,8 @@
-     public boolean populated = false;
- 
--    public Chunk(ChunkView chunkView, int n, int n2, byte[] arrby, byte[] object) {
-+    public Chunk(ChunkView chunkView, int n, int n2, byte[] arrby, byte[] meta) {
-         this.world = chunkView;
-         this.tiles = arrby;
--        this.meta = object;
-+        this.meta = meta;
-         this.x = n;
-         this.z = n2;
-@@ -45,5 +45,5 @@
+@@ -55,7 +55,7 @@
              for (n2 = 0; n2 < 16; ++n2) {
                  for (int j = 0; j < 16; ++j) {
 -                    object = Tile.BY_ID[this.getTile(n2, i, j)];
-+                    Tile object = Tile.BY_ID[this.getTile(n2, i, j)];
-                     this.field_146 += ((Tile)object).field_165;
-                     if (n == 0 || !((Tile)object).method_31()) continue;
-@@ -116,7 +116,6 @@
+-                    this.field_146 += ((Tile)object).field_165;
+-                    if (n == 0 || !((Tile)object).isNotAir()) continue;
++                    Tile t = Tile.BY_ID[this.getTile(n2, i, j)];
++                    this.field_146 += t.field_165;
++                    if (n == 0 || !t.isNotAir()) continue;
+                     this.presentYLevels.add(i);
+                     n = 0;
+@@ -127,7 +127,6 @@
              ((Entity)object).chunk = this;
              Entity entity = object;
 -            object = this;

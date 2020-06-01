@@ -1,17 +1,17 @@
 --- a/tk/valoeghese/fc0/client/render/Shader.java
 +++ b/tk/valoeghese/fc0/client/render/Shader.java
-@@ -30,8 +30,8 @@
-     }
+@@ -15,8 +15,8 @@
+     private final int program;
  
 -    public Shader(String object, String string) {
-+    public Shader(String object2, String string) {
++    public Shader(String location, String string) {
          int n = GL20.glCreateShader(35633);
          try {
 -            GL20.glShaderSource(n, (CharSequence)ResourceLoader.read((String)object));
-+            GL20.glShaderSource(n, (CharSequence)ResourceLoader.read((String)object2));
++            GL20.glShaderSource(n, (CharSequence)ResourceLoader.read((String)location));
          }
          catch (IOException iOException) {
-@@ -39,7 +39,7 @@
+@@ -24,7 +24,7 @@
          }
          GL20.glCompileShader(n);
 -        object = new int[1];
@@ -21,14 +21,14 @@
 +        if (object[0] == 0) {
              throw new RuntimeException("Error compiling vertex shader", new RuntimeException(GL20.glGetShaderInfoLog(n)));
          }
-@@ -53,5 +53,5 @@
+@@ -38,5 +38,5 @@
          GL20.glCompileShader(n2);
          GL20.glGetShaderiv(n2, 35713, (int[])object);
 -        if (object[0] == false) {
 +        if (object[0] == 0) {
              throw new RuntimeException("Error compiling fragment shader", new RuntimeException(GL20.glGetShaderInfoLog(n2)));
          }
-@@ -61,5 +61,5 @@
+@@ -46,5 +46,5 @@
          GL20.glLinkProgram(this.program);
          GL20.glGetProgramiv(this.program, 35714, (int[])object);
 -        if (object[0] == false) {
