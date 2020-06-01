@@ -1,0 +1,7 @@
+CLASS tk/valoeghese/fc0/class_86 tk/valoeghese/fc0/tile/PlantTile
+	FIELD field_298 soilId B
+	METHOD <init> (IIIFFLtk/valoeghese/fc0/class_14;)V
+		ARG 1 id
+		ARG 2 textureX
+		ARG 3 textureY
+		ARG 6 soil

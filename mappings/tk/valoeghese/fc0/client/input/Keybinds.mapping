@@ -21,3 +21,5 @@ CLASS tk/valoeghese/fc0/class_39 tk/valoeghese/fc0/client/input/Keybinds
 	FIELD field_267 SELECT_8 Ltk/valoeghese/fc0/class_19;
 	FIELD field_268 SELECT_9 Ltk/valoeghese/fc0/class_19;
 	FIELD field_269 SET_SPAWN Ltk/valoeghese/fc0/class_19;
+	FIELD field_359 SELECT_0 Ltk/valoeghese/fc0/class_19;
+	FIELD field_360 INVENTORY Ltk/valoeghese/fc0/class_19;

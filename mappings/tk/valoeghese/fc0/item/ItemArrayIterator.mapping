@@ -1,0 +1,5 @@
+CLASS tk/valoeghese/fc0/class_91 tk/valoeghese/fc0/item/ItemArrayIterator
+	FIELD field_316 index I
+	FIELD field_317 iterator [Ltk/valoeghese/fc0/class_92;
+	METHOD <init> ([Ltk/valoeghese/fc0/class_92;)V
+		ARG 1 items

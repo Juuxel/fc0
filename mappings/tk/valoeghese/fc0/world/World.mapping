@@ -22,4 +22,4 @@ CLASS tk/valoeghese/fc0/class_6 tk/valoeghese/fc0/world/World
 	METHOD method_216 getStoredChunk (II)Ltk/valoeghese/fc0/class_4;
 		ARG 1 x
 		ARG 2 z
-	METHOD method_8 generateSpawn ()V
+	METHOD method_8 generateSpawn (Ltk/valoeghese/fc0/class_33;)V

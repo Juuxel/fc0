@@ -1,6 +1,9 @@
 CLASS tk/valoeghese/fc0/class_37 tk/valoeghese/fc0/client/Player
 	FIELD field_120 camera Ltk/valoeghese/fc0/class_27;
 	FIELD field_259 currentEcozone Ltk/valoeghese/fc0/class_46;
+	METHOD <init> (Ltk/valoeghese/fc0/class_27;Ltk/valoeghese/fc0/class_36;Z)V
+		ARG 1 camera
+		ARG 2 fc0
 	METHOD method_87 getCamera ()Ltk/valoeghese/fc0/class_27;
 	METHOD method_90 rayCast (D)Ltk/valoeghese/fc0/class_1;
 		ARG 1 maxDistance

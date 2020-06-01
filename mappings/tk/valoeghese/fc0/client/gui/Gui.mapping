@@ -6,12 +6,16 @@ CLASS tk/valoeghese/fc0/class_17 tk/valoeghese/fc0/client/gui/Gui
 	FIELD field_45 texture I
 	METHOD <init> (I)V
 		ARG 1 texture
-	METHOD method_194 reset ()V
-	METHOD method_36 build ()V
-	METHOD method_37 vertex (FFFF)I
+	METHOD method_226 vertex (FFFF)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 u
 		ARG 4 v
+	METHOD method_36 build ()V
+	METHOD method_37 vertex (FFFFF)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 u
+		ARG 5 v
 	METHOD method_38 index (III)V
-	METHOD method_39 render ()V

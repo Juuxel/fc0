@@ -7,7 +7,10 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 	FIELD field_213 GRAY_BRICKS Ltk/valoeghese/fc0/class_14;
 	FIELD field_27 id B
 	FIELD field_28 textureX I
+	FIELD field_299 translationKey Ljava/lang/String;
 	FIELD field_29 AIR Ltk/valoeghese/fc0/class_14;
+	FIELD field_302 ICE Ltk/valoeghese/fc0/class_14;
+	FIELD field_303 GALENA Ltk/valoeghese/fc0/class_14;
 	FIELD field_30 solid Z
 	FIELD field_31 BY_ID [Ltk/valoeghese/fc0/class_14;
 	FIELD field_32 textureY I
@@ -24,6 +27,13 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 		ARG 3 textureY
 	METHOD method_164 useCrossModel ()Ltk/valoeghese/fc0/class_14;
 	METHOD method_165 hasCrossModel ()Z
+	METHOD method_238 canPlaceAt (Ltk/valoeghese/fc0/class_50;III)Z
+		ARG 1 world
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD method_239 setTranslationKey (Ljava/lang/String;)Ltk/valoeghese/fc0/class_14;
+		ARG 1 translationKey
 	METHOD method_30 nonOpaque ()Ltk/valoeghese/fc0/class_14;
 	METHOD method_31 isNotAir ()Z
 	METHOD method_32 getTextureY (I)I
