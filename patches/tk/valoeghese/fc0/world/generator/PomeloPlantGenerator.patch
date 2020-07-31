@@ -1,9 +1,0 @@
---- a/tk/valoeghese/fc0/world/generator/PomeloPlantGenerator.java
-+++ b/tk/valoeghese/fc0/world/generator/PomeloPlantGenerator.java
-@@ -16,5 +16,5 @@
-     }
- 
--    public void method_319(TileView tileView, TreeGeneratorConfig treeGeneratorConfig, int n, int n2, Random random) {
-+    public void generate(TileView tileView, TreeGeneratorConfig treeGeneratorConfig, int n, int n2, Random random) {
-         int n3 = treeGeneratorConfig.getTreeGenAmount(n, n2);
-         if (random.nextInt(8) == 0) {
