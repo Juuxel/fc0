@@ -1,3 +1,6 @@
 TODO: These have to be specified properly in the intermediary
 
-class_108 => class_106$class_108 (TextureAtlas$Position)
+class_108                     => class_106$class_108 (TextureAtlas$Position)
+class_30 (WorldVertex)        => class_29$class_30 (WorldRenderer$Vertex)
+class_18 (GuiVertex)          => class_17$class_18 (Gui$Vertex)
+class_79 (GeneratingTileView) => class_6$class_79 (World$GeneratingTileView)
