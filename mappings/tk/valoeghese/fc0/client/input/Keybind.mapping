@@ -1,6 +1,4 @@
 CLASS tk/valoeghese/fc0/class_19 tk/valoeghese/fc0/client/input/Keybind
-	FIELD field_296 terrainShader Ltk/valoeghese/fc0/class_28;
-	FIELD field_297 guiShader Ltk/valoeghese/fc0/class_28;
 	FIELD field_49 name Ljava/lang/String;
 	FIELD field_51 down Z
 	FIELD field_54 pressed Z
@@ -8,8 +6,6 @@ CLASS tk/valoeghese/fc0/class_19 tk/valoeghese/fc0/client/input/Keybind
 		ARG 1 name
 		ARG 2 defaultKey
 		ARG 3 mouse
-	METHOD method_236 storeTexture (Ljava/awt/image/BufferedImage;)I
-		ARG 0 image
 	METHOD method_43 isDown ()Z
 	METHOD method_46 update (I)V
 		ARG 1 action

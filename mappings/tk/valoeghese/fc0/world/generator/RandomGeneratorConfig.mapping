@@ -1,8 +1,0 @@
-CLASS tk/valoeghese/fc0/class_54 tk/valoeghese/fc0/world/generator/RandomGeneratorConfig
-	FIELD field_194 min I
-	FIELD field_195 extra I
-	METHOD <init> (II)V
-		ARG 1 min
-		ARG 2 max
-	METHOD method_155 getRandomValue (Ljava/util/Random;)I
-		ARG 1 random
