@@ -21,6 +21,10 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 	FIELD field_37 LOG Ltk/valoeghese/fc0/class_14;
 	FIELD field_38 WATER Ltk/valoeghese/fc0/class_14;
 	FIELD field_39 SAND Ltk/valoeghese/fc0/class_14;
+	FIELD field_400 key Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;IF)V
+		ARG 1 key
+		ARG 2 id
 	METHOD method_164 useCrossModel ()Ltk/valoeghese/fc0/class_14;
 	METHOD method_165 hasCrossModel ()Z
 	METHOD method_238 canPlaceAt (Ltk/valoeghese/fc0/class_50;III)Z
@@ -32,8 +36,14 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 		ARG 1 translationKey
 	METHOD method_30 nonOpaque ()Ltk/valoeghese/fc0/class_14;
 	METHOD method_31 isNotAir ()Z
+	METHOD method_32 getTextureY (IB)I
+		ARG 1 face
+		ARG 2 meta
 	METHOD method_33 isSolid (Z)Z
 		ARG 1 renderingWater
+	METHOD method_333 setTexturePositions (Ljava/util/function/Function;)V
+		ARG 1 atlasPositionGetter
+	METHOD method_334 nonSolid ()Ltk/valoeghese/fc0/class_14;
 	METHOD method_34 shouldRender ()Z
 	METHOD method_35 getTextureX (IB)I
 		ARG 1 face

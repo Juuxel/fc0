@@ -1,0 +1,7 @@
+CLASS tk/valoeghese/fc0/class_53 tk/valoeghese/fc0/world/generator/GroundFoliageGeneratorConfig
+	FIELD field_193 tiles [Ltk/valoeghese/fc0/class_14;
+	METHOD <init> (II[Ltk/valoeghese/fc0/class_14;)V
+		ARG 1 min
+		ARG 2 max
+		ARG 3 tiles
+	METHOD method_154 getRandomTile (Ljava/util/Random;)Ltk/valoeghese/fc0/class_14;

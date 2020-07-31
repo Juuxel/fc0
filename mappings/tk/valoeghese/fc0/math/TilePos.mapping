@@ -10,3 +10,8 @@ CLASS tk/valoeghese/fc0/class_3 tk/valoeghese/fc0/math/TilePos
 		ARG 1 vec
 	METHOD method_133 down ()Ltk/valoeghese/fc0/class_3;
 	METHOD method_209 toChunkPos ()Ltk/valoeghese/fc0/class_33;
+	METHOD method_344 isInsideChunk ()Z
+	METHOD method_345 offset (III)Ltk/valoeghese/fc0/class_3;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z

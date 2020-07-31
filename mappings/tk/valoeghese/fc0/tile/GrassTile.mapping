@@ -1,1 +1,4 @@
 CLASS tk/valoeghese/fc0/class_12 tk/valoeghese/fc0/tile/GrassTile
+	FIELD field_394 sideTexturePosition Ltk/valoeghese/fc0/class_115;
+	FIELD field_395 snowyTexturePosition Ltk/valoeghese/fc0/class_115;
+	FIELD field_396 snowySideTexturePosition Ltk/valoeghese/fc0/class_115;

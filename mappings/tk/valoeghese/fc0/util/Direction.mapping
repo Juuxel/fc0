@@ -1,4 +1,5 @@
 CLASS tk/valoeghese/fc0/class_34 tk/valoeghese/fc0/util/Direction
+	FIELD field_401 VALUES [Ltk/valoeghese/fc0/class_34;
 	FIELD field_94 x I
 	FIELD field_97 y I
 	FIELD field_99 z I
@@ -6,6 +7,8 @@ CLASS tk/valoeghese/fc0/class_34 tk/valoeghese/fc0/util/Direction
 		ARG 3 x
 		ARG 4 y
 		ARG 5 z
+	METHOD apply (Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 1 pos
 	METHOD method_125 getX ()I
 	METHOD method_126 getY ()I
 	METHOD method_127 getZ ()I

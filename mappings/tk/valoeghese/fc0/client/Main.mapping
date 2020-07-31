@@ -1,3 +1,5 @@
 CLASS tk/valoeghese/fc0/client/Main
 	METHOD main ([Ljava/lang/String;)V
 		ARG 0 args
+	METHOD method_373 println (Ljava/lang/Object;)V
+		ARG 0 t

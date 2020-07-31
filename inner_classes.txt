@@ -1,0 +1,3 @@
+TODO: These have to be specified properly in the intermediary
+
+class_108 => class_106$class_108 (TextureAtlas$Position)

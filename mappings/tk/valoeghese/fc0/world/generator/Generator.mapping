@@ -3,9 +3,16 @@ CLASS tk/valoeghese/fc0/class_10 tk/valoeghese/fc0/world/generator/Generator
 	FIELD field_191 id Ljava/lang/String;
 	FIELD field_192 GROUND_FOLIAGE Ltk/valoeghese/fc0/class_10;
 	FIELD field_305 SCATTERED_ORE Ltk/valoeghese/fc0/class_10;
+	FIELD field_404 POMELO_PLANT Ltk/valoeghese/fc0/class_10;
 	METHOD <init> (Ljava/lang/String;)V
 		ARG 1 id
 	METHOD method_152 getTopY (Ltk/valoeghese/fc0/class_50;II)I
 		ARG 0 world
 		ARG 1 x
 		ARG 2 z
+	METHOD method_28 generate (Ltk/valoeghese/fc0/class_50;Ltk/valoeghese/fc0/class_51;IILjava/util/Random;)V
+		ARG 1 world
+		ARG 2 config
+		ARG 3 x
+		ARG 4 z
+		ARG 5 random
