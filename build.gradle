@@ -1,3 +1,4 @@
+import juuxel.bytecodetweaker.BytecodeTweaker
 import net.fabricmc.stitch.commands.CommandFixNesting
 
 plugins {
@@ -79,6 +80,11 @@ task intermediary(type: RemapJarTask) {
 
     doLast {
         CommandFixNesting.run(outputJar)
+
+        def tweakFile = file("bytecode_tweaks/${version}.json")
+        if (tweakFile.exists()) {
+            new BytecodeTweaker(tweakFile).run(outputJar.toPath())
+        }
     }
 }
 

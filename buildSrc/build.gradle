@@ -15,4 +15,5 @@ dependencies {
     implementation "net.fabricmc:tiny-mappings-parser:$tiny_mappings_parser"
     implementation "com.google.guava:guava:$guava" // for t-m-p
     implementation "commons-io:commons-io:$commons_io" // for CommandFixNesting
+    implementation "blue.endless:jankson:$jankson"
 }
