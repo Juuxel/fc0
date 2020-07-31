@@ -1,5 +1,5 @@
-import cuchaz.enigma.command.ConvertMappingsCommand
 import cuchaz.enigma.command.InvertMappingsCommand
+import cuchaz.enigma.command.MapSpecializedMethodsCommand
 import net.fabricmc.stitch.commands.tinyv2.CommandMergeTinyV2
 import net.fabricmc.stitch.commands.tinyv2.CommandProposeV2FieldNames
 import net.fabricmc.stitch.commands.tinyv2.CommandReorderTinyV2
@@ -42,10 +42,10 @@ class DeobfuscateTask extends DefaultTask {
         def proposedTiny = Files.createTempFile("proposed.", ".tiny")
         def mergedTiny = Files.createTempFile("merged.", ".tiny")
         def invertedIntermediary = Files.createTempFile("inverted_intermediary.", ".tiny")
-        def converter = new ConvertMappingsCommand()
+        def converter = new MapSpecializedMethodsCommand()
 
-        // Convert to tiny v2
-        converter.run("enigma", mappings.absolutePath, "tinyv2:intermediary:named", inputTiny.toString())
+        // Convert to tiny v2 and map specialized methods
+        converter.run(inputJar.absolutePath, "enigma", mappings.absolutePath, "tinyv2:intermediary:named", inputTiny.toString())
         new InvertMappingsCommand().run("tiny", intermediaryMappings.absolutePath, "tinyv2:intermediary:official", invertedIntermediary.toString())
 
         // Propose names
