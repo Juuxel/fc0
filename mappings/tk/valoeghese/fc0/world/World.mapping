@@ -23,3 +23,7 @@ CLASS tk/valoeghese/fc0/class_6 tk/valoeghese/fc0/world/World
 		ARG 1 x
 		ARG 2 z
 	METHOD method_8 generateSpawn (Ltk/valoeghese/fc0/class_33;)V
+	CLASS class_79 GeneratingTileView
+		FIELD field_285 world Ltk/valoeghese/fc0/class_6;
+		METHOD <init> (Ltk/valoeghese/fc0/class_6;)V
+			ARG 1 world

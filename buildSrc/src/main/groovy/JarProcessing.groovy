@@ -2,7 +2,7 @@ import net.fabricmc.tinyremapper.OutputConsumerPath
 import net.fabricmc.tinyremapper.TinyRemapper
 import org.gradle.api.file.FileCollection
 
-class JarRemapping {
+class JarProcessing {
     static void remapJar(TinyRemapper remapper, File input, File output, FileCollection libraries) {
         def consumer = new OutputConsumerPath.Builder(output.toPath()).build()
         try {
@@ -18,5 +18,9 @@ class JarRemapping {
             consumer.close()
             remapper.finish()
         }
+    }
+
+    static void fixNesting(File jar) {
+        CommandFixNesting.run(jar)
     }
 }

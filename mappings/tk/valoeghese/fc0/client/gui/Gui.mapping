@@ -19,3 +19,16 @@ CLASS tk/valoeghese/fc0/class_17 tk/valoeghese/fc0/client/gui/Gui
 		ARG 4 u
 		ARG 5 v
 	METHOD method_38 index (III)V
+	CLASS class_18 Vertex
+		FIELD field_46 vao I
+		FIELD field_47 elementCount I
+		METHOD <init> (II)V
+			ARG 1 vao
+			ARG 2 elementCount
+		METHOD <init> (IIB)V
+			ARG 1 vao
+			ARG 2 elementCount
+		METHOD method_40 getVao (Ltk/valoeghese/fc0/class_17$class_18;)I
+			ARG 0 vertex
+		METHOD method_41 getElementCount (Ltk/valoeghese/fc0/class_17$class_18;)I
+			ARG 0 vertex

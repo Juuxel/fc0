@@ -74,6 +74,10 @@ task intermediary(type: RemapJarTask) {
     outputJar = intermediaryJar
     from = "official"
     to = "intermediary"
+
+    doLast {
+        JarProcessing.fixNesting(outputJar)
+    }
 }
 
 task deobf(type: DeobfuscateTask, dependsOn: intermediary) {

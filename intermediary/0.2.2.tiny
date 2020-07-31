@@ -42,7 +42,7 @@ FIELD	G	Ljava/util/Map;	a	field_371
 CLASS	H	tk/valoeghese/fc0/class_107
 FIELD	H	Ljava/awt/image/BufferedImage;	a	field_372
 FIELD	H	Ljava/lang/String;	a	field_373
-CLASS	I	tk/valoeghese/fc0/class_108
+CLASS	I	tk/valoeghese/fc0/class_106$class_108
 FIELD	I	I	a	field_374
 FIELD	I	I	b	field_375
 METHOD	I	()I	a	method_302
@@ -60,7 +60,7 @@ METHOD	J	(Lorg/joml/Matrix4f;)V	a	method_75
 METHOD	J	()V	b	method_122
 METHOD	J	(FFFFFF)I	b	method_76
 METHOD	J	(III)V	b	method_77
-CLASS	K	tk/valoeghese/fc0/class_30
+CLASS	K	tk/valoeghese/fc0/class_29$class_30
 FIELD	K	I	a	field_86
 FIELD	K	I	b	field_87
 METHOD	K	(LK;)I	a	method_78
@@ -94,7 +94,7 @@ METHOD	N	(FFFF)I	a	method_226
 METHOD	N	(FFFFF)I	a	method_37
 METHOD	N	(III)V	a	method_38
 METHOD	N	()V	c	method_36
-CLASS	O	tk/valoeghese/fc0/class_18
+CLASS	O	tk/valoeghese/fc0/class_17$class_18
 FIELD	O	I	a	field_46
 FIELD	O	I	b	field_47
 METHOD	O	(LO;)I	a	method_40
@@ -524,7 +524,7 @@ METHOD	aq	()V	b	method_137
 METHOD	aq	(II)Lan;	c	method_216
 CLASS	ar	tk/valoeghese/fc0/class_78
 FIELD	ar	[I	a	field_284
-CLASS	as	tk/valoeghese/fc0/class_79
+CLASS	as	tk/valoeghese/fc0/class_6$class_79
 FIELD	as	Laq;	a	field_285
 CLASS	at	tk/valoeghese/fc0/class_80
 METHOD	at	(Lae;)V	b	method_217
