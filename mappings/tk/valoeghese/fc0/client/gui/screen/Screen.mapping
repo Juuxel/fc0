@@ -1,0 +1,7 @@
+CLASS tk/valoeghese/fc0/class_101 tk/valoeghese/fc0/client/gui/screen/Screen
+	FIELD field_361 fc0 Ltk/valoeghese/fc0/class_36;
+	METHOD <init> (Ltk/valoeghese/fc0/class_36;)V
+		ARG 1 fc0
+	METHOD method_296 render (F)V
+	METHOD method_297 (Ltk/valoeghese/fc0/class_32;)V
+		ARG 1 window

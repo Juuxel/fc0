@@ -1,0 +1,5 @@
+CLASS tk/valoeghese/fc0/class_105 tk/valoeghese/fc0/client/gui/screen/SaveScreen
+	FIELD field_368 parent Ltk/valoeghese/fc0/class_121;
+	METHOD <init> (Ltk/valoeghese/fc0/class_36;Ltk/valoeghese/fc0/class_121;)V
+		ARG 1 fc0
+		ARG 2 parent

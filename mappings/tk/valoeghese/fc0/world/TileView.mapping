@@ -19,3 +19,7 @@ CLASS tk/valoeghese/fc0/class_50 tk/valoeghese/fc0/world/TileView
 		ARG 1 x
 		ARG 2 z
 		ARG 3 predicate
+	METHOD method_350 getMetaFromChunk (III)B
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z

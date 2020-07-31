@@ -1,0 +1,6 @@
+CLASS tk/valoeghese/fc0/class_102 tk/valoeghese/fc0/client/gui/screen/ClickToStartScreen
+	FIELD field_362 startLabel Ltk/valoeghese/fc0/class_17;
+	FIELD field_366 parent Ltk/valoeghese/fc0/class_121;
+	METHOD <init> (Ltk/valoeghese/fc0/class_36;Ltk/valoeghese/fc0/class_121;)V
+		ARG 1 fc0
+		ARG 2 parent

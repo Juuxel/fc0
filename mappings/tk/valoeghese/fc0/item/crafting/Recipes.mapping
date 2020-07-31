@@ -1,0 +1,9 @@
+CLASS tk/valoeghese/fc0/class_89 tk/valoeghese/fc0/item/crafting/Recipes
+	FIELD field_310 INSTANCE Ltk/valoeghese/fc0/class_89;
+	FIELD field_311 recipes Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;
+	METHOD method_247 init ()V
+	METHOD method_248 getRecipes (I)Ljava/util/List;
+		ARG 1 input
+	METHOD method_249 addRecipe (ILtk/valoeghese/fc0/class_92;)V
+		ARG 1 input
+		ARG 2 output

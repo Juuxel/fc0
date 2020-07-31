@@ -1,0 +1,5 @@
+CLASS tk/valoeghese/fc0/class_84 tk/valoeghese/fc0/client/ClientInventory
+	FIELD field_294 fc0 Ltk/valoeghese/fc0/class_36;
+	METHOD <init> (ILtk/valoeghese/fc0/class_36;)V
+		ARG 1 size
+		ARG 2 fc0

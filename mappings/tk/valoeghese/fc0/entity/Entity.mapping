@@ -5,6 +5,10 @@ CLASS tk/valoeghese/fc0/class_49 tk/valoeghese/fc0/entity/Entity
 	FIELD field_187 falling Z
 	FIELD field_188 velocity Ltk/valoeghese/fc0/class_40;
 	FIELD field_325 inventory Ltk/valoeghese/fc0/class_90;
+	FIELD field_326 creativeMode Z
+	METHOD <init> (ZLjava/util/function/IntFunction;)V
+		ARG 1 creativeMode
+		ARG 2 inventoryFactory
 	METHOD method_138 getX ()I
 	METHOD method_139 getPos ()Ltk/valoeghese/fc0/class_45;
 	METHOD method_140 getTilePos ()Ltk/valoeghese/fc0/class_3;
@@ -24,6 +28,11 @@ CLASS tk/valoeghese/fc0/class_49 tk/valoeghese/fc0/entity/Entity
 	METHOD method_146 canJump ()Z
 	METHOD method_147 isUnderwater ()Z
 	METHOD method_268 getInventory ()Ltk/valoeghese/fc0/class_90;
+	METHOD method_269 load (Ltk/valoeghese/fc0/class_56;)V
+		ARG 1 tscs
+	METHOD method_270 setDefaultItems ()V
+	METHOD method_271 loadInventory (Ltk/valoeghese/fc0/class_56;)V
+		ARG 1 tscs
 	METHOD method_88 tick ()V
 	METHOD method_92 move (DDD)Z
 		ARG 1 x

@@ -1,0 +1,9 @@
+--- a/tk/valoeghese/fc0/client/render/texture/TextureAtlas.java
++++ b/tk/valoeghese/fc0/client/render/texture/TextureAtlas.java
+@@ -30,5 +30,5 @@
+                 throw new RuntimeException("Invalidly sized image encountered while generating atlas \"" + string + "\"!");
+             }
+-            this.positions.put(atlasTexture.name, new Position(n, n2, 0));
++            this.positions.put(atlasTexture.name, new Position(n, n2));
+             int n3 = n << 4;
+             int n4 = 15 - n2 << 4;

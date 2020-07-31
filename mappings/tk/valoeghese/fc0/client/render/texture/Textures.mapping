@@ -1,0 +1,24 @@
+CLASS tk/valoeghese/fc0/class_26 tk/valoeghese/fc0/client/render/texture/Textures
+	FIELD field_166 FONT_ATLAS I
+	FIELD field_289 STARTUP I
+	FIELD field_328 SELECTED I
+	FIELD field_329 CRAFT I
+	FIELD field_330 CRAFTING I
+	FIELD field_409 TILE_ATLAS Ltk/valoeghese/fc0/class_106;
+	FIELD field_410 ITEM_ATLAS_ID I
+	FIELD field_411 ITEM_ATLAS Ltk/valoeghese/fc0/class_106;
+	FIELD field_412 ENTER I
+	FIELD field_71 TILE_ATLAS_ID I
+	FIELD field_73 WATER_OVERLAY I
+	METHOD method_359 init ()V
+	METHOD method_360 storeAtlas (Ltk/valoeghese/fc0/class_106;)I
+		ARG 0 atlas
+	METHOD method_361 generateAtlas (Ljava/lang/String;Ljava/util/function/Consumer;)Ltk/valoeghese/fc0/class_106;
+		ARG 0 id
+		ARG 1 textureSetConsumer
+	METHOD method_364 generateItemAtlas (Ljava/lang/String;Ljava/util/function/Consumer;)Ltk/valoeghese/fc0/class_106;
+		ARG 0 id
+		ARG 1 textureSetConsumer
+	METHOD method_57 load (Ljava/lang/String;Z)I
+		ARG 0 location
+		ARG 1 failSafely

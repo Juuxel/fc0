@@ -1,0 +1,9 @@
+--- a/tk/valoeghese/fc0/client/gui/widget/TexturedWidget.java
++++ b/tk/valoeghese/fc0/client/gui/widget/TexturedWidget.java
+@@ -77,5 +77,5 @@
+         GL20.glEnableVertexAttribArray(1);
+         GL30.glBindVertexArray(0);
+-        this.vertices.add(new Vertex(n3, arrn.length, 0));
++        this.vertices.add(new Vertex(n3, arrn.length));
+     }
+ 

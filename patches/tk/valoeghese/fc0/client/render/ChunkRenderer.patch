@@ -1,8 +1,0 @@
---- a/tk/valoeghese/fc0/client/render/ChunkRenderer.java
-+++ b/tk/valoeghese/fc0/client/render/ChunkRenderer.java
-@@ -58,4 +58,5 @@
-                     boolean bl2 = bl = tile2 == Tile.WATER;
-                     ArrayList<TileRenderer> arrayList5 = bl ? arrayList2 : (arrayList4 = tile2.method_240() ? arrayList3 : arrayList);
-+                    arrayList4 = arrayList5;
-                     if (tile2.shouldRender() && tile2.hasCrossModel()) {
-                         arrayList4.add(new CrossTileRenderer(new Vector3f(i, k, j), tile2, 0.95f, by2));

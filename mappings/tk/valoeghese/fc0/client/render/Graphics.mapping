@@ -1,0 +1,11 @@
+CLASS tk/valoeghese/fc0/class_109 tk/valoeghese/fc0/client/render/Graphics
+	METHOD method_309 enableBlend ()V
+	METHOD method_310 bindTexture (I)V
+		ARG 0 texture
+	METHOD method_311 disableCursor (J)V
+		ARG 0 window
+	METHOD method_313 setViewport (Ltk/valoeghese/fc0/class_32;)V
+		ARG 0 window
+	METHOD method_314 disableBlend ()V
+	METHOD method_315 enableCursor (J)V
+		ARG 0 window

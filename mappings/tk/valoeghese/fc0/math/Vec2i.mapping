@@ -4,5 +4,7 @@ CLASS tk/valoeghese/fc0/class_115 tk/valoeghese/fc0/math/Vec2i
 	METHOD <init> (II)V
 		ARG 1 x
 		ARG 2 y
+	METHOD <init> (Ltk/valoeghese/fc0/class_106$class_108;)V
+		ARG 1 atlasPosition
 	METHOD method_346 getX ()I
 	METHOD method_347 getY ()I

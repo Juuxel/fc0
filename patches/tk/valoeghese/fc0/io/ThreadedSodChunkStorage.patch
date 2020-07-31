@@ -10,7 +10,7 @@
                  while (saveThread != null && !SaveThread.isReady()) {
 @@ -108,6 +107,5 @@
       */
-     public void save(Iterator<? extends Chunk> iterator, Iterator<Item> iterator2, int n, Pos pos, Pos pos2, long l) {
+     public void save(Iterator<? extends Chunk> iterator, Iterator<ItemStack> iterator2, int n, Pos pos, Pos pos2, long l) {
 -        Object object = LOCK;
 -        synchronized (object) {
 +        synchronized (LOCK) {

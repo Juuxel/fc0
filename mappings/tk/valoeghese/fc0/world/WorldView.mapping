@@ -16,3 +16,5 @@ CLASS tk/valoeghese/fc0/class_8 tk/valoeghese/fc0/world/WorldView
 		ARG 2 tile
 	METHOD method_24 addEntity (Ltk/valoeghese/fc0/class_49;)V
 		ARG 1 entity
+	METHOD method_349 getMeta (Ltk/valoeghese/fc0/class_3;)B
+		ARG 1 pos

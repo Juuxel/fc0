@@ -1,13 +1,15 @@
 CLASS tk/valoeghese/fc0/class_33 tk/valoeghese/fc0/math/ChunkPos
 	FIELD field_92 x I
-	FIELD field_93 y I
+	FIELD field_93 z I
 	METHOD <init> (II)V
 		ARG 1 x
-		ARG 2 y
-	METHOD method_207 distanceTo (II)I
+		ARG 2 z
+	METHOD method_207 manhattanDistanceTo (II)I
 		COMMENT Gets the Manhattan distance to the specified coordinates.
 		ARG 1 x
-		ARG 2 y
-	METHOD method_208 distanceTo (Ltk/valoeghese/fc0/class_33;)I
+		ARG 2 z
+	METHOD method_208 manhattanDistanceTo (Ltk/valoeghese/fc0/class_33;)I
 		COMMENT Gets the Manhattan distance to the other position.
+		ARG 1 other
+	METHOD method_339 distanceTo (Ltk/valoeghese/fc0/class_33;)D
 		ARG 1 other

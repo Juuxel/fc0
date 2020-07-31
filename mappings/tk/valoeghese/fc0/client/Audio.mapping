@@ -1,0 +1,5 @@
+CLASS tk/valoeghese/fc0/class_103 tk/valoeghese/fc0/client/Audio
+	FIELD field_363 audioDevice J
+	FIELD field_365 audioContext J
+	METHOD method_299 getAudioDevice ()J
+	METHOD method_301 initAudio ()V

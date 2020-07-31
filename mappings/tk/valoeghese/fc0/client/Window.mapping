@@ -10,3 +10,7 @@ CLASS tk/valoeghese/fc0/class_32 tk/valoeghese/fc0/client/Window
 		ARG 1 window
 		ARG 3 width
 		ARG 4 height
+	METHOD method_305 swapBuffers ()V
+	METHOD method_306 shouldStayOpen ()Z
+	METHOD method_307 getCursorPos ()[F
+	METHOD method_308 destroy ()V

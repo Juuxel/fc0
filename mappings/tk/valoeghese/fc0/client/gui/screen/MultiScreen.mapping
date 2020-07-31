@@ -1,0 +1,7 @@
+CLASS tk/valoeghese/fc0/class_121 tk/valoeghese/fc0/client/gui/screen/MultiScreen
+	FIELD field_421 currentIndex I
+	FIELD field_422 currentScreen Ltk/valoeghese/fc0/class_101;
+	FIELD field_423 screens Ljava/util/List;
+	METHOD method_377 getCurrentIndex ()I
+	METHOD method_378 setCurrentScreen (I)V
+		ARG 1 index

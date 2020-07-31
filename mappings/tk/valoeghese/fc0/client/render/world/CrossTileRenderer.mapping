@@ -1,0 +1,6 @@
+CLASS tk/valoeghese/fc0/class_75 tk/valoeghese/fc0/client/render/world/CrossTileRenderer
+	METHOD <init> (Lorg/joml/Vector3f;Ltk/valoeghese/fc0/class_14;FB)V
+		ARG 1 pos
+		ARG 2 tile
+		ARG 3 light
+		ARG 4 meta

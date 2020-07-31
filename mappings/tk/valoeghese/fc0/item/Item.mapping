@@ -1,17 +1,17 @@
-CLASS tk/valoeghese/fc0/class_92 tk/valoeghese/fc0/item/Item
-	FIELD field_319 count I
-	FIELD field_320 tile Ltk/valoeghese/fc0/class_14;
-	FIELD field_322 hasTile Z
-	METHOD <init> (IBI)V
-		ARG 1 tile
-		ARG 3 count
-	METHOD <init> (Ltk/valoeghese/fc0/class_14;)V
-		ARG 1 tile
-	METHOD <init> (Ltk/valoeghese/fc0/class_14;I)V
-		ARG 1 tile
-	METHOD <init> (Ltk/valoeghese/fc0/class_92;)V
-		ARG 1 other
-	METHOD method_260 getCount ()I
-	METHOD method_261 getTile ()Ltk/valoeghese/fc0/class_14;
-	METHOD method_264 show ()[Ljava/lang/String;
-	METHOD method_267 getTileId ()I
+CLASS tk/valoeghese/fc0/class_112 tk/valoeghese/fc0/item/Item
+	FIELD field_383 index I
+	FIELD field_384 POMELO Ltk/valoeghese/fc0/class_112;
+	FIELD field_385 id Ljava/lang/String;
+	FIELD field_386 BY_INDEX [Ltk/valoeghese/fc0/class_112;
+	FIELD field_387 textureX I
+	FIELD field_388 translationKey Ljava/lang/String;
+	FIELD field_389 textureY I
+	METHOD <init> (Ljava/lang/String;I)V
+		ARG 1 id
+		ARG 2 index
+	METHOD method_322 getTextureX ()I
+	METHOD method_323 setTranslationKey (Ljava/lang/String;)Ltk/valoeghese/fc0/class_112;
+		ARG 1 translationKey
+	METHOD method_324 setTexturePositions (Ljava/util/function/Function;)V
+		ARG 1 atlasPositionGetter
+	METHOD method_325 getTextureY ()I

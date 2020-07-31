@@ -1,6 +1,0 @@
-CLASS tk/valoeghese/fc0/class_101
-	METHOD <init> (Ltk/valoeghese/fc0/class_36;)V
-		ARG 1 fc0
-	METHOD method_296 render (F)V
-	METHOD method_297 (Ltk/valoeghese/fc0/class_32;)V
-		ARG 1 window

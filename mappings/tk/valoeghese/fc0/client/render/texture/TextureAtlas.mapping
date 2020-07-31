@@ -1,0 +1,15 @@
+CLASS tk/valoeghese/fc0/class_106 tk/valoeghese/fc0/client/render/texture/TextureAtlas
+	FIELD field_369 image Ljava/awt/image/BufferedImage;
+	FIELD field_370 name Ljava/lang/String;
+	FIELD field_371 positions Ljava/util/Map;
+	METHOD <init> (Ljava/lang/String;[Ltk/valoeghese/fc0/class_107;)V
+		ARG 1 name
+		ARG 2 textures
+	CLASS class_108 Position
+		FIELD field_374 x I
+		FIELD field_375 y I
+		METHOD <init> (II)V
+			ARG 1 x
+			ARG 2 y
+		METHOD method_302 getX ()I
+		METHOD method_303 getY ()I

@@ -1,0 +1,6 @@
+CLASS tk/valoeghese/fc0/class_81 tk/valoeghese/fc0/client/gui/widget/ItemWidget
+	METHOD method_221 render (Ltk/valoeghese/fc0/class_14;BF)V
+		ARG 1 tile
+		ARG 2 meta
+	METHOD method_369 render (Ltk/valoeghese/fc0/class_112;F)V
+		ARG 1 item

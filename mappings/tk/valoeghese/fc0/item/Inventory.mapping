@@ -1,8 +1,18 @@
 CLASS tk/valoeghese/fc0/class_90 tk/valoeghese/fc0/item/Inventory
 	FIELD field_312 size I
 	FIELD field_313 items [Ltk/valoeghese/fc0/class_92;
+	FIELD field_315 selectedSlot I
 	METHOD <init> (I)V
 		ARG 1 size
 	METHOD method_251 size ()I
+	METHOD method_252 getSelectedItem ()Ltk/valoeghese/fc0/class_92;
+	METHOD method_253 clear ()V
 	METHOD method_254 getItem (I)Ltk/valoeghese/fc0/class_92;
 		ARG 1 slot
+	METHOD method_255 selectSlot (I)V
+		ARG 1 slot
+	METHOD method_256 setItem (ILtk/valoeghese/fc0/class_92;)V
+		ARG 1 slot
+		ARG 2 stack
+	METHOD method_257 add (Ltk/valoeghese/fc0/class_92;)Z
+		ARG 1 stack

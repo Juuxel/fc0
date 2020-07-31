@@ -1,7 +1,0 @@
-CLASS tk/valoeghese/fc0/class_100
-	FIELD field_351 crosshair Ltk/valoeghese/fc0/class_17;
-	FIELD field_352 inventoryOverlay Ltk/valoeghese/fc0/class_95;
-	FIELD field_353 ecozoneOverlay Ltk/valoeghese/fc0/class_16;
-	FIELD field_354 versionOverlay Ltk/valoeghese/fc0/class_17;
-	METHOD method_284 selectItem (Ltk/valoeghese/fc0/class_90;)V
-		ARG 0 inventory
