@@ -21,10 +21,10 @@
 +    DOWN(0, -1, 0);
      private final int x;
      private final int y;
-@@ -46,5 +45,5 @@
+@@ -44,5 +43,5 @@
  
      @Override
--    public final /* synthetic */ Object apply(Object object) {
-+    public final /* synthetic */ TilePos apply(TilePos object) {
-         return this.offset((TilePos)object);
+-    public /* synthetic */ Object apply(Object object) {
++    public /* synthetic */ TilePos apply(TilePos object) {
+         return this.method_85((TilePos)object);
      }

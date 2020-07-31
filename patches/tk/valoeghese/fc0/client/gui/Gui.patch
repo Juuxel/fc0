@@ -1,9 +1,9 @@
 --- a/tk/valoeghese/fc0/client/gui/Gui.java
 +++ b/tk/valoeghese/fc0/client/gui/Gui.java
-@@ -75,5 +75,5 @@
+@@ -77,5 +77,5 @@
          GL20.glEnableVertexAttribArray(1);
          GL30.glBindVertexArray(0);
--        this.vertices.add(new GuiVertex(n3, arrn.length, 0));
-+        this.vertices.add(new GuiVertex(n3, arrn.length, (byte) 0));
+-        this.vertices.add(new Vertex(n3, arrn.length, 0));
++        this.vertices.add(new Vertex(n3, arrn.length));
      }
  

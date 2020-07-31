@@ -1,9 +1,0 @@
---- a/tk/valoeghese/fc0/class_103.java
-+++ b/tk/valoeghese/fc0/class_103.java
-@@ -30,5 +30,5 @@
- 
-     public static void method_301() {
--        field_363 = ALC10.alcOpenDevice(null);
-+        field_363 = ALC10.alcOpenDevice((java.nio.ByteBuffer) null);
-         ALCCapabilities aLCCapabilities = ALC.createCapabilities(field_363);
-         IntBuffer intBuffer = BufferUtils.createIntBuffer(16);

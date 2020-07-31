@@ -1,3 +1,5 @@
+import net.fabricmc.stitch.commands.CommandFixNesting
+
 plugins {
     id 'java'
     id 'application'
@@ -76,7 +78,7 @@ task intermediary(type: RemapJarTask) {
     to = "intermediary"
 
     doLast {
-        JarProcessing.fixNesting(outputJar)
+        CommandFixNesting.run(outputJar)
     }
 }
 

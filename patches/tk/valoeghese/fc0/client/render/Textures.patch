@@ -1,0 +1,16 @@
+--- a/tk/valoeghese/fc0/client/render/Textures.java
++++ b/tk/valoeghese/fc0/client/render/Textures.java
+@@ -52,5 +52,5 @@
+         try {
+             ArrayList<class_107> arrayList = new ArrayList<class_107>();
+-            LinkedHashSet linkedHashSet = new LinkedHashSet();
++            LinkedHashSet<String> linkedHashSet = new LinkedHashSet();
+             consumer.accept(linkedHashSet);
+             for (String string2 : linkedHashSet) {
+@@ -72,5 +72,5 @@
+             String string2;
+             ArrayList<class_107> arrayList = new ArrayList<class_107>();
+-            LinkedHashSet linkedHashSet = new LinkedHashSet();
++            LinkedHashSet<String> linkedHashSet = new LinkedHashSet();
+             consumer.accept(linkedHashSet);
+             String[] arrstring = linkedHashSet.toArray(new String[0]);

@@ -33,6 +33,6 @@ class RemapJarTask extends DefaultTask {
             .withMappings(TinyUtils.createTinyMappingProvider(mappings.toPath(), from, to))
             .build()
 
-        JarProcessing.remapJar(remapper, inputJar, outputJar, libraries)
+        JarRemapping.remapJar(remapper, inputJar, outputJar, libraries)
     }
 }

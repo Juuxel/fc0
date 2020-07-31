@@ -1,15 +1,8 @@
 --- a/tk/valoeghese/fc0/client/render/ChunkRenderer.java
 +++ b/tk/valoeghese/fc0/client/render/ChunkRenderer.java
-@@ -50,5 +50,4 @@
-                 for (int k = 0; k < 128; ++k) {
-                     Tile tile;
--                    ArrayList<TileRenderer> arrayList4;
-                     if (!this.chunk.containsTileAtLevel(k)) continue;
-                     byte by = this.tiles[ChunkRenderer.encode(i, k, j)];
-@@ -56,5 +55,5 @@
-                     Tile tile2 = Tile.BY_ID[by];
-                     boolean bl = tile2 == Tile.WATER;
--                    ArrayList<TileRenderer> arrayList5 = bl ? arrayList2 : (arrayList4 = tile2.method_240() ? arrayList3 : arrayList);
-+                    ArrayList<TileRenderer> arrayList4 = bl ? arrayList2 : (arrayList4 = tile2.method_240() ? arrayList3 : arrayList);
+@@ -58,4 +58,5 @@
+                     boolean bl2 = bl = tile2 == Tile.WATER;
+                     ArrayList<TileRenderer> arrayList5 = bl ? arrayList2 : (arrayList4 = tile2.method_240() ? arrayList3 : arrayList);
++                    arrayList4 = arrayList5;
                      if (tile2.shouldRender() && tile2.hasCrossModel()) {
                          arrayList4.add(new CrossTileRenderer(new Vector3f(i, k, j), tile2, 0.95f, by2));
