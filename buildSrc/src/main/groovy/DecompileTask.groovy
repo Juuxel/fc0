@@ -1,3 +1,4 @@
+import juuxel.fc0.tools.source.EnumFixer
 import org.benf.cfr.reader.api.CfrDriver
 import org.benf.cfr.reader.api.OutputSinkFactory
 import org.benf.cfr.reader.api.SinkReturns
@@ -40,6 +41,17 @@ class DecompileTask extends DefaultTask {
             .withOutputSink(new SinkFactory())
             .build()
         driver.analyse([input.getAbsolutePath()])
+
+        Files.walk(output.toPath())
+            .filter { Files.isRegularFile(it) && it.toString().endsWith(".java") }
+            .forEach {
+                def lines = Files.readAllLines(it)
+                def newLines = EnumFixer.fixEnums(lines)
+
+                if (newLines != null) {
+                    Files.write(it, newLines, StandardCharsets.UTF_8)
+                }
+            }
 
         // https://stackoverflow.com/a/6214823
         new AntBuilder().copy(toDir: cleanOutput.absolutePath) {

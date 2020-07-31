@@ -1,4 +1,22 @@
-import juuxel.bytecodetweaker.BytecodeTweaker
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "jitpack"
+            url = "https://jitpack.io"
+
+            content {
+                includeGroup "com.github.Juuxel"
+            }
+        }
+    }
+
+    dependencies {
+        classpath "com.github.Juuxel:fc0-tools:1.1.4"
+    }
+}
+
+import juuxel.fc0.tools.bytecodetweaker.BytecodeTweaker
 import net.fabricmc.stitch.commands.CommandFixNesting
 
 plugins {

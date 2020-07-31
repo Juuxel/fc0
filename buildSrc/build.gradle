@@ -4,6 +4,14 @@ repositories {
         name = "fabric"
         url = "https://maven.fabricmc.net"
     }
+    maven {
+        name = "jitpack"
+        url = "https://jitpack.io"
+
+        content {
+            includeGroup "com.github.Juuxel"
+        }
+    }
 }
 
 dependencies {
@@ -15,5 +23,5 @@ dependencies {
     implementation "net.fabricmc:tiny-mappings-parser:$tiny_mappings_parser"
     implementation "com.google.guava:guava:$guava" // for t-m-p
     implementation "commons-io:commons-io:$commons_io" // for CommandFixNesting
-    implementation "blue.endless:jankson:$jankson"
+    implementation "com.github.Juuxel:fc0-tools:$fc0_tools"
 }
