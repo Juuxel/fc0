@@ -29,6 +29,7 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 		ARG 2 index
 	METHOD method_164 useCrossModel ()Ltk/valoeghese/fc0/class_14;
 	METHOD method_165 hasCrossModel ()Z
+	METHOD method_237 getFriction ()F
 	METHOD method_238 canPlaceAt (Ltk/valoeghese/fc0/class_50;III)Z
 		ARG 1 world
 		ARG 2 x

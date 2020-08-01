@@ -4,6 +4,7 @@ CLASS tk/valoeghese/fc0/class_49 tk/valoeghese/fc0/entity/Entity
 	FIELD field_185 world Ltk/valoeghese/fc0/class_80;
 	FIELD field_187 falling Z
 	FIELD field_188 velocity Ltk/valoeghese/fc0/class_40;
+	FIELD field_324 velocityScale D
 	FIELD field_325 inventory Ltk/valoeghese/fc0/class_90;
 	FIELD field_326 creativeMode Z
 	METHOD <init> (ZLjava/util/function/IntFunction;)V

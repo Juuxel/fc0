@@ -11,9 +11,12 @@ CLASS tk/valoeghese/fc0/class_62 tk/valoeghese/sod/DataSection
 	METHOD method_179 writeInt (I)V
 		ARG 1 data
 	METHOD method_180 readBoolean (I)Z
-		COMMENT Note: Proguard has hardcoded the index to be 2, making this method useless.
 		ARG 1 index
 	METHOD method_181 writeLong (J)V
 		ARG 1 data
 	METHOD method_182 writeBoolean (Z)V
 		ARG 1 data
+	METHOD method_243 writeByte (B)V
+		ARG 1 data
+	METHOD method_244 readByte (I)B
+		ARG 1 index

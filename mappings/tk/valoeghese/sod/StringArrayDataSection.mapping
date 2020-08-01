@@ -1,3 +1,5 @@
 CLASS tk/valoeghese/fc0/class_72 tk/valoeghese/sod/StringArrayDataSection
 	FIELD field_241 array Ljava/util/List;
 	METHOD method_193 size ()I
+	METHOD method_358 writeString (Ljava/lang/String;)V
+		ARG 1 value

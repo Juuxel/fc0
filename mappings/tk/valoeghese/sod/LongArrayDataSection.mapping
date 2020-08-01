@@ -1,3 +1,5 @@
 CLASS tk/valoeghese/fc0/class_68 tk/valoeghese/sod/LongArrayDataSection
 	FIELD field_238 array Lit/unimi/dsi/fastutil/longs/LongList;
 	METHOD method_189 size ()I
+	METHOD method_356 writeLong (J)V
+		ARG 1 value

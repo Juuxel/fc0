@@ -1,3 +1,5 @@
 CLASS tk/valoeghese/fc0/class_67 tk/valoeghese/sod/IntArrayDataSection
 	FIELD field_237 array Lit/unimi/dsi/fastutil/ints/IntList;
 	METHOD method_188 size ()I
+	METHOD method_355 writeInt (I)V
+		ARG 1 value
