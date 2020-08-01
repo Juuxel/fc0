@@ -1,6 +1,15 @@
 CLASS tk/valoeghese/fc0/class_81 tk/valoeghese/fc0/client/gui/widget/ItemWidget
+	FIELD field_286 x F
+	FIELD field_287 y F
+	FIELD field_288 size F
+	METHOD <init> (FFF)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 size
 	METHOD method_221 render (Ltk/valoeghese/fc0/class_14;BF)V
 		ARG 1 tile
 		ARG 2 meta
+		ARG 3 width
 	METHOD method_369 render (Ltk/valoeghese/fc0/class_112;F)V
 		ARG 1 item
+		ARG 2 width

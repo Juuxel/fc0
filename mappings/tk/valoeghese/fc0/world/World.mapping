@@ -7,13 +7,14 @@ CLASS tk/valoeghese/fc0/class_6 tk/valoeghese/fc0/world/World
 	FIELD field_280 generatingView Ltk/valoeghese/fc0/class_50;
 	FIELD field_281 chunkFactory Ltk/valoeghese/fc0/class_47;
 	FIELD field_282 chunkStorage Ltk/valoeghese/fc0/class_56;
+	FIELD field_283 saveExecutor Ljava/util/concurrent/ExecutorService;
 	METHOD <init> (Ltk/valoeghese/fc0/class_56;JILtk/valoeghese/fc0/class_47;)V
 		ARG 1 chunkStorage
 		ARG 2 seed
 		ARG 4 radius
 		ARG 5 chunkFactory
 	METHOD method_112 getChunks ()Ljava/util/Iterator;
-	METHOD method_137 resetRenderers ()V
+	METHOD method_137 reset ()V
 	METHOD method_213 getChunkKey (II)J
 		ARG 0 x
 		ARG 1 z

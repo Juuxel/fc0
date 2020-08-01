@@ -10,6 +10,7 @@ CLASS tk/valoeghese/fc0/class_46 tk/valoeghese/fc0/world/Ecozone
 	FIELD field_162 TUNDRA Ltk/valoeghese/fc0/class_46;
 	FIELD field_163 DESERT Ltk/valoeghese/fc0/class_46;
 	FIELD field_189 generators Ljava/util/Map;
+	FIELD field_304 COLD_WOODLAND Ltk/valoeghese/fc0/class_46;
 	METHOD <init> (Ljava/lang/String;)V
 		ARG 1 id
 	METHOD <init> (Ljava/lang/String;Ltk/valoeghese/fc0/class_14;Ltk/valoeghese/fc0/class_14;)V

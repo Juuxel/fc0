@@ -8,6 +8,7 @@ CLASS tk/valoeghese/fc0/class_4 tk/valoeghese/fc0/world/Chunk
 	FIELD field_180 meta [B
 	FIELD field_273 pos Ltk/valoeghese/fc0/class_33;
 	FIELD field_274 finished Z
+	FIELD field_295 dirty Z
 	FIELD field_6 x I
 	FIELD field_7 world Ltk/valoeghese/fc0/class_5;
 	FIELD field_9 presentYLevels Lit/unimi/dsi/fastutil/ints/IntSet;
@@ -24,7 +25,10 @@ CLASS tk/valoeghese/fc0/class_4 tk/valoeghese/fc0/world/Chunk
 	METHOD method_135 serialize (Ltk/valoeghese/fc0/class_60;)V
 		ARG 1 data
 	METHOD method_210 getPos ()Ltk/valoeghese/fc0/class_33;
+	METHOD method_234 isDirty ()Z
 	METHOD method_3 resetRenderer ()V
+	METHOD method_348 innerAddEntity (Ltk/valoeghese/fc0/class_49;)V
+		ARG 1 entity
 	METHOD method_4 encodePosition (III)I
 		ARG 0 x
 		ARG 1 y

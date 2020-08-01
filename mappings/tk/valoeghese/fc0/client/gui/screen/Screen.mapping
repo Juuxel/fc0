@@ -2,6 +2,12 @@ CLASS tk/valoeghese/fc0/class_101 tk/valoeghese/fc0/client/gui/screen/Screen
 	FIELD field_361 fc0 Ltk/valoeghese/fc0/class_36;
 	METHOD <init> (Ltk/valoeghese/fc0/class_36;)V
 		ARG 1 fc0
+	METHOD method_294 tick ()V
+	METHOD method_295 mouseMoved (DD)V
+		ARG 1 x
+		ARG 3 y
 	METHOD method_296 render (F)V
-	METHOD method_297 (Ltk/valoeghese/fc0/class_32;)V
+		ARG 1 lighting
+	METHOD method_297 close (Ltk/valoeghese/fc0/class_32;)V
 		ARG 1 window
+	METHOD method_298 init ()V

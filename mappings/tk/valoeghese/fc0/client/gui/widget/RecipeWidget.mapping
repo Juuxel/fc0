@@ -1,1 +1,12 @@
 CLASS tk/valoeghese/fc0/class_94 tk/valoeghese/fc0/client/gui/widget/RecipeWidget
+	FIELD field_334 recipeOutput Ltk/valoeghese/fc0/class_92;
+	FIELD field_335 icon Ltk/valoeghese/fc0/class_81;
+	FIELD field_336 craftButton Ltk/valoeghese/fc0/class_117;
+	FIELD field_337 name Ltk/valoeghese/fc0/class_16;
+	METHOD <init> (Ltk/valoeghese/fc0/class_92;FF)V
+		ARG 1 recipeOutput
+		ARG 2 x
+		ARG 3 y
+	METHOD method_370 isWithinButton (FF)Z
+		ARG 1 x
+		ARG 2 y
