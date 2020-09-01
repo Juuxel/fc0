@@ -1,17 +1,17 @@
 CLASS tk/valoeghese/fc0/class_55 tk/valoeghese/fc0/world/generator/TreeGeneratorConfig
 	FIELD field_196 treeDensity F
-	FIELD field_197 baseTreeAmt I
+	FIELD field_197 baseTreeCount I
 	FIELD field_198 baseHeight I
-	FIELD field_199 heightRand I
+	FIELD field_199 heightSpread I
 	METHOD <init> (IF)V
-		ARG 1 baseTreeAmt
+		ARG 1 baseTreeCount
 		ARG 2 treeDensity
 	METHOD <init> (IFII)V
-		ARG 1 baseTreeAmt
+		ARG 1 baseTreeCount
 		ARG 2 treeDensity
 		ARG 3 baseHeight
-		ARG 4 heightRand
-	METHOD method_156 getTreeGenAmount (II)I
+		ARG 4 heightSpread
+	METHOD method_156 getTreeCount (II)I
 		ARG 1 x
 		ARG 2 z
 	METHOD method_157 getTreeHeight (Ljava/util/Random;)I

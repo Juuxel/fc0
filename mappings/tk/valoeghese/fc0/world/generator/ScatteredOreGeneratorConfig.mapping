@@ -1,1 +1,10 @@
 CLASS tk/valoeghese/fc0/class_87 tk/valoeghese/fc0/world/generator/ScatteredOreGeneratorConfig
+	FIELD field_306 tries I
+	FIELD field_307 baseHeight I
+	FIELD field_308 heightSpread I
+	METHOD <init> (III)V
+		ARG 1 tries
+		ARG 2 minHeight
+		ARG 3 maxHeight
+	METHOD method_245 getTries ()I
+	METHOD method_246 getHeight (Ljava/util/Random;)I

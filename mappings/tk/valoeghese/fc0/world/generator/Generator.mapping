@@ -16,3 +16,9 @@ CLASS tk/valoeghese/fc0/class_10 tk/valoeghese/fc0/world/generator/Generator
 		ARG 3 x
 		ARG 4 z
 		ARG 5 random
+	METHOD method_352 setLeaves (Ltk/valoeghese/fc0/class_50;IIIB)Z
+		ARG 1 world
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 tile

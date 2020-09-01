@@ -1,1 +1,2 @@
 CLASS tk/valoeghese/fc0/class_88 tk/valoeghese/fc0/world/generator/ScatteredOreGenerator
+	FIELD field_309 DEFAULT_CONFIG Ltk/valoeghese/fc0/class_87;
