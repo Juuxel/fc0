@@ -1,0 +1,7 @@
+CLASS tk/valoeghese/fc0/class_135 tk/valoeghese/fc0/tile/RandomTextureTile
+	FIELD field_457 texturePositions Lit/unimi/dsi/fastutil/bytes/Byte2ObjectArrayMap;
+	FIELD field_458 textures Ljava/util/List;
+	FIELD field_459 textureCount I
+	METHOD <init> (Ljava/util/List;IF)V
+		ARG 1 textures
+		ARG 2 id

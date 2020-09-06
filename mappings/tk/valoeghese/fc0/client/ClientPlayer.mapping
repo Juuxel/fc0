@@ -1,4 +1,4 @@
-CLASS tk/valoeghese/fc0/class_37 tk/valoeghese/fc0/client/Player
+CLASS tk/valoeghese/fc0/class_37 tk/valoeghese/fc0/client/ClientPlayer
 	FIELD field_120 camera Ltk/valoeghese/fc0/class_27;
 	FIELD field_259 currentEcozone Ltk/valoeghese/fc0/class_46;
 	METHOD <init> (Ltk/valoeghese/fc0/class_27;Ltk/valoeghese/fc0/class_36;Z)V

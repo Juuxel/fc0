@@ -1,6 +1,6 @@
 --- a/tk/valoeghese/fc0/io/ThreadedSodChunkStorage.java
 +++ b/tk/valoeghese/fc0/io/ThreadedSodChunkStorage.java
-@@ -71,6 +71,5 @@
+@@ -83,6 +83,5 @@
       */
      public void saveChunks(Iterator<? extends Chunk> iterator) {
 -        Object object = LOCK;
@@ -8,9 +8,9 @@
 +        synchronized (LOCK) {
              try {
                  while (saveThread != null && !SaveThread.isReady()) {
-@@ -108,6 +107,5 @@
+@@ -120,6 +119,5 @@
       */
-     public void save(Iterator<? extends Chunk> iterator, Iterator<ItemStack> iterator2, int n, Pos pos, Pos pos2, long l) {
+     public void method_161(Player player, Iterator<? extends Chunk> iterator, Iterator<ItemStack> iterator2, int n, Pos pos, Pos pos2, long l) {
 -        Object object = LOCK;
 -        synchronized (object) {
 +        synchronized (LOCK) {

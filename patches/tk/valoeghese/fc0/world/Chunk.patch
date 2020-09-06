@@ -1,0 +1,16 @@
+--- a/tk/valoeghese/fc0/world/Chunk.java
++++ b/tk/valoeghese/fc0/world/Chunk.java
+@@ -481,5 +481,5 @@
+     public static <T extends Chunk> T deserialize(ChunkView chunkView, ChunkFactory<T> chunkFactory, BinaryData binaryData) {
+         int n;
+-        BaseDataSection<Byte> baseDataSection;
++        BaseDataSection<?> baseDataSection;
+         ByteArrayDataSection byteArrayDataSection = binaryData.getByteArray("tiles");
+         byte[] arrby = new byte[32768];
+@@ -514,5 +514,5 @@
+             baseDataSection = binaryData.method_431("heightmap");
+             for (n = 0; n < ((IntArrayDataSection)baseDataSection).size(); ++n) {
+-                t2.field_440[n] = ((IntArrayDataSection)baseDataSection).method_432(n);
++                ((Chunk) t2).field_440[n] = ((IntArrayDataSection)baseDataSection).method_432(n);
+             }
+         }

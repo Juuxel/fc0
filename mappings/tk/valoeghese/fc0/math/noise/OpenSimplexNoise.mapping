@@ -15,3 +15,14 @@ CLASS tk/valoeghese/fc0/class_42 tk/valoeghese/fc0/math/noise/OpenSimplexNoise
 		ARG 2 ysb
 		ARG 3 dx
 		ARG 5 dy
+	METHOD method_391 eval (DDD)D
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_392 extrapolate (IIIDDD)D
+		ARG 1 xsb
+		ARG 2 ysb
+		ARG 3 zsb
+		ARG 4 dx
+		ARG 6 dy
+		ARG 8 dz

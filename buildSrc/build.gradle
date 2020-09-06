@@ -24,4 +24,5 @@ dependencies {
     implementation "com.google.guava:guava:$guava" // for t-m-p
     implementation "commons-io:commons-io:$commons_io" // for CommandFixNesting
     implementation "com.github.Juuxel:fc0-tools:$fc0_tools"
+    implementation "net.fabricmc:procyon-fabric-compilertools:$procyon"
 }

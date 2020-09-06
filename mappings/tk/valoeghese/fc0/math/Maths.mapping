@@ -10,3 +10,7 @@ CLASS tk/valoeghese/fc0/class_114 tk/valoeghese/fc0/math/Maths
 		ARG 4 d
 	METHOD method_342 floor (D)I
 		ARG 0 x
+	METHOD method_390 clamp (III)I
+		ARG 0 x
+		ARG 1 min
+		ARG 2 max

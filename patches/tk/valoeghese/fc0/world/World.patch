@@ -1,16 +1,112 @@
 --- a/tk/valoeghese/fc0/world/World.java
 +++ b/tk/valoeghese/fc0/world/World.java
-@@ -36,5 +36,5 @@
+@@ -40,5 +40,5 @@
      private final Random random;
      private final long seed;
 -    private final TileView generatingView = new GeneratingTileView(0);
 +    private final TileView generatingView = new GeneratingTileView();
      private final ChunkFactory<T> chunkFactory;
      @Nullable
-@@ -79,5 +79,5 @@
+@@ -93,57 +93,56 @@
+     @Override
+     @Nullable
+-    public Chunk loadChunk(int var1_1, int var2_2, ChunkStatus var3_3) {
+-        if (!this.isInWorld(var1_1 << 4, 50, var2_2 << 4)) {
++    public Chunk loadChunk(final int x, final int z, final ChunkStatus status) {
++        // Replaced with code decompiled using Procyon
++        if (!this.isInWorld(x << 4, 50, z << 4)) {
              return null;
          }
--        World world = this;
-+        World<T> world = this;
-         int n3 = n;
-         int n4 = n2;
+-        var5_6 = this;
+-        var6_5 = var1_1;
+-        var7_4 = var2_2;
+-        var8_7 = var5_6.getStoredChunk(var6_5, var7_4);
+-        if (var8_7 != null) {
+-            v0 = var8_7;
+-        } else if (var5_6.chunkStorage == null) {
+-            var5_6.random.setSeed(var5_6.seed + (long)(134 * var6_5) + (long)(-529 * var7_4));
+-            v0 = var5_6.chunkGenerator.generate(var5_6.chunkFactory, var5_6, var6_5, var7_4);
+-        } else {
+-            v0 = var5_6.chunkStorage.method_159(var5_6.chunkGenerator, var5_6, var6_5, var7_4, var5_6.chunkFactory);
++        final Chunk storedChunk = this.getStoredChunk(x, z);
++        Chunk chunk;
++        if (storedChunk != null) {
++            chunk = storedChunk;
+         }
+-        var4_8 = v0;
+-        switch (_EnumSwitches.GET_CHUNK[var3_3.ordinal()]) {
+-            case 1: {
+-                break;
+-            }
+-            case 2: 
+-            case 3: {
+-                if (!var4_8.field_438.method_415()) {
+-                    var4_8.method_412();
++        else if (this.chunkStorage == null) {
++            this.random.setSeed(this.seed + 134 * x + -529 * z);
++            chunk = this.chunkGenerator.generate(this.chunkFactory, this, x, z);
++        }
++        else {
++            chunk = this.chunkStorage.method_159(this.chunkGenerator, this, x, z, this.chunkFactory);
++        }
++        final Chunk chunk2 = chunk;
++        Label_0242: {
++            switch (_EnumSwitches.GET_CHUNK[status.ordinal()]) {
++                case 2:
++                case 3: {
++                    if (!chunk2.field_438.method_415()) {
++                        chunk2.method_412();
++                    }
++                    if (chunk2.field_441) {
++                        chunk2.method_405(this.field_448);
++                        chunk2.method_408();
++                        chunk2.field_441 = false;
++                        break Label_0242;
++                    }
++                    if (!chunk2.field_438.method_415()) {
++                        chunk2.method_394(this.field_448);
++                    }
++                    break Label_0242;
+                 }
+-                if (!var4_8.field_441) ** GOTO lbl27
+-                var4_8.method_405(this.field_448);
+-                var4_8.method_408();
+-                var4_8.field_441 = false;
+-                ** GOTO lbl29
+-lbl27:
+-                // 1 sources
+-
+-                if (!var4_8.field_438.method_415()) {
+-                    var4_8.method_394(this.field_448);
++                case 4: {
++                    if (!chunk2.populated) {
++                        chunk2.populated = true;
++                        this.random.setSeed(this.seed + 134 * chunk2.x + -529 * chunk2.z + 127L);
++                        this.chunkGenerator.populate(this.generatingView, chunk2, this.random);
++                        break;
++                    }
++                    break;
+                 }
+             }
+-lbl29:
+-            // 5 sources
+-
+-            case 4: {
+-                if (var4_8.populated) break;
+-                var4_8.populated = true;
+-                this.random.setSeed(this.seed + (long)(134 * var4_8.x) + (long)(-529 * var4_8.z) + 127L);
+-                this.chunkGenerator.populate(this.generatingView, (Chunk)var4_8, this.random);
+-                break;
+-            }
+         }
+-        var4_8.field_438 = var4_8.field_438.method_416(var3_3);
+-        if (var4_8 == null) return var4_8;
+-        this.chunks.put(World.getChunkKey(var1_1, var2_2), var4_8);
+-        return var4_8;
++        chunk2.field_438 = chunk2.field_438.method_416(status);
++        if (chunk2 != null) {
++            this.chunks.put(getChunkKey(x, z), (T)chunk2);
++        }
++        return chunk2;
+     }
+ 

@@ -1,0 +1,9 @@
+--- a/tk/valoeghese/fc0/client/gui/screen/HudScreen.java
++++ b/tk/valoeghese/fc0/client/gui/screen/HudScreen.java
+@@ -233,5 +233,5 @@
+         }
+         if (Keybinds.field_469.isPressed()) {
+-            ((Client2fc)object).method_437(!((Client2fc)(object = Client2fc.get())).method_435());
++            fc0.method_437(!((Client2fc)(object = Client2fc.get())).method_435());
+         }
+     }

@@ -19,6 +19,8 @@ buildscript {
 import juuxel.fc0.tools.bytecodetweaker.BytecodeTweaker
 import net.fabricmc.stitch.commands.CommandFixNesting
 
+import java.nio.file.Files
+
 plugins {
     id 'java'
     id 'application'
@@ -29,7 +31,7 @@ mainClassName = 'tk.valoeghese.fc0.client.Main'
 sourceCompatibility = JavaVersion.VERSION_1_8
 
 group 'tk.valoeghese'
-version '0.2.2'
+version '0.2.3'
 
 repositories {
     mavenCentral()
@@ -54,6 +56,23 @@ def gameJar = project.file("2fc0f18-${version}.jar")
 def mappingsDir = project.file('mappings')
 def intermediaryJar = project.file("build/intermediary-${gameJar.name}")
 def runDirectory = project.file('run')
+
+if (!gameJar.exists()) {
+    def url = new URL("https://github.com/valoeghese/2fc-early-releases/raw/master/2fc0f18-${version}.jar")
+    try {
+        println "Downloading 2fc0f18 v$version"
+
+        def stream = url.openStream()
+        try {
+            Files.copy(stream, gameJar.toPath())
+        } finally {
+            stream.close()
+        }
+    } catch (IOException e) {
+        System.err.println "Could not download 2fc0f18 v$version"
+        e.printStackTrace()
+    }
+}
 
 if (!runDirectory.exists()) {
     runDirectory.mkdir()

@@ -11,17 +11,6 @@ CLASS tk/valoeghese/fc0/class_56 tk/valoeghese/fc0/io/ThreadedSodChunkStorage
 		ARG 1 path
 		ARG 2 seed
 	METHOD method_158 getSeed ()J
-	METHOD method_159 loadOrCreate (Ltk/valoeghese/fc0/class_5;IILtk/valoeghese/fc0/class_47;)Ltk/valoeghese/fc0/class_4;
-		ARG 1 world
-		ARG 2 x
-		ARG 3 z
-		ARG 4 factory
-	METHOD method_161 save (Ljava/util/Iterator;Ljava/util/Iterator;ILtk/valoeghese/fc0/class_45;Ltk/valoeghese/fc0/class_45;J)V
-		ARG 1 chunks
-		ARG 2 inventory
-		ARG 4 playerPos
-		ARG 5 spawnPoint
-		ARG 6 seed
 	METHOD method_218 save (Ltk/valoeghese/fc0/class_4;)V
 		ARG 1 chunk
 	METHOD method_219 saveChunks (Ljava/util/Iterator;)V

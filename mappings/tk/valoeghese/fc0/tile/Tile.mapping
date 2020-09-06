@@ -5,7 +5,7 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 	FIELD field_211 TALLGRASS Ltk/valoeghese/fc0/class_14;
 	FIELD field_212 BRICKS Ltk/valoeghese/fc0/class_14;
 	FIELD field_213 STONE_BRICKS Ltk/valoeghese/fc0/class_14;
-	FIELD field_27 index B
+	FIELD field_27 id B
 	FIELD field_28 textureX I
 	FIELD field_299 translationKey Ljava/lang/String;
 	FIELD field_29 AIR Ltk/valoeghese/fc0/class_14;
@@ -14,7 +14,7 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 	FIELD field_302 ICE Ltk/valoeghese/fc0/class_14;
 	FIELD field_303 GALENA Ltk/valoeghese/fc0/class_14;
 	FIELD field_30 solid Z
-	FIELD field_31 BY_INDEX [Ltk/valoeghese/fc0/class_14;
+	FIELD field_31 BY_ID [Ltk/valoeghese/fc0/class_14;
 	FIELD field_32 textureY I
 	FIELD field_33 STONE Ltk/valoeghese/fc0/class_14;
 	FIELD field_34 shouldRender Z
@@ -23,10 +23,13 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 	FIELD field_37 LOG Ltk/valoeghese/fc0/class_14;
 	FIELD field_38 WATER Ltk/valoeghese/fc0/class_14;
 	FIELD field_39 SAND Ltk/valoeghese/fc0/class_14;
-	FIELD field_400 key Ljava/lang/String;
+	FIELD field_400 texture Ljava/lang/String;
+	FIELD field_461 luminance I
+	FIELD field_462 TORCH Ltk/valoeghese/fc0/class_14;
+	FIELD field_463 PLANKS Ltk/valoeghese/fc0/class_14;
 	METHOD <init> (Ljava/lang/String;IF)V
-		ARG 1 id
-		ARG 2 index
+		ARG 1 texture
+		ARG 2 id
 	METHOD method_164 useCrossModel ()Ltk/valoeghese/fc0/class_14;
 	METHOD method_165 hasCrossModel ()Z
 	METHOD method_237 getFriction ()F
@@ -44,7 +47,7 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 	METHOD method_32 getTextureY (IB)I
 		ARG 1 face
 		ARG 2 meta
-	METHOD method_33 isSolid (Z)Z
+	METHOD method_33 isSolid (ZLtk/valoeghese/fc0/class_14;)Z
 		ARG 1 renderingWater
 	METHOD method_332 getDrop (Ljava/util/Random;B)Ltk/valoeghese/fc0/class_92;
 		ARG 1 random
@@ -58,3 +61,9 @@ CLASS tk/valoeghese/fc0/class_14 tk/valoeghese/fc0/tile/Tile
 	METHOD method_35 getTextureX (IB)I
 		ARG 1 face
 		ARG 2 meta
+	METHOD method_424 getLuminance ()I
+	METHOD method_428 setLuminance (I)Ltk/valoeghese/fc0/class_14;
+		ARG 1 luminance
+	METHOD method_429 (Ltk/valoeghese/fc0/class_8;Ltk/valoeghese/fc0/class_3;)V
+		ARG 1 world
+		ARG 2 pos

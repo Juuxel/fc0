@@ -1,6 +1,6 @@
 --- a/tk/valoeghese/sod/BinaryData.java
 +++ b/tk/valoeghese/sod/BinaryData.java
-@@ -43,5 +43,5 @@
+@@ -48,5 +48,5 @@
      }
  
 -    public void writeGzipped(File file) {

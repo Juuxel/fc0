@@ -11,8 +11,5 @@ CLASS tk/valoeghese/fc0/class_55 tk/valoeghese/fc0/world/generator/TreeGenerator
 		ARG 2 treeDensity
 		ARG 3 baseHeight
 		ARG 4 heightSpread
-	METHOD method_156 getTreeCount (II)I
-		ARG 1 x
-		ARG 2 z
 	METHOD method_157 getTreeHeight (Ljava/util/Random;)I
 		ARG 1 random
